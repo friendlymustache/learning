@@ -1,0 +1,651 @@
+topic,course,current_url,isbns,tocs
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399",
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399","Table of Contents</h3>
+                <div class=""simple-html"">Preface; Part I. Fundamental: 1. Matrix-vector multiplication; 2. Orthogonal vectors and matrices; 3. Norms; 4. The singular value decomposition; 5. More on the SVD; Part II. QR Factorization and Least Squares: 6. Projectors; 7. QR factorization; 8. Gram-Schmidt orthogonalization; 9. MATLAB; 10. Householder triangularization; 11. Least squares problems; Part III. Conditioning and Stability: 12. Conditioning and condition numbers; 13. Floating point arithmetic; 14. Stability; 15. More on stability; 16. Stability of householder triangularization; 17. Stability of back substitution; 18. Conditioning of least squares problems; 19. Stability of least squares algorithms; Part IV. Systems of Equations: 20. Gaussian elimination; 21. Pivoting; 22. Stability of Gaussian elimination; 23. Cholesky factorization; Part V. Eigenvalues: 24. Eigenvalue problems; 25. Overview of Eigenvalue algorithms; 26. Reduction to Hessenberg or tridiagonal form; 27. Rayleigh quotient, inverse iteration; 28. QR algorithm without shifts; 29. QR algorithm with shifts; 30. Other Eigenvalue algorithms; 31. Computing the SVD; Part VI. Iterative Methods: 32. Overview of iterative methods; 33. The Arnoldi iteration; 34. How Arnoldi locates Eigenvalues; 35. GMRES; 36. The Lanczos iteration; 37. From Lanczos to Gauss quadrature; 38. Conjugate gradients; 39. Biorthogonalization methods; 40. Preconditioning; Appendix; Notes; Bibliography; Index.
+</div>
+              
+    </div>"
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399","Table of Contents</h3>
+                <div class=""simple-html"">Preface; Part I. Fundamental: 1. Matrix-vector multiplication; 2. Orthogonal vectors and matrices; 3. Norms; 4. The singular value decomposition; 5. More on the SVD; Part II. QR Factorization and Least Squares: 6. Projectors; 7. QR factorization; 8. Gram-Schmidt orthogonalization; 9. MATLAB; 10. Householder triangularization; 11. Least squares problems; Part III. Conditioning and Stability: 12. Conditioning and condition numbers; 13. Floating point arithmetic; 14. Stability; 15. More on stability; 16. Stability of householder triangularization; 17. Stability of back substitution; 18. Conditioning of least squares problems; 19. Stability of least squares algorithms; Part IV. Systems of Equations: 20. Gaussian elimination; 21. Pivoting; 22. Stability of Gaussian elimination; 23. Cholesky factorization; Part V. Eigenvalues: 24. Eigenvalue problems; 25. Overview of Eigenvalue algorithms; 26. Reduction to Hessenberg or tridiagonal form; 27. Rayleigh quotient, inverse iteration; 28. QR algorithm without shifts; 29. QR algorithm with shifts; 30. Other Eigenvalue algorithms; 31. Computing the SVD; Part VI. Iterative Methods: 32. Overview of iterative methods; 33. The Arnoldi iteration; 34. How Arnoldi locates Eigenvalues; 35. GMRES; 36. The Lanczos iteration; 37. From Lanczos to Gauss quadrature; 38. Conjugate gradients; 39. Biorthogonalization methods; 40. Preconditioning; Appendix; Notes; Bibliography; Index.
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><strong>1. Introduction</strong><br>
+</p>
+
+</div>
+              
+    </div>"
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,"Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",",Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399","Table of Contents</h3>
+                <div class=""simple-html"">Preface; Part I. Fundamental: 1. Matrix-vector multiplication; 2. Orthogonal vectors and matrices; 3. Norms; 4. The singular value decomposition; 5. More on the SVD; Part II. QR Factorization and Least Squares: 6. Projectors; 7. QR factorization; 8. Gram-Schmidt orthogonalization; 9. MATLAB; 10. Householder triangularization; 11. Least squares problems; Part III. Conditioning and Stability: 12. Conditioning and condition numbers; 13. Floating point arithmetic; 14. Stability; 15. More on stability; 16. Stability of householder triangularization; 17. Stability of back substitution; 18. Conditioning of least squares problems; 19. Stability of least squares algorithms; Part IV. Systems of Equations: 20. Gaussian elimination; 21. Pivoting; 22. Stability of Gaussian elimination; 23. Cholesky factorization; Part V. Eigenvalues: 24. Eigenvalue problems; 25. Overview of Eigenvalue algorithms; 26. Reduction to Hessenberg or tridiagonal form; 27. Rayleigh quotient, inverse iteration; 28. QR algorithm without shifts; 29. QR algorithm with shifts; 30. Other Eigenvalue algorithms; 31. Computing the SVD; Part VI. Iterative Methods: 32. Overview of iterative methods; 33. The Arnoldi iteration; 34. How Arnoldi locates Eigenvalues; 35. GMRES; 36. The Lanczos iteration; 37. From Lanczos to Gauss quadrature; 38. Conjugate gradients; 39. Biorthogonalization methods; 40. Preconditioning; Appendix; Notes; Bibliography; Index.
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><strong>1. Introduction</strong><br>
+</p>
+
+</div>
+              
+    </div>"
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,"Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",",Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399","Table of Contents</h3>
+                <div class=""simple-html"">Preface; Part I. Fundamental: 1. Matrix-vector multiplication; 2. Orthogonal vectors and matrices; 3. Norms; 4. The singular value decomposition; 5. More on the SVD; Part II. QR Factorization and Least Squares: 6. Projectors; 7. QR factorization; 8. Gram-Schmidt orthogonalization; 9. MATLAB; 10. Householder triangularization; 11. Least squares problems; Part III. Conditioning and Stability: 12. Conditioning and condition numbers; 13. Floating point arithmetic; 14. Stability; 15. More on stability; 16. Stability of householder triangularization; 17. Stability of back substitution; 18. Conditioning of least squares problems; 19. Stability of least squares algorithms; Part IV. Systems of Equations: 20. Gaussian elimination; 21. Pivoting; 22. Stability of Gaussian elimination; 23. Cholesky factorization; Part V. Eigenvalues: 24. Eigenvalue problems; 25. Overview of Eigenvalue algorithms; 26. Reduction to Hessenberg or tridiagonal form; 27. Rayleigh quotient, inverse iteration; 28. QR algorithm without shifts; 29. QR algorithm with shifts; 30. Other Eigenvalue algorithms; 31. Computing the SVD; Part VI. Iterative Methods: 32. Overview of iterative methods; 33. The Arnoldi iteration; 34. How Arnoldi locates Eigenvalues; 35. GMRES; 36. The Lanczos iteration; 37. From Lanczos to Gauss quadrature; 38. Conjugate gradients; 39. Biorthogonalization methods; 40. Preconditioning; Appendix; Notes; Bibliography; Index.
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><strong>1. Introduction</strong><br>
+</p>
+
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><b>PART 1 BASIC STRUCTURAL PRINCIPLES</b><br>
+1. The Building Blocks<br>
+2. Motifs of Protein Structure<br>
+3. α-Domain Structures<br>
+4. α/β Structures<br>
+5. β Structures<br>
+6. Folding and Flexibility<br>
+7. DNA Structures</p>
+<p><b>PART 2 STRUCTURE, FUNCTION AND ENGINEERING</b><br>
+8. DNA Recognition in Procaryotes by Helix-Turn-Helix Motifs<br>
+9. DNA Recognition by Eukaryotic Transcription Factors<br>
+10. Specific Transcription Factors Belong to a Few Families<br>
+11. An Example of Enzyme Catalysis: Serine Proteinases<br>
+12. Membrane Proteins<br>
+13. Signal Transduction<br>
+14. Fibrous Proteins<br>
+15. Recognition of Foreign Molecules by the Immune System<br>
+16. The Structure of Spherical Viruses<br>
+17. Prediction, Engineering, and Design of Protein Structures<br>
+18. Determination of Protein Structures</p>
+
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html"">Introduction: What is an inverse problem? What is an ll-posed problem? How to cure ill-posedness. An outline of the book. Reference. Part 1 Image deconvolution - Some mathematical tools: The Fourier Transform (FT). Bandlimited functions and sampling theorems. Convolution operators. The Discrete Fourier Transform (DFT). Cyclic matrices. Relationship between FT and DFT. Discretization of the convolution product. References. Examples of image blurring: Blurring and noise. Linear motion blur. Out-of-focus blur. Diffraction-limited imaging systems. Atmospheric turbulence blur. Near-field acoustic holography. References. The ill-posedness of image deconvolution: Formulation of the problem. Well-posed and ill-posed problems. Existence of the solution and inverse filtering. Discretization: from ill-posedness to ill-conditioning. Bandlimited systems: least-squares solutions and generalized solution. Approximate solutions and the use of ""a priori"" information. Constrained least-squares. References. Regularization methods: Least squares solutions with prescribed energy. Approximate solutions with minimal energy. Regularization algorithms in the sense of Tikhonov. Regularization and filtering. The global point spread function. Choice of the regularization parameter. References. Iterative regularization methods: The Landweber method. The projected Landweber method for the computation of constrained regularized solutions. The steepest descent and the conjugate gradient method. References. Statistical methods: Maximum Likelihood (ML) methods. The ML method in the case of gaussian noise. The ML method in the case of Poisson noise. Bayesian methods. The Wiener filter. References. Part 2 Linear inverse imaging problems - Examples of linear inverse problems: Space-variant imaging systems. X-ray tomography. Emission tomography. Inverse diffraction and inverse source problems. Linearized inverse scattering problems. References. Singular value decomposition (SVD): Mathematical description of linear imaging systems. SVD of a matrix. SVD of a semi-discrete mapping. SVD of an integral operator with square-integrable kernel. SVD of the Radon transform. References. Inversion methods revisited: The generalized solution. The Tikhonov regularization method. Truncated SVD. Iterative regularization methods. Statistical methods. References. Fourier based methods for specific problems: The Fourier slice theorem in tomography. The filtered backprojection (FBP) method in tomography. Implementation of the discrete FBP. Resolution and super-resolution in image restoration. Out-of-band extrapolation. The Gerchberg method and its generalization. References. Comments and concluding remakrs: Does there exist a general-purpose method? In praise of simulation. References. Part 3 Mathematical appendices: Euclidean and Hilbert spaces of functions. Linear operators in function spaces. Euclidean vector spaces and matrices. Properties of the DFT and the FFT algorithm. Minimization of quadratic functionals. Contraction and non-expansive mappings. The EM method. References.
+</div>
+              
+    </div>"
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,"Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",",Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399","Table of Contents</h3>
+                <div class=""simple-html"">Preface; Part I. Fundamental: 1. Matrix-vector multiplication; 2. Orthogonal vectors and matrices; 3. Norms; 4. The singular value decomposition; 5. More on the SVD; Part II. QR Factorization and Least Squares: 6. Projectors; 7. QR factorization; 8. Gram-Schmidt orthogonalization; 9. MATLAB; 10. Householder triangularization; 11. Least squares problems; Part III. Conditioning and Stability: 12. Conditioning and condition numbers; 13. Floating point arithmetic; 14. Stability; 15. More on stability; 16. Stability of householder triangularization; 17. Stability of back substitution; 18. Conditioning of least squares problems; 19. Stability of least squares algorithms; Part IV. Systems of Equations: 20. Gaussian elimination; 21. Pivoting; 22. Stability of Gaussian elimination; 23. Cholesky factorization; Part V. Eigenvalues: 24. Eigenvalue problems; 25. Overview of Eigenvalue algorithms; 26. Reduction to Hessenberg or tridiagonal form; 27. Rayleigh quotient, inverse iteration; 28. QR algorithm without shifts; 29. QR algorithm with shifts; 30. Other Eigenvalue algorithms; 31. Computing the SVD; Part VI. Iterative Methods: 32. Overview of iterative methods; 33. The Arnoldi iteration; 34. How Arnoldi locates Eigenvalues; 35. GMRES; 36. The Lanczos iteration; 37. From Lanczos to Gauss quadrature; 38. Conjugate gradients; 39. Biorthogonalization methods; 40. Preconditioning; Appendix; Notes; Bibliography; Index.
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><strong>1. Introduction</strong><br>
+</p>
+
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><b>PART 1 BASIC STRUCTURAL PRINCIPLES</b><br>
+1. The Building Blocks<br>
+2. Motifs of Protein Structure<br>
+3. α-Domain Structures<br>
+4. α/β Structures<br>
+5. β Structures<br>
+6. Folding and Flexibility<br>
+7. DNA Structures</p>
+<p><b>PART 2 STRUCTURE, FUNCTION AND ENGINEERING</b><br>
+8. DNA Recognition in Procaryotes by Helix-Turn-Helix Motifs<br>
+9. DNA Recognition by Eukaryotic Transcription Factors<br>
+10. Specific Transcription Factors Belong to a Few Families<br>
+11. An Example of Enzyme Catalysis: Serine Proteinases<br>
+12. Membrane Proteins<br>
+13. Signal Transduction<br>
+14. Fibrous Proteins<br>
+15. Recognition of Foreign Molecules by the Immune System<br>
+16. The Structure of Spherical Viruses<br>
+17. Prediction, Engineering, and Design of Protein Structures<br>
+18. Determination of Protein Structures</p>
+
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html"">Introduction: What is an inverse problem? What is an ll-posed problem? How to cure ill-posedness. An outline of the book. Reference. Part 1 Image deconvolution - Some mathematical tools: The Fourier Transform (FT). Bandlimited functions and sampling theorems. Convolution operators. The Discrete Fourier Transform (DFT). Cyclic matrices. Relationship between FT and DFT. Discretization of the convolution product. References. Examples of image blurring: Blurring and noise. Linear motion blur. Out-of-focus blur. Diffraction-limited imaging systems. Atmospheric turbulence blur. Near-field acoustic holography. References. The ill-posedness of image deconvolution: Formulation of the problem. Well-posed and ill-posed problems. Existence of the solution and inverse filtering. Discretization: from ill-posedness to ill-conditioning. Bandlimited systems: least-squares solutions and generalized solution. Approximate solutions and the use of ""a priori"" information. Constrained least-squares. References. Regularization methods: Least squares solutions with prescribed energy. Approximate solutions with minimal energy. Regularization algorithms in the sense of Tikhonov. Regularization and filtering. The global point spread function. Choice of the regularization parameter. References. Iterative regularization methods: The Landweber method. The projected Landweber method for the computation of constrained regularized solutions. The steepest descent and the conjugate gradient method. References. Statistical methods: Maximum Likelihood (ML) methods. The ML method in the case of gaussian noise. The ML method in the case of Poisson noise. Bayesian methods. The Wiener filter. References. Part 2 Linear inverse imaging problems - Examples of linear inverse problems: Space-variant imaging systems. X-ray tomography. Emission tomography. Inverse diffraction and inverse source problems. Linearized inverse scattering problems. References. Singular value decomposition (SVD): Mathematical description of linear imaging systems. SVD of a matrix. SVD of a semi-discrete mapping. SVD of an integral operator with square-integrable kernel. SVD of the Radon transform. References. Inversion methods revisited: The generalized solution. The Tikhonov regularization method. Truncated SVD. Iterative regularization methods. Statistical methods. References. Fourier based methods for specific problems: The Fourier slice theorem in tomography. The filtered backprojection (FBP) method in tomography. Implementation of the discrete FBP. Resolution and super-resolution in image restoration. Out-of-band extrapolation. The Gerchberg method and its generalization. References. Comments and concluding remakrs: Does there exist a general-purpose method? In praise of simulation. References. Part 3 Mathematical appendices: Euclidean and Hilbert spaces of functions. Linear operators in function spaces. Euclidean vector spaces and matrices. Properties of the DFT and the FFT algorithm. Minimization of quadratic functionals. Contraction and non-expansive mappings. The EM method. References.
+</div>
+              
+    </div>"
+algorithms,6-046j-introduction-to-algorithms-sma-5503-fall-2005,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-introduction-to-algorithms-sma-5503-fall-2005/,9780262033848,"Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,6-006-introduction-to-algorithms-fall-2011,http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/,"9780262033848,9781590282571",",Table of Contents</h3>
+                <div class=""simple-html"">Preface<br>
+I Foundations <br>
+1 The Role of Algorithms in Computing <br>
+2 Getting Started <br>
+3 Growth of Functions <br>
+4 Recurrences <br>
+5 Probabilistic Analysis and Randomized Algorithms <br>
+II Sorting and Order Statistics <br>
+6 Heapsort <br>
+7 Quicksort <br>
+8 Sorting in Linear Time <br>
+9 Medians and Order Statistics <br>
+III Data Structures <br>
+10 Elementary Data Structures <br>
+11 Hash Table <br>
+12 Binary Search Trees <br>
+13 Red-Black Trees <br>
+14 Augmenting Data Structures <br>
+IV Advanced Design and Analysis Techniques <br>
+15 Dynamic Programming <br>
+16 Greedy Algorithms <br>
+17 Amortized Analysis <br>
+V Advanced Data Structures <br>
+18 B-Trees <br>
+19 Binomial Heaps <br>
+20 Fibonacci Heaps <br>
+21 Data Structures for Disjoint Sets <br>
+VI Graph Algorithms <br>
+22 Elementary Graph Algorithms <br>
+23 Minimum Spanning Trees <br>
+24 Single-Source Shortest Paths <br>
+25 All-Pairs Shortest Paths <br>
+26 Maximum Flow <br>
+VII Selected Topics <br>
+27 Sorting Networks <br>
+28 Matrix Operations <br>
+29 Linear Programming <br>
+30 Polynomials and the FFT <br>
+31 Number-Theoretic Algorithms <br>
+32 String Matching <br>
+33 Computational Geometry <br>
+(and more...)
+</div>
+              
+    </div>"
+algorithms,20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006,http://ocw.mit.edu/courses/biological-engineering/20-482j-foundations-of-algorithms-and-computational-techniques-in-systems-biology-spring-2006/,"9780387954042,9780198556459,9780898713619,9780815323051,9780750304399","Table of Contents</h3>
+                <div class=""simple-html"">Preface; Part I. Fundamental: 1. Matrix-vector multiplication; 2. Orthogonal vectors and matrices; 3. Norms; 4. The singular value decomposition; 5. More on the SVD; Part II. QR Factorization and Least Squares: 6. Projectors; 7. QR factorization; 8. Gram-Schmidt orthogonalization; 9. MATLAB; 10. Householder triangularization; 11. Least squares problems; Part III. Conditioning and Stability: 12. Conditioning and condition numbers; 13. Floating point arithmetic; 14. Stability; 15. More on stability; 16. Stability of householder triangularization; 17. Stability of back substitution; 18. Conditioning of least squares problems; 19. Stability of least squares algorithms; Part IV. Systems of Equations: 20. Gaussian elimination; 21. Pivoting; 22. Stability of Gaussian elimination; 23. Cholesky factorization; Part V. Eigenvalues: 24. Eigenvalue problems; 25. Overview of Eigenvalue algorithms; 26. Reduction to Hessenberg or tridiagonal form; 27. Rayleigh quotient, inverse iteration; 28. QR algorithm without shifts; 29. QR algorithm with shifts; 30. Other Eigenvalue algorithms; 31. Computing the SVD; Part VI. Iterative Methods: 32. Overview of iterative methods; 33. The Arnoldi iteration; 34. How Arnoldi locates Eigenvalues; 35. GMRES; 36. The Lanczos iteration; 37. From Lanczos to Gauss quadrature; 38. Conjugate gradients; 39. Biorthogonalization methods; 40. Preconditioning; Appendix; Notes; Bibliography; Index.
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><strong>1. Introduction</strong><br>
+</p>
+
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><p><b>PART 1 BASIC STRUCTURAL PRINCIPLES</b><br>
+1. The Building Blocks<br>
+2. Motifs of Protein Structure<br>
+3. α-Domain Structures<br>
+4. α/β Structures<br>
+5. β Structures<br>
+6. Folding and Flexibility<br>
+7. DNA Structures</p>
+<p><b>PART 2 STRUCTURE, FUNCTION AND ENGINEERING</b><br>
+8. DNA Recognition in Procaryotes by Helix-Turn-Helix Motifs<br>
+9. DNA Recognition by Eukaryotic Transcription Factors<br>
+10. Specific Transcription Factors Belong to a Few Families<br>
+11. An Example of Enzyme Catalysis: Serine Proteinases<br>
+12. Membrane Proteins<br>
+13. Signal Transduction<br>
+14. Fibrous Proteins<br>
+15. Recognition of Foreign Molecules by the Immune System<br>
+16. The Structure of Spherical Viruses<br>
+17. Prediction, Engineering, and Design of Protein Structures<br>
+18. Determination of Protein Structures</p>
+
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html"">Introduction: What is an inverse problem? What is an ll-posed problem? How to cure ill-posedness. An outline of the book. Reference. Part 1 Image deconvolution - Some mathematical tools: The Fourier Transform (FT). Bandlimited functions and sampling theorems. Convolution operators. The Discrete Fourier Transform (DFT). Cyclic matrices. Relationship between FT and DFT. Discretization of the convolution product. References. Examples of image blurring: Blurring and noise. Linear motion blur. Out-of-focus blur. Diffraction-limited imaging systems. Atmospheric turbulence blur. Near-field acoustic holography. References. The ill-posedness of image deconvolution: Formulation of the problem. Well-posed and ill-posed problems. Existence of the solution and inverse filtering. Discretization: from ill-posedness to ill-conditioning. Bandlimited systems: least-squares solutions and generalized solution. Approximate solutions and the use of ""a priori"" information. Constrained least-squares. References. Regularization methods: Least squares solutions with prescribed energy. Approximate solutions with minimal energy. Regularization algorithms in the sense of Tikhonov. Regularization and filtering. The global point spread function. Choice of the regularization parameter. References. Iterative regularization methods: The Landweber method. The projected Landweber method for the computation of constrained regularized solutions. The steepest descent and the conjugate gradient method. References. Statistical methods: Maximum Likelihood (ML) methods. The ML method in the case of gaussian noise. The ML method in the case of Poisson noise. Bayesian methods. The Wiener filter. References. Part 2 Linear inverse imaging problems - Examples of linear inverse problems: Space-variant imaging systems. X-ray tomography. Emission tomography. Inverse diffraction and inverse source problems. Linearized inverse scattering problems. References. Singular value decomposition (SVD): Mathematical description of linear imaging systems. SVD of a matrix. SVD of a semi-discrete mapping. SVD of an integral operator with square-integrable kernel. SVD of the Radon transform. References. Inversion methods revisited: The generalized solution. The Tikhonov regularization method. Truncated SVD. Iterative regularization methods. Statistical methods. References. Fourier based methods for specific problems: The Fourier slice theorem in tomography. The filtered backprojection (FBP) method in tomography. Implementation of the discrete FBP. Resolution and super-resolution in image restoration. Out-of-band extrapolation. The Gerchberg method and its generalization. References. Comments and concluding remakrs: Does there exist a general-purpose method? In praise of simulation. References. Part 3 Mathematical appendices: Euclidean and Hilbert spaces of functions. Linear operators in function spaces. Euclidean vector spaces and matrices. Properties of the DFT and the FFT algorithm. Minimization of quadratic functionals. Contraction and non-expansive mappings. The EM method. References.
+</div>
+              
+    </div>,Table of Contents</h3>
+                <div class=""simple-html""><table>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">Preface</td>
+<td width=""10%"" align=""right""></td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">Prelude</td>
+<td width=""10%"" align=""right""></td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">List of Figures</td>
+<td width=""10%"" align=""right""></td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">List of Tables</td>
+<td width=""10%"" align=""right""></td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">Acronyms, Abbreviations, and Units</td>
+<td width=""10%"" align=""right""></td>
+</tr>
+<tr>
+<td width=""20%"">1</td>
+<td width=""70%"">Biomolecular Structure and Modeling: Historical Perspective</td>
+<td width=""10%"" align=""right"">1</td>
+</tr>
+<tr>
+<td width=""20%"">2</td>
+<td width=""70%"">Biomolecular Structure and Modeling: Problem and Application Perspective</td>
+<td width=""10%"" align=""right"">33</td>
+</tr>
+<tr>
+<td width=""20%"">3</td>
+<td width=""70%"">Protein Structure Introduction</td>
+<td width=""10%"" align=""right"">61</td>
+</tr>
+<tr>
+<td width=""20%"">4</td>
+<td width=""70%"">Protein Structure Hierarchy</td>
+<td width=""10%"" align=""right"">91</td>
+</tr>
+<tr>
+<td width=""20%"">5</td>
+<td width=""70%"">Nucleic Acids Structure Minitutorial</td>
+<td width=""10%"" align=""right"">113</td>
+</tr>
+<tr>
+<td width=""20%"">6</td>
+<td width=""70%"">Topics in Nucleic Acids Structure</td>
+<td width=""10%"" align=""right"">147</td>
+</tr>
+<tr>
+<td width=""20%"">7</td>
+<td width=""70%"">Theoretical and Computational Approaches to Biomolecular Structure</td>
+<td width=""10%"" align=""right"">199</td>
+</tr>
+<tr>
+<td width=""20%"">8</td>
+<td width=""70%"">Force Fields</td>
+<td width=""10%"" align=""right"">225</td>
+</tr>
+<tr>
+<td width=""20%"">9</td>
+<td width=""70%"">Nonbonded Computations</td>
+<td width=""10%"" align=""right"">259</td>
+</tr>
+<tr>
+<td width=""20%"">10</td>
+<td width=""70%"">Multivariate Minimization in Computational Chemistry</td>
+<td width=""10%"" align=""right"">305</td>
+</tr>
+<tr>
+<td width=""20%"">11</td>
+<td width=""70%"">Monte Carlo Techniques</td>
+<td width=""10%"" align=""right"">345</td>
+</tr>
+<tr>
+<td width=""20%"">12</td>
+<td width=""70%"">Molecular Dynamics: Basics</td>
+<td width=""10%"" align=""right"">383</td>
+</tr>
+<tr>
+<td width=""20%"">13</td>
+<td width=""70%"">Molecular Dynamics: Further Topics</td>
+<td width=""10%"" align=""right"">419</td>
+</tr>
+<tr>
+<td width=""20%"">14</td>
+<td width=""70%"">Similarity and Diversity in Chemical Design</td>
+<td width=""10%"" align=""right"">463</td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">Epilogue</td>
+<td width=""10%"" align=""right"">497</td>
+</tr>
+<tr>
+<td width=""20%"">App. A</td>
+<td width=""70%"">Molecular Modeling Sample Syllabus</td>
+<td width=""10%"" align=""right"">499</td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">App. B: Article Reading List</td>
+<td width=""10%"" align=""right"">501</td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">App. C: Supplementary Course Texts</td>
+<td width=""10%"" align=""right"">505</td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">App. D: Homework Assignments</td>
+<td width=""10%"" align=""right"">511</td>
+</tr>
+<tr>
+<td width=""20%""></td>
+<td width=""70%"">Index</td>
+<td width=""10%"" align=""right"">621</td>
+</tr>
+</table>
+
+</div>
+              
+    </div>"
