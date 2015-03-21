@@ -1,0 +1,19 @@
+<div class = "ui inverted menu">
+	<div class = "ui left floated item"> {{#link-to 'index'}} Cumulus {{/link-to}} </div>
+	<div class = "ui right floated item"> Right menu </div>
+
+	<form {{action "search" query on="submit"}} class="ui item centered form" style="width: 50%">
+		<div class="ui small left icon input">
+		  <i class="search icon"></i>
+		  {{input class="ui left icon" value=query}}	
+		</div>
+	</form>
+
+</div>
+
+
+<div class = "ui centered page grid">
+<div class = "sixteen wide column">
+{{outlet}}
+</div>
+</div>
