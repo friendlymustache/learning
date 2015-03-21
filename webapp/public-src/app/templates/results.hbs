@@ -1,0 +1,18 @@
+
+<div class="ui segment">
+	<div class="ui list">
+		{{#each topic in model}}
+			{{#link-to 'topic' topic class="item"}} {{topic.name}} {{/link-to}}
+		{{/each}}
+	</div>
+
+	{{#if noResults}}
+		<div class="ui message"> No results </div>
+	{{/if}}
+</div>
+
+
+
+<div>
+{{outlet}}
+</div>
