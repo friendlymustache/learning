@@ -11,18 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150321060631) do
+ActiveRecord::Schema.define(version: 20150322090044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "edges", id: false, force: :cascade do |t|
-    t.integer "topic_id"
+    t.integer "postreq_id"
     t.integer "prereq_id"
   end
 
+  add_index "edges", ["postreq_id"], name: "index_edges_on_postreq_id", using: :btree
   add_index "edges", ["prereq_id"], name: "index_edges_on_prereq_id", using: :btree
-  add_index "edges", ["topic_id"], name: "index_edges_on_topic_id", using: :btree
+
+  create_table "link_edges", id: false, force: :cascade do |t|
+    t.integer  "topic_id"
+    t.integer  "link_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string   "url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "title"
+  end
+
+  create_table "prereqs", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "topics", force: :cascade do |t|
     t.string   "name"
