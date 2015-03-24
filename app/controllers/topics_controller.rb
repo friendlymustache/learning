@@ -9,15 +9,13 @@ class TopicsController < ApplicationController
 		end
 	end
 
+	def show
+		render json: Topic.find_by_name(params[:id])
+	end
+
 	def index
 		if params['name'] != nil
-			# Use limit field to specify whether we want one or many records in response
-			if params['limit'] != nil
-				render json: Topic.find_by_name(params['name'])
-			else
-				render json: Topic.where("name ILIKE ?", "%#{params['name']}%")
-			end
-
+			render json: Topic.where("name ILIKE ?", "%#{params[:name]}%")
 		else
 			render json: Topic.all
 		end
