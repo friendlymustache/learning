@@ -9190,3 +9190,90 @@ Processing by TopicsController#index as HTML
   [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 8]]
   [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 8]]
 Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-24 13:35:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (1.4ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mEdge Load (0.7ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 1]]
+  [1m[35mLink Load (1.8ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 1]]
+  [1m[36mEdge Load (0.6ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 2]]
+  [1m[35mLink Load (0.7ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 2]]
+  [1m[36mEdge Load (0.5ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 3]]
+  [1m[35mLink Load (0.7ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 3]]
+  [1m[36mEdge Load (0.5ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 4]]
+  [1m[35mLink Load (0.8ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 4]]
+  [1m[36mEdge Load (0.5ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 5]]
+  [1m[35mLink Load (1.5ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 5]]
+  [1m[36mEdge Load (0.5ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 7]]
+  [1m[35mLink Load (1.6ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 7]]
+  [1m[36mEdge Load (0.3ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 8]]
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 8]]
+Completed 200 OK in 118ms (Views: 79.0ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-24 13:35:50 -0700
+Processing by TopicsController#index as HTML
+  [1m[36mTopic Load (0.9ms)[0m  [1mSELECT "topics".* FROM "topics"[0m
+  [1m[35mEdge Load (0.4ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 1]]
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 1]]
+  [1m[35mEdge Load (0.3ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 2]]
+  [1m[36mLink Load (0.2ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 2]]
+  [1m[35mEdge Load (0.2ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 3]]
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 3]]
+  [1m[35mEdge Load (0.3ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 4]]
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 4]]
+  [1m[35mEdge Load (0.3ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 5]]
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 5]]
+  [1m[35mEdge Load (0.3ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 7]]
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 7]]
+  [1m[35mEdge Load (0.4ms)[0m  SELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1  [["topic_id", 8]]
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1[0m  [["topic_id", 8]]
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-24 13:35:51 -0700
+Processing by TopicsController#index as HTML
+  [1m[35mTopic Load (0.8ms)[0m  SELECT "topics".* FROM "topics"
+  [1m[36mEdge Load (0.2ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 1]]
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 1]]
+  [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 2]]
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 2]]
+  [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 3]]
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 3]]
+  [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 4]]
+  [1m[35mLink Load (0.2ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 4]]
+  [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 5]]
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 5]]
+  [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 7]]
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 7]]
+  [1m[36mEdge Load (0.1ms)[0m  [1mSELECT "edges".* FROM "edges" WHERE "edges"."topic_id" = $1[0m  [["topic_id", 8]]
+  [1m[35mLink Load (0.1ms)[0m  SELECT "links".* FROM "links" INNER JOIN "link_edges" ON "links"."id" = "link_edges"."link_id" WHERE "link_edges"."topic_id" = $1  [["topic_id", 8]]
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 2.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (3.3ms)[0m  [1mINSERT INTO "topics" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Algorithms"], ["created_at", "2015-03-24 20:53:16.562035"], ["updated_at", "2015-03-24 20:53:16.562035"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "topics" ("ancestry", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "9"], ["name", "Mathematical Foundations"], ["created_at", "2015-03-24 20:53:16.574445"], ["updated_at", "2015-03-24 20:53:16.574445"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "topics" ("ancestry", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["ancestry", "9"], ["name", "Dynamic Programming"], ["created_at", "2015-03-24 20:53:16.578491"], ["updated_at", "2015-03-24 20:53:16.578491"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "topics" ("ancestry", "name", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["ancestry", "9"], ["name", "Greedy Algorithms"], ["created_at", "2015-03-24 20:53:16.581513"], ["updated_at", "2015-03-24 20:53:16.581513"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "topics" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Algebra"], ["created_at", "2015-03-24 20:53:16.583955"], ["updated_at", "2015-03-24 20:53:16.583955"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "topics" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Addition"], ["created_at", "2015-03-24 20:53:16.586274"], ["updated_at", "2015-03-24 20:53:16.586274"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (8.6ms)[0m  [1mINSERT INTO "edges" ("prereq_id", "topic_id") VALUES ($1, $2) RETURNING "id"[0m  [["prereq_id", 14], ["topic_id", 13]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mTopic Load (0.8ms)[0m  [1mSELECT  "topics".* FROM "topics"  ORDER BY "topics"."id" DESC LIMIT 1[0m
+  [1m[35mTopic Load (0.6ms)[0m  SELECT "topics".* FROM "topics" INNER JOIN "edges" ON "topics"."id" = "edges"."prereq_id" WHERE "edges"."topic_id" = $1  [["topic_id", 14]]
+  [1m[36mTopic Load (1.6ms)[0m  [1mSELECT  "topics".* FROM "topics" WHERE "topics"."name" = $1 LIMIT 1[0m  [["name", "Algebra"]]
+  [1m[35mTopic Load (0.7ms)[0m  SELECT "topics".* FROM "topics" INNER JOIN "edges" ON "topics"."id" = "edges"."prereq_id" WHERE "edges"."topic_id" = $1  [["topic_id", 13]]

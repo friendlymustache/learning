@@ -8,3 +8,7 @@
 
 root = Topic.create(name: 'Algorithms')
 root.children.create([{name: 'Mathematical Foundations'}, {name: 'Dynamic Programming'}, {name: 'Greedy Algorithms'}])
+
+algebra = Topic.create(name: 'Algebra')
+addition = Topic.create(name: 'Addition')
+algebra.add_prereq(addition)
