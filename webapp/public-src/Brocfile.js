@@ -19,5 +19,6 @@ var app = new EmberApp();
 
 app.import("bower_components/semantic-ui/dist/semantic.min.css");
 app.import("bower_components/semantic-ui/dist/semantic.min.js");
-
+app.import("bower_components/typeahead.js/dist/typeahead.min.js");
+app.import("bower_components/d3/d3.min.js");
 module.exports = app.toTree();

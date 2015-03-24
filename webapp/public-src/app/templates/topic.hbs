@@ -1,9 +1,8 @@
-<ul>
 
-</ul>
+<div class="ui centered header"> {{name}} </div>
 
-
-
-<div>
-{{outlet}}
+<div class="ui link list">
+	{{#each link in links}}
+			<a target="_blank" {{bind-attr href="link.url"}}>{{link.title}}</a>
+	{{/each}}
 </div>
