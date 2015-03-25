@@ -15,7 +15,8 @@ class TopicsController < ApplicationController
 
 	def index
 		if params['name'] != nil
-			render json: Topic.where("name ILIKE ?", "%#{params[:name]}%")
+			render json: Topic.where("name ILIKE ? AND ancestry IS NULL",
+			 "%#{params[:name]}%")
 		else
 			render json: Topic.all
 		end

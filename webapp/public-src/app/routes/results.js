@@ -21,10 +21,9 @@ export default Ember.Route.extend({
 		var links = extraAttrs.link;
 		var edges = extraAttrs.edge;
 		var topics = extraAttrs.primary;
+		controller.set('nodes_exist', (topics.length != 0));
 
-		this._super(controller, topics);
-
-
+		this._super(controller, topics);		
 		controller.set('graph_nodes', topics);
 		controller.set('graph_edges', edges);
 	}

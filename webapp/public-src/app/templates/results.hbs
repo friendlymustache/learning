@@ -1,28 +1,11 @@
-
 <div class="ui segment">
-	<div class="ui list">
-		{{#each topic in model}}
-			{{#link-to 'topic' topic class="item"}} {{topic.name}}, id: {{topic.id}} {{/link-to}}
-
-			{{#each edge in topic.edges}}
-				<div> Edge: {{edge.id}}, starting at {{edge.prereq_id}} ending at {{edge.topic.id}} </div>
-			{{/each}}
-		{{/each}}
-	</div>
-
-	{{#if noResults}}
-		<div class="ui message"> No results </div>
-	{{/if}}
+{{#if nodes_exist}}
+	<div class="ui header"> Results </div>
+	{{view "topic-graph" nodes=graph_nodes edges=graph_edges}} 
+{{else}}
+	<div class="ui header"> No results </div>
+{{/if}}
 </div>
-
-<div class="ui segment">
-<div class="ui header"> Yo </div>
-
-{{view "topic-graph" nodes=graph_nodes edges=graph_edges}} 
-
-</div>
-
-
 
 <div>
 {{outlet}}
