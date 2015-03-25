@@ -9,6 +9,7 @@ __author__ = 'Vishal'
 
 import urllib2
 import sys
+import json
 
 if len(sys.argv) == 1:
     print "Usage: python KhanScraper.py searchterm"
@@ -52,8 +53,12 @@ for x in videoLinks:
         if y.startswith("        <meta name=\"title\" content"):
             tempOut = y.split("\"")[3]
         if y.startswith("        <link rel=\"video_src"):
-            output.append((tempOut, y.split("\"")[3]))
+            tOut = {}
+            tOut["name"] = tempOut
+            tOut["url"] = y.split("\"")[3]
+            output.append(tOut)
+            #output[tempOut] = y.split("\"")[3]
+            #output.append((tempOut, y.split("\"")[3]))
             break
 
-for x in output:
-    print x
+print json.dumps(output, sort_keys=True, indent=4, separators=(',', ': '))
