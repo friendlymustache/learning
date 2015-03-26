@@ -151,7 +151,7 @@ export default Ember.View.extend({
 
   updateGraph : function() {
     var nodes = this.getNodes();
-
+    this.clearGraph();
     if (nodes.length > 0) {
       this.drawGraph(this.getNodes(), this.getEdges(), this);    
     }

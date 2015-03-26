@@ -15,6 +15,10 @@ task :deploy, :env, :remote do |t, args|
 
   sh 'git add -A'
   sh 'git commit -m "Compile for deployment"'
+  sh 'cd ..'
 
-  sh "git push #{args[:remote]} head:master"
+  # From project root directory (not the webapp folder), 
+  # this worked: sudo git subtree push --prefix=webapp heroku master
+  sh "git subtree push --prefix webapp #{args[:remote]} head:master"
+
 end

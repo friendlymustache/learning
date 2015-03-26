@@ -1547,7 +1547,7 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
 
     updateGraph: (function () {
       var nodes = this.getNodes();
-
+      this.clearGraph();
       if (nodes.length > 0) {
         this.drawGraph(this.getNodes(), this.getEdges(), this);
       }
@@ -1588,7 +1588,7 @@ catch(err) {
 if (runningTests) {
   require("learning/tests/test-helper");
 } else {
-  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.5cea0b37"});
+  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.3e31f9ed"});
 }
 
 /* jshint ignore:end */
