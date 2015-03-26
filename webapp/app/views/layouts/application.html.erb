@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Learning</title>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Learning</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%= yield %>
+    
+<meta name="learning/config/environment" content="%7B%22modulePrefix%22%3A%22learning%22%2C%22environment%22%3A%22development%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22hash%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22learning%22%2C%22version%22%3A%220.0.0.5cea0b37%22%7D%2C%22exportApplicationGlobal%22%3Atrue%7D" />
 
-</body>
+    <link rel="stylesheet" href="ember-assets/vendor.css">
+    <link rel="stylesheet" href="ember-assets/learning.css">
+
+    
+  <%= csrf_meta_tags %></head>
+  <body><%= yield %>
+    
+
+    <script src="ember-assets/vendor.js"></script>
+    <script src="ember-assets/learning.js"></script>
+
+    
+  </body>
 </html>

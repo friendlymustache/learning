@@ -6,18 +6,15 @@ require File.expand_path('../config/application', __FILE__)
 Rails.application.load_tasks
 
 
-task :deploy do
-  sh 'git checkout master'
-  # sh 'git merge rails-served-html -m "Merging master for deployment"'
-  sh 'rm -rf public/assets'
-  sh 'cd public-src && BROCCOLI_ENV=production broccoli build ../backend/public/assets && cd ..'
+task :deploy, :env, :remote do |t, args|
+  # We don't have separate branches for production/development 
+  # yet, so we comment this out
+  # sh "git checkout #{args[:env]}"
+  # sh 'git merge master -m "Merging for deployment"'
+  sh './build.sh'
 
-  unless `git status` =~ /nothing to commit, working directory clean/
-    sh 'git add -A'
-    sh 'git commit -m "Asset compilation for deployment"'
-  end
+  sh 'git add -A'
+  sh 'git commit -m "Compile for deployment"'
 
-  sh 'git push heroku master'
-
-  sh 'git checkout -'
+  sh "git push #{args[:remote]} head:master"
 end
