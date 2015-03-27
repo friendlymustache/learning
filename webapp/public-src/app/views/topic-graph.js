@@ -2,8 +2,8 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
   attributeBindings: ['style'],
-  style: "width: 960px; height: 500px;",
   classNames: ["topic-graph"],
+  svgClassName : "topic-graph",
 
   setDimensions : function() {
     
@@ -34,22 +34,27 @@ export default Ember.View.extend({
     this.set('style', style);
   },
 
+
   isArray : function(obj) {
     return Object.prototype.toString.call( obj ) === '[object Array]';
   },
+
 
   validateEdge : function(edge) {
     return (edge.source !== undefined && edge.target !== undefined 
       && edge.source !== null && edge.target !== null);
   },
 
+
   getNodes : function() {
     return this.get('nodes');
   },
 
+
   getNode : function(id) {
     return this.getNodes().filterBy('id', id)[0];
   },
+
 
   getEdges : function() {
     var edges = this.get('edges');
@@ -66,9 +71,11 @@ export default Ember.View.extend({
     return output;
   },
 
+
   getClassName : function(name) {
     return "." + name;
   },
+
 
   clearGraph : function() {
     var svg = this.get('svg');
@@ -76,77 +83,75 @@ export default Ember.View.extend({
       svg.selectAll("*").remove();
     }
   },
+
   
   drawGraph : function(nodes, edges, context) {
-    var width = context.get('width'),
-        height = context.get('height');
-    var color = d3.scale.category20();
-    var svgClassName = 'root-svg';
-
-    var force = d3.layout.force()
-        .charge(-200)
-        .gravity(0.05 * Math.log(nodes.length))
-        .linkDistance(30)
-        .size([width, height]);
-
+    var width = this.get('width'),
+        height = this.get('height');
+    var context = this;
 
     var svg = this.get('svg');
     if (svg === undefined) {
-      svg = d3.select(".topic-graph").append("svg")
-          .attr("width", width)
-          .attr("height", height)
-          .attr('class', svgClassName);
+      var svgClass = this.getClassName(this.get('svgClassName'));      
+      svg = d3.select(svgClass).append("svg")
+              .attr("width", width)
+              .attr("height", height);
       this.set('svg', svg);
-    }
+    }        
 
-    force
-        .nodes(nodes)
-        .links(edges)
-        .start();
-    console.log("Started animation");
+    var force = d3.layout.force()
+        .gravity(.05)
+        .distance(100)
+        .charge(-100)
+        .size([width, height]);
 
-
-    var gnodes = svg.selectAll('g.gnode')
-      .data(nodes)
-      .enter()
-      .append('g')
-      .classed('gnode', true);  
-    console.log("Added groups");
-
+    force.nodes(nodes).links(edges).start();
 
     var link = svg.selectAll(".link")
         .data(edges)
       .enter().append("line")
-        .attr("class", "link")
-        .style("stroke-width", function(d) { return 3.0; /* Math.sqrt(d.value); */ });
+        .attr("class", "link");
 
-    console.log("Added links");      
-    var node = gnodes.append("circle")
+    var node = svg.selectAll(".node")
+        .data(nodes)
+      .enter().append("g")
         .attr("class", "node")
-        .attr("r", 5)
-        //.style("fill", function(d) { return color(d.group); })
         .call(force.drag);
 
-    console.log("Added circles");        
+    /*
+    node.append("image")
+        .attr("xlink:href", "https://github.com/favicon.ico")
+        .attr("x", -8)
+        .attr("y", -8)
+        .attr("width", 16)
+        .attr("height", 16);
+    */
 
-    var labels = gnodes.append("text")
-        .text(function(d) { return d.name; });
+    node.append("circle")
+        .attr("x", -8)
+        .attr("y", -8)    
+        .attr("class", "node")
+        .attr("r", 5)       
+        .on("dblclick", function(d) { context.goToResult(d); });        
 
-    console.log("Added labels");        
-      
+    node.append("text")
+        .attr("dx", 12)
+        .attr("dy", ".35em")
+        .text(function(d) { return d.name })
+        .on("dblclick", function(d) { context.goToResult(d); });
+
     force.on("tick", function() {
       link.attr("x1", function(d) { return d.source.x; })
           .attr("y1", function(d) { return d.source.y; })
           .attr("x2", function(d) { return d.target.x; })
           .attr("y2", function(d) { return d.target.y; });
-      
-         
-      gnodes.attr("transform", function(d) { 
-          return 'translate(' + [d.x, d.y] + ')'; 
-      });
-      
-        
+
+      node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
     });
+  },
+
+  goToResult : function(topic) {
+    this.get('controller').send('goToResult', topic);
   },
 
   updateGraph : function() {

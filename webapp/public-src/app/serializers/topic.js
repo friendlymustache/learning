@@ -42,12 +42,14 @@ export default DS.RESTSerializer.extend({
 	    }
 
 	    // return primaryArray;
-	    return [{id: 300, name: "Topic.js serializer", link_ids : [], edge_ids: [], extraAttrs: outputArrays}];
+	    return [{id: -1, link_ids : [], edge_ids: [], extraAttrs: outputArrays}];
 	  },
 
+	extractSingle : function(store, primaryType, rawPayload, id) {
+		return this._super(store, primaryType, rawPayload, id);
+	},
 
 	normalizePayload: function(payload) {
-
 		return this._super(payload);
 
 		/* Add IDs to edges. Commented out for now, in favor

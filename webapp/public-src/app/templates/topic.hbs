@@ -5,6 +5,10 @@
 	{{#each link in links}}
 			<a target="_blank" {{bind-attr href="link.url"}}>{{link.title}}</a>
 	{{/each}}
+
+	{{#each topic in children}}
+		{{#link-to 'topic' topic}} {{topic.name}} {{/link-to}}
+	{{/each}}
 </div>
 
 {{outlet}}
