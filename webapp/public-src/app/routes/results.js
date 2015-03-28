@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 	},
 
 	setupController : function(controller, model) {
-		controller.set('nodes_exist', (model.content.length != 0));
+		controller.set('nodes_exist', (model.content.length !== 0));
 		this._super(controller, model);
 	}
 });

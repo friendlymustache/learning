@@ -16,7 +16,6 @@ export default DS.Model.extend({
   // prereqs : DS.hasMany('topic'),
   prereqs : (function() {
     return this.get('edges').map(function(data) {
-      debugger;
       return this.find(data.get('prereq_id'));
     }, this);
   }).property('edges.@each'),

@@ -41,8 +41,8 @@ export default Ember.View.extend({
 
 
   validateEdge : function(edge) {
-    return (edge.source !== undefined && edge.target !== undefined 
-      && edge.source !== null && edge.target !== null);
+    return (edge.source !== undefined && edge.target !== undefined &&
+      edge.source !== null && edge.target !== null);
   },
 
 
@@ -69,7 +69,7 @@ export default Ember.View.extend({
 
   getIndexWithProperty : function(array, prop, value) {
     for(var i = 0, elem; elem = array[i]; i++) {
-      if (elem[prop] == value) {
+      if (elem[prop] === value) {
         return i;
       }
     }
@@ -126,7 +126,6 @@ export default Ember.View.extend({
   drawGraph : function(nodes, edges, context) {
     var width = this.get('width'),
         height = this.get('height');
-    var context = this;
 
     var svg = this.get('svg');
     if (svg === undefined) {
@@ -138,7 +137,7 @@ export default Ember.View.extend({
     }        
 
     var force = d3.layout.force()
-        .gravity(.05)
+        .gravity(0.05)
         .distance(100)
         .charge(-100)
         .size([width, height]);
@@ -166,7 +165,7 @@ export default Ember.View.extend({
     node.append("text")
         .attr("dx", 12)
         .attr("dy", ".35em")
-        .text(function(d) { return d.name })
+        .text(function(d) { return d.name; })
         .on("dblclick", function(d) { context.goToResult(d); });
 
     force.on("tick", function() {

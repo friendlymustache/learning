@@ -4,7 +4,6 @@ export default Ember.Route.extend({
 	model: function(params) {
 		return this.store.find('topic', params.name);
 	},
-	
 
 	getParentsList : function(model) {
 		var parent = model.get('parent');
@@ -13,14 +12,12 @@ export default Ember.Route.extend({
 			return [];
 		}
 		var parentRecord = this.store.getById('parent', parentId);				
-		return [parentRecord].concat(this.getParentsList(parentRecord));
+		return this.getParentsList(parentRecord).concat([parentRecord]);
 	},
 
 	setupController : function(controller, model) {
 		var parentsList = this.getParentsList(model);
 		this._super(controller, model);
-		controller
-		.set('parents', parentsList);
-		debugger;
+		controller.set('parents', parentsList);
 	},
 });

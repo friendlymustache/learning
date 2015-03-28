@@ -165,7 +165,6 @@ define('learning/models/topic', ['exports', 'ember-data'], function (exports, DS
     // prereqs : DS.hasMany('topic'),
     prereqs: (function () {
       return this.get("edges").map(function (data) {
-        debugger;
         return this.find(data.get("prereq_id"));
       }, this);
     }).property("edges.@each") });
@@ -204,7 +203,7 @@ define('learning/routes/results', ['exports', 'ember'], function (exports, Ember
 		},
 
 		setupController: function setupController(controller, model) {
-			controller.set("nodes_exist", model.content.length != 0);
+			controller.set("nodes_exist", model.content.length !== 0);
 			this._super(controller, model);
 		}
 	});
@@ -226,14 +225,13 @@ define('learning/routes/topic', ['exports', 'ember'], function (exports, Ember) 
 				return [];
 			}
 			var parentRecord = this.store.getById("parent", parentId);
-			return [parentRecord].concat(this.getParentsList(parentRecord));
+			return this.getParentsList(parentRecord).concat([parentRecord]);
 		},
 
 		setupController: function setupController(controller, model) {
 			var parentsList = this.getParentsList(model);
 			this._super(controller, model);
 			controller.set("parents", parentsList);
-			debugger;
 		} });
 
 });
@@ -244,73 +242,13 @@ define('learning/serializers/topic', ['exports', 'ember-data'], function (export
 	exports['default'] = DS['default'].RESTSerializer.extend({
 
 		extractSingle: function extractSingle(store, primaryType, rawPayload, name) {
-			var id = undefined;
+			var id;
 			for (var topic in rawPayload.topics) {
-				if (topic.name == name) {
+				if (topic.name === name) {
 					id = topic.id;
 				}
 			}
-			return this._extractSingle(store, primaryType, rawPayload, id);
-		},
-
-		_extractSingle: function _extractSingle(store, primaryType, rawPayload, recordId) {
-
-			var forEach = Ember.ArrayPolyfills.forEach;
-			var map = Ember.ArrayPolyfills.map;
-			var camelize = Ember.String.camelize;
-
-			var payload = this.normalizePayload(rawPayload);
-			var primaryTypeName = primaryType.typeKey;
-			var primaryRecord;
-
-			for (var prop in payload) {
-				var typeName = this.typeForRoot(prop);
-
-				if (!store.modelFactoryFor(typeName)) {
-					Ember.warn(this.warnMessageNoModelForKey(prop, typeName), false);
-					continue;
-				}
-				var type = store.modelFor(typeName);
-				var isPrimary = type.typeKey === primaryTypeName;
-				var value = payload[prop];
-
-				if (value === null) {
-					continue;
-				}
-
-				// legacy support for singular resources
-				if (isPrimary && Ember.typeOf(value) !== "array") {
-					primaryRecord = this.normalize(primaryType, value, prop);
-					continue;
-				}
-
-				/*jshint loopfunc:true*/
-				forEach.call(value, function (hash) {
-					var typeName = this.typeForRoot(prop);
-					var type = store.modelFor(typeName);
-					var typeSerializer = store.serializerFor(type);
-
-					hash = typeSerializer.normalize(type, hash, prop);
-
-					var isFirstCreatedRecord = isPrimary && !recordId && !primaryRecord;
-					var isUpdatedRecord = isPrimary && coerceId(hash.id) === recordId;
-
-					// debugger;
-					// find the primary record.
-					//
-					// It's either:
-					// * the record with the same ID as the original request
-					// * in the case of a newly created record that didn't have an ID, the first
-					//   record in the Array
-					if (isFirstCreatedRecord || isUpdatedRecord) {
-						primaryRecord = hash;
-					} else {
-						store.push(typeName, hash);
-					}
-				}, this);
-			}
-
-			return primaryRecord;
+			return this._super(store, primaryType, rawPayload, id);
 		} });
 
 });
@@ -739,52 +677,6 @@ define('learning/templates/topic', ['exports'], function (exports) {
       };
     }());
     var child1 = (function() {
-      return {
-        isHTMLBars: true,
-        blockParams: 0,
-        cachedFragment: null,
-        hasRendered: false,
-        build: function build(dom) {
-          var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("			");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createElement("a");
-          dom.setAttribute(el1,"target","_blank");
-          dom.setAttribute(el1,"class","item link");
-          dom.appendChild(el0, el1);
-          var el1 = dom.createTextNode("\n");
-          dom.appendChild(el0, el1);
-          return el0;
-        },
-        render: function render(context, env, contextualElement) {
-          var dom = env.dom;
-          var hooks = env.hooks, element = hooks.element, content = hooks.content;
-          dom.detectNamespace(contextualElement);
-          var fragment;
-          if (env.useFragmentCache && dom.canClone) {
-            if (this.cachedFragment === null) {
-              fragment = this.build(dom);
-              if (this.hasRendered) {
-                this.cachedFragment = fragment;
-              } else {
-                this.hasRendered = true;
-              }
-            }
-            if (this.cachedFragment) {
-              fragment = dom.cloneNode(this.cachedFragment, true);
-            }
-          } else {
-            fragment = this.build(dom);
-          }
-          var element0 = dom.childAt(fragment, [1]);
-          var morph0 = dom.createMorphAt(element0,-1,-1);
-          element(env, element0, context, "bind-attr", [], {"href": "link.url"});
-          content(env, morph0, context, "link.title");
-          return fragment;
-        }
-      };
-    }());
-    var child2 = (function() {
       var child0 = (function() {
         return {
           isHTMLBars: true,
@@ -793,15 +685,19 @@ define('learning/templates/topic', ['exports'], function (exports) {
           hasRendered: false,
           build: function build(dom) {
             var el0 = dom.createDocumentFragment();
-            var el1 = dom.createTextNode(" ");
+            var el1 = dom.createTextNode("				");
             dom.appendChild(el0, el1);
-            var el1 = dom.createTextNode(" ");
+            var el1 = dom.createElement("a");
+            dom.setAttribute(el1,"target","_blank");
+            dom.setAttribute(el1,"class","item link");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
             dom.appendChild(el0, el1);
             return el0;
           },
           render: function render(context, env, contextualElement) {
             var dom = env.dom;
-            var hooks = env.hooks, content = hooks.content;
+            var hooks = env.hooks, element = hooks.element, content = hooks.content;
             dom.detectNamespace(contextualElement);
             var fragment;
             if (env.useFragmentCache && dom.canClone) {
@@ -819,8 +715,10 @@ define('learning/templates/topic', ['exports'], function (exports) {
             } else {
               fragment = this.build(dom);
             }
-            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-            content(env, morph0, context, "topic.name");
+            var element0 = dom.childAt(fragment, [1]);
+            var morph0 = dom.createMorphAt(element0,-1,-1);
+            element(env, element0, context, "bind-attr", [], {"href": "link.url"});
+            content(env, morph0, context, "link.title");
             return fragment;
           }
         };
@@ -832,9 +730,16 @@ define('learning/templates/topic', ['exports'], function (exports) {
         hasRendered: false,
         build: function build(dom) {
           var el0 = dom.createDocumentFragment();
-          var el1 = dom.createTextNode("		");
+          var el1 = dom.createTextNode("	    ");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","ui small header");
+          var el2 = dom.createTextNode(" Links ");
+          dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("");
           dom.appendChild(el0, el1);
           return el0;
         },
@@ -858,8 +763,137 @@ define('learning/templates/topic', ['exports'], function (exports) {
           } else {
             fragment = this.build(dom);
           }
-          var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
-          block(env, morph0, context, "link-to", ["topic", get(env, context, "topic.name")], {"class": "item"}, child0, null);
+          if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
+          var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+          block(env, morph0, context, "each", [get(env, context, "links")], {"keyword": "link"}, child0, null);
+          return fragment;
+        }
+      };
+    }());
+    var child2 = (function() {
+      var child0 = (function() {
+        var child0 = (function() {
+          return {
+            isHTMLBars: true,
+            blockParams: 0,
+            cachedFragment: null,
+            hasRendered: false,
+            build: function build(dom) {
+              var el0 = dom.createDocumentFragment();
+              var el1 = dom.createTextNode(" ");
+              dom.appendChild(el0, el1);
+              var el1 = dom.createTextNode(" ");
+              dom.appendChild(el0, el1);
+              return el0;
+            },
+            render: function render(context, env, contextualElement) {
+              var dom = env.dom;
+              var hooks = env.hooks, content = hooks.content;
+              dom.detectNamespace(contextualElement);
+              var fragment;
+              if (env.useFragmentCache && dom.canClone) {
+                if (this.cachedFragment === null) {
+                  fragment = this.build(dom);
+                  if (this.hasRendered) {
+                    this.cachedFragment = fragment;
+                  } else {
+                    this.hasRendered = true;
+                  }
+                }
+                if (this.cachedFragment) {
+                  fragment = dom.cloneNode(this.cachedFragment, true);
+                }
+              } else {
+                fragment = this.build(dom);
+              }
+              var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+              content(env, morph0, context, "topic.name");
+              return fragment;
+            }
+          };
+        }());
+        return {
+          isHTMLBars: true,
+          blockParams: 0,
+          cachedFragment: null,
+          hasRendered: false,
+          build: function build(dom) {
+            var el0 = dom.createDocumentFragment();
+            var el1 = dom.createTextNode("			");
+            dom.appendChild(el0, el1);
+            var el1 = dom.createTextNode("\n");
+            dom.appendChild(el0, el1);
+            return el0;
+          },
+          render: function render(context, env, contextualElement) {
+            var dom = env.dom;
+            var hooks = env.hooks, get = hooks.get, block = hooks.block;
+            dom.detectNamespace(contextualElement);
+            var fragment;
+            if (env.useFragmentCache && dom.canClone) {
+              if (this.cachedFragment === null) {
+                fragment = this.build(dom);
+                if (this.hasRendered) {
+                  this.cachedFragment = fragment;
+                } else {
+                  this.hasRendered = true;
+                }
+              }
+              if (this.cachedFragment) {
+                fragment = dom.cloneNode(this.cachedFragment, true);
+              }
+            } else {
+              fragment = this.build(dom);
+            }
+            var morph0 = dom.createMorphAt(fragment,0,1,contextualElement);
+            block(env, morph0, context, "link-to", ["topic", get(env, context, "topic.name")], {"class": "item"}, child0, null);
+            return fragment;
+          }
+        };
+      }());
+      return {
+        isHTMLBars: true,
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("		");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createElement("div");
+          dom.setAttribute(el1,"class","ui small header");
+          var el2 = dom.createTextNode(" Subtopics ");
+          dom.appendChild(el1, el2);
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("\n");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode("");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, block = hooks.block;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          if (this.cachedFragment) { dom.repairClonedNode(fragment,[3]); }
+          var morph0 = dom.createMorphAt(fragment,2,3,contextualElement);
+          block(env, morph0, context, "each", [get(env, context, "children")], {"keyword": "topic"}, child0, null);
           return fragment;
         }
       };
@@ -880,7 +914,7 @@ define('learning/templates/topic', ['exports'], function (exports) {
         var el2 = dom.createTextNode(" ");
         dom.appendChild(el1, el2);
         dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n\n");
+        var el1 = dom.createTextNode("\n\n\n");
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("div");
         dom.setAttribute(el1,"class","ui breadcrumb");
@@ -941,8 +975,8 @@ define('learning/templates/topic', ['exports'], function (exports) {
         content(env, morph0, context, "name");
         block(env, morph1, context, "each", [get(env, context, "parents")], {"keyword": "par"}, child0, null);
         content(env, morph2, context, "name");
-        block(env, morph3, context, "each", [get(env, context, "links")], {"keyword": "link"}, child1, null);
-        block(env, morph4, context, "each", [get(env, context, "children")], {"keyword": "topic"}, child2, null);
+        block(env, morph3, context, "if", [get(env, context, "links")], {}, child1, null);
+        block(env, morph4, context, "if", [get(env, context, "children")], {}, child2, null);
         content(env, morph5, context, "outlet");
         return fragment;
       }
@@ -1123,7 +1157,7 @@ define('learning/tests/models/topic.jshint', function () {
 
   module('JSHint - models');
   test('models/topic.js should pass jshint', function() { 
-    ok(false, 'models/topic.js should pass jshint.\nmodels/topic.js: line 19, col 7, Forgotten \'debugger\' statement?\n\n1 error'); 
+    ok(true, 'models/topic.js should pass jshint.'); 
   });
 
 });
@@ -1153,7 +1187,7 @@ define('learning/tests/routes/results.jshint', function () {
 
   module('JSHint - routes');
   test('routes/results.js should pass jshint', function() { 
-    ok(false, 'routes/results.js should pass jshint.\nroutes/results.js: line 9, col 63, Expected \'!==\' and instead saw \'!=\'.\n\n1 error'); 
+    ok(true, 'routes/results.js should pass jshint.'); 
   });
 
 });
@@ -1163,7 +1197,7 @@ define('learning/tests/routes/topic.jshint', function () {
 
   module('JSHint - routes');
   test('routes/topic.js should pass jshint', function() { 
-    ok(false, 'routes/topic.js should pass jshint.\nroutes/topic.js: line 24, col 9, Forgotten \'debugger\' statement?\n\n1 error'); 
+    ok(true, 'routes/topic.js should pass jshint.'); 
   });
 
 });
@@ -1173,7 +1207,7 @@ define('learning/tests/serializers/topic.jshint', function () {
 
   module('JSHint - serializers');
   test('serializers/topic.js should pass jshint', function() { 
-    ok(false, 'serializers/topic.js should pass jshint.\nserializers/topic.js: line 6, col 13, It\'s not necessary to initialize \'id\' to \'undefined\'.\nserializers/topic.js: line 8, col 30, Expected \'===\' and instead saw \'==\'.\nserializers/topic.js: line 17, col 23, \'Ember\' is not defined.\nserializers/topic.js: line 18, col 19, \'Ember\' is not defined.\nserializers/topic.js: line 19, col 24, \'Ember\' is not defined.\nserializers/topic.js: line 29, col 13, \'Ember\' is not defined.\nserializers/topic.js: line 41, col 28, \'Ember\' is not defined.\nserializers/topic.js: line 55, col 48, \'coerceId\' is not defined.\nserializers/topic.js: line 18, col 13, \'map\' is defined but never used.\nserializers/topic.js: line 19, col 13, \'camelize\' is defined but never used.\n\n10 errors'); 
+    ok(true, 'serializers/topic.js should pass jshint.'); 
   });
 
 });
@@ -1686,7 +1720,7 @@ define('learning/tests/views/topic-graph.jshint', function () {
 
   module('JSHint - views');
   test('views/topic-graph.js should pass jshint', function() { 
-    ok(false, 'views/topic-graph.js should pass jshint.\nviews/topic-graph.js: line 45, col 7, Bad line breaking before \'&&\'.\nviews/topic-graph.js: line 72, col 24, Expected \'===\' and instead saw \'==\'.\nviews/topic-graph.js: line 129, col 17, \'context\' is already defined.\nviews/topic-graph.js: line 141, col 21, A leading decimal point can be confused with a dot: \'.05\'.\nviews/topic-graph.js: line 169, col 42, Missing semicolon.\nviews/topic-graph.js: line 134, col 13, \'d3\' is not defined.\nviews/topic-graph.js: line 140, col 17, \'d3\' is not defined.\n\n7 errors'); 
+    ok(false, 'views/topic-graph.js should pass jshint.\nviews/topic-graph.js: line 133, col 13, \'d3\' is not defined.\nviews/topic-graph.js: line 139, col 17, \'d3\' is not defined.\n\n2 errors'); 
   });
 
 });
@@ -1756,7 +1790,7 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
 
     getIndexWithProperty: function getIndexWithProperty(array, prop, value) {
       for (var i = 0, elem; elem = array[i]; i++) {
-        if (elem[prop] == value) {
+        if (elem[prop] === value) {
           return i;
         }
       }
@@ -1807,7 +1841,6 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
     drawGraph: function drawGraph(nodes, edges, context) {
       var width = this.get("width"),
           height = this.get("height");
-      var context = this;
 
       var svg = this.get("svg");
       if (svg === undefined) {
@@ -1898,7 +1931,7 @@ catch(err) {
 if (runningTests) {
   require("learning/tests/test-helper");
 } else {
-  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.2bbbab51"});
+  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.8103c59e"});
 }
 
 /* jshint ignore:end */
