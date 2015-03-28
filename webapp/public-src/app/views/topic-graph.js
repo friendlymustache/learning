@@ -46,28 +46,66 @@ export default Ember.View.extend({
   },
 
 
+  _getNodes : function() {
+    return this.get('nodes').toArray();
+  },
+
   getNodes : function() {
-    return this.get('nodes');
+    var nodes = this._getNodes();
+    var output = [];
+    for (var i = 0; i < nodes.length; i++) {
+      var nodeJson = nodes[i].toJSON();
+      nodeJson.id = nodes[i].get('id');
+      output.push(nodeJson);
+    }
+    return output;
   },
 
 
   getNode : function(id) {
-    return this.getNodes().filterBy('id', id)[0];
+    var matchingNodes = this.getNodes().filterBy('id', id);
+    return matchingNodes[0];
+  },
+
+  getIndexWithProperty : function(array, prop, value) {
+    for(var i = 0, elem; elem = array[i]; i++) {
+      if (elem[prop] == value) {
+        return i;
+      }
+    }
   },
 
 
   getEdges : function() {
-    var edges = this.get('edges');
+    var nodes = this.getNodes();
+    var nodeEdges = this.get('nodes').getEach('edges');
+    var output = [];
+
+    for (var i = 0, edgeList; edgeList = nodeEdges[i]; i++) {
+      var edgeArr = edgeList.toArray();
+      for (var j = 0, edge; edge = edgeArr[j]; j++) {
+        var edgeJSON = edge.toJSON();
+        edgeJSON.source = this.getIndexWithProperty(nodes, 'id', edgeJSON.prereq_id);
+        edgeJSON.target = this.getIndexWithProperty(nodes, 'id', edgeJSON.topic);
+        delete edgeJSON['topic'];
+        delete edgeJSON['prereq_id'];
+        output.push(edgeJSON);
+      }
+    }
+
+    /*
+    var edges = [];
     var output = [];
     for(var i = 0, edge; edge = edges[i]; i++) {
-      edge.source = this.getNode(edge.prereq_id);
-      edge.target = this.getNode(edge.topic_id);
+      edge.source = this.getNode(edge.get('prereq_id'));
+      edge.target = this.getNode(edge.get('topic.id'));
 
       if (this.validateEdge(edge)) {
         output.push(edge);
       }
 
     }
+    */
     return output;
   },
 
@@ -96,7 +134,7 @@ export default Ember.View.extend({
       svg = d3.select(svgClass).append("svg")
               .attr("width", width)
               .attr("height", height);
-      this.set('svg', svg);
+      this.set('svg', svg); 
     }        
 
     var force = d3.layout.force()
@@ -117,16 +155,7 @@ export default Ember.View.extend({
       .enter().append("g")
         .attr("class", "node")
         .call(force.drag);
-
-    /*
-    node.append("image")
-        .attr("xlink:href", "https://github.com/favicon.ico")
-        .attr("x", -8)
-        .attr("y", -8)
-        .attr("width", 16)
-        .attr("height", 16);
-    */
-
+        
     node.append("circle")
         .attr("x", -8)
         .attr("y", -8)    
@@ -166,5 +195,5 @@ export default Ember.View.extend({
     this.setDimensions();    
     this.drawGraph(this.getNodes(), this.getEdges(), this);
 
-  }  	
+  }   
 });

@@ -1,7 +1,7 @@
 <div class="ui segment">
 {{#if nodes_exist}}
 	<div class="ui header"> Results (double click to go to topic page) </div>
-	{{view "topic-graph" nodes=graph_nodes edges=graph_edges}} 
+	{{view "topic-graph" nodes=model}} 
 {{else}}
 	<div class="ui header"> No results </div>
 {{/if}}

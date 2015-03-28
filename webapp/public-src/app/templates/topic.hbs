@@ -3,11 +3,11 @@
 
 <div class="ui link list">
 	{{#each link in links}}
-			<a target="_blank" {{bind-attr href="link.url"}}>{{link.title}}</a>
+			<a target="_blank" class="item" {{bind-attr href="link.url"}}>{{link.title}}</a>
 	{{/each}}
 
 	{{#each topic in children}}
-		{{#link-to 'topic' topic}} {{topic.name}} {{/link-to}}
+		{{#link-to 'topic' topic.name class="item"}} {{topic.name}} {{/link-to}}
 	{{/each}}
 </div>
 

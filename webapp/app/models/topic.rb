@@ -63,6 +63,7 @@ class Topic < ActiveRecord::Base
 		     WHERE name ILIKE #{query} AND ancestry IS NULL) as prereq_ids
 		    NATURAL JOIN 
 		    (SELECT * FROM topics) as topic_ids;
+
 		""".gsub("\n", "")
 
 		return Topic.find_by_sql(safe_sql)
