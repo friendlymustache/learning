@@ -176,12 +176,14 @@ topic_list = [
 ]
 
 
+def build_links(name, topic)
+end
+
 for topic_hash in topic_list
   name = topic_hash["name"]
   parent_name = topic_hash["parent"]
-
-  parent = Topic.find_by_name(parent_name)
   if parent != nil
-  	parent.children.create({name: name})
+  	topic = parent.children.create({name: name})
+    build_links(name, topic)    
   end
 end	

@@ -5,6 +5,12 @@ rect {
 
 .node {
   fill: #000;
+  cursor: pointer;
+
+}
+
+.node text {
+  font: 10px sans-serif;
 }
 
 .cursor {
@@ -14,5 +20,5 @@ rect {
 }
 
 .link {
-  stroke: #999;
+  stroke: #ccc;
 }
