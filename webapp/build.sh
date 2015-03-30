@@ -22,7 +22,7 @@ function boldMessage {
 #echo -e "${color}Building Ember app${reset}"
 boldMessage 4 "Building Ember app"
 cd public-src
-ember build #--environment production
+ember build --environment production
 cd ../
  
 rm -rf public/ember-assets
@@ -35,15 +35,15 @@ mv public/assets public/ember-assets
  
 printMessage 4 "Replacing references s/assets/ember-assets/ in public/index.html"
 sed -i.bck s/assets/ember-assets/ public/index.html
- 
+  
+printMessage 4 "Replacing application.html.erb's contents with index.html"
+cp public/index.html app/views/layouts/application.html.erb
+
 printMessage 4 "inserting csrf_meta_tags in head"
-sed -i.bck 's/<\/head>/<%= csrf_meta_tags %>&/' public/index.html
+sed -i.bck 's/<\/head>/<%= csrf_meta_tags %>&/' app/views/layouts/application.html.erb
  
 printMessage 4 "inserting yield in body"
-sed -i.bck 's/<body>/&<%= yield %>/' public/index.html
- 
-printMessage 4 "Replacing application.html.erb with index.html"
-mv public/index.html app/views/layouts/application.html.erb
+sed -i.bck 's/<body>/&<%= yield %>/' app/views/layouts/application.html.erb
  
 printMessage 4 "Cleaning Up"
 rm -rf public_bk/
