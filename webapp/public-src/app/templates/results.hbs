@@ -1,9 +1,14 @@
 <div class="ui segment">
 {{#if nodes_exist}}
-	<div class="ui header"> Results (double click to go to topic page) </div>
+	<div class="ui large centered header"> 
+	  <i class="small idea icon" />
+	  <div class="content">
+	  	Results 
+	  </div>
+	</div>
 	{{view "topic-graph" nodes=model}} 
 {{else}}
-	<div class="ui header"> No results </div>
+	<div class="ui centered header"> No results </div>
 {{/if}}
 </div>
 

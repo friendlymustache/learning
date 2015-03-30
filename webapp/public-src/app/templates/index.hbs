@@ -1,0 +1,22 @@
+<div class="ui center aligned segment">
+
+	<h2 class="ui icon header">
+	  <i class="teal cloud icon"></i>
+	  <div class="content">
+	    Cumulus
+	    <div class="sub header">Your one-stop learning resource.</div>
+	  </div>
+	</h2>
+
+
+	<form {{action "search" query on="submit"}} class="ui item centered form" style="width: 100%">
+		<div class="ui small left icon input">
+		  <i class="search icon"></i>
+		  {{input class="ui left icon" value=query placeholder="Search for a topic, concept, or idea (e.g. 'algorithms')"}}	
+		</div>
+	</form>
+</div>
+
+<div>
+{{outlet}}
+</div>

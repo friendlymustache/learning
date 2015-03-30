@@ -4,13 +4,15 @@ rect {
 }
 
 .node {
-  fill: #000;
-  cursor: pointer;
+  fill: #3b83c0;
+  cursor: move;
 
 }
 
 .node text {
   font: 10px sans-serif;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .cursor {
@@ -20,5 +22,20 @@ rect {
 }
 
 .link {
-  stroke: #ccc;
+  stroke: rgba(59, 131, 192, 0.2);
+}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 40%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }

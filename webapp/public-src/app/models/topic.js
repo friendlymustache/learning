@@ -3,8 +3,6 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   name: DS.attr('string'),
   links: DS.hasMany('link'),
-
-
   parent: DS.belongsTo('topic', {inverse: 'children', async: true}),
 
   // It's ok to store children using a separate model that

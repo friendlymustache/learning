@@ -1,3 +1,4 @@
+require 'json'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -176,14 +177,26 @@ topic_list = [
 ]
 
 
-def build_links(name, topic)
+def buildScrapingCommand(name)
+    return "python ../scraping/KhanScraper.py #{name}"
+end
+
+def create_links(topic)
+    puts "Getting links for topic: #{topic.name}"
+    command = buildScrapingCommand(topic.name)
+    result = JSON.parse(`#{command}`)
+    for link in result
+        topic.links.create({title: link["name"], url: link["url"]})
+    end
+
 end
 
 for topic_hash in topic_list
   name = topic_hash["name"]
   parent_name = topic_hash["parent"]
+  parent = Topic.find_by_name(parent_name)
   if parent != nil
   	topic = parent.children.create({name: name})
-    build_links(name, topic)    
+    create_links(topic)    
   end
 end	

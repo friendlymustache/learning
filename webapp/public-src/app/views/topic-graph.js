@@ -2,23 +2,28 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
   attributeBindings: ['style'],
-  classNames: ["topic-graph"],
+  classNames: ["topic-graph", "ui", "segment", "raised"],
   svgClassName : "topic-graph",
 
   setDimensions : function() {
     
+    // Build strings used to form style attribute
     var defaultWidth = 700;
     var defaultHeight = 300;
+    var widthString = "width: " + defaultWidth + "px;";
+    var heightString = "height: " + defaultHeight + "px;";
 
-    var heightString = "width: " + defaultWidth + "px; ";
-    var widthString = "height: " + defaultHeight + "px;";
-
+    // Get the passed-in width and height arguments. 
     var width = this.get('width');
     var height = this.get('height');
 
+    // If user passed in a width, use the passed-in width to construct
+    // the <style> string (see below)
     if (width !== undefined) {
-      widthString = "width: " + width + "px; ";
+      widthString = "width: " + width + "px;";
     }
+
+    // Otherwise, go with the default width
     else {
       this.set('width', defaultWidth);
     }
@@ -30,8 +35,8 @@ export default Ember.View.extend({
       this.set('height', defaultHeight);
     }
 
-    var style = widthString + heightString;
-    this.set('style', style);
+    // var style = widthString + heightString;
+    // this.set('style', style);
   },
 
 
@@ -130,9 +135,18 @@ export default Ember.View.extend({
     var svg = this.get('svg');
     if (svg === undefined) {
       var svgClass = this.getClassName(this.get('svgClassName'));      
-      svg = d3.select(svgClass).append("svg")
+      svg = d3.select(svgClass)
+             .append("div")
+             .classed("svg-container", true) // container class to make it responsive
+             .append("svg")
+             .attr("preserveAspectRatio", "xMinYMin meet")
+             .attr("viewBox", "0 0 600 400")
+             //class to make it responsive
+             .classed("svg-content-responsive", true); 
+              /*      
               .attr("width", width)
               .attr("height", height);
+              */
       this.set('svg', svg); 
     }        
 
@@ -152,21 +166,20 @@ export default Ember.View.extend({
     var node = svg.selectAll(".node")
         .data(nodes)
       .enter().append("g")
-        .attr("class", "node")
-        .call(force.drag);
+        .attr("class", "node");
         
     node.append("circle")
         .attr("x", -8)
         .attr("y", -8)    
         .attr("class", "node")
         .attr("r", 5)       
-        .on("dblclick", function(d) { context.goToResult(d); });        
+        .call(force.drag);
 
     node.append("text")
         .attr("dx", 12)
         .attr("dy", ".35em")
         .text(function(d) { return d.name; })
-        .on("dblclick", function(d) { context.goToResult(d); });
+        .on("click", function(d) { context.goToResult(d); });
 
     force.on("tick", function() {
       link.attr("x1", function(d) { return d.source.x; })

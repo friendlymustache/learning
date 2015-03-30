@@ -31,13 +31,7 @@ define('learning/controllers/application', ['exports', 'ember'], function (expor
 
 	'use strict';
 
-	exports['default'] = Ember['default'].Controller.extend({
-		actions: {
-			search: function search(query) {
-				this.transitionToRoute("results", query);
-			}
-		}
-	});
+	exports['default'] = Ember['default'].Controller.extend({});
 
 });
 define('learning/controllers/results', ['exports', 'ember'], function (exports, Ember) {
@@ -121,7 +115,8 @@ define('learning/models/link', ['exports', 'ember-data'], function (exports, DS)
 
   exports['default'] = DS['default'].Model.extend({
     title: DS['default'].attr("string"),
-    url: DS['default'].attr("string")
+    url: DS['default'].attr("string"),
+    topic: DS['default'].belongsTo("topic")
   });
 
 });
@@ -153,7 +148,6 @@ define('learning/models/topic', ['exports', 'ember-data'], function (exports, DS
   exports['default'] = DS['default'].Model.extend({
     name: DS['default'].attr("string"),
     links: DS['default'].hasMany("link"),
-
     parent: DS['default'].belongsTo("topic", { inverse: "children", async: true }),
 
     // It's ok to store children using a separate model that
@@ -187,6 +181,19 @@ define('learning/router', ['exports', 'ember', 'learning/config/environment'], f
 
 });
 define('learning/routes/application', ['exports', 'ember'], function (exports, Ember) {
+
+	'use strict';
+
+	exports['default'] = Ember['default'].Route.extend({
+		actions: {
+			search: function search(query) {
+				this.transitionTo("results", query);
+			}
+		}
+	});
+
+});
+define('learning/routes/index', ['exports', 'ember'], function (exports, Ember) {
 
 	'use strict';
 
@@ -398,7 +405,7 @@ define('learning/templates/application', ['exports'], function (exports) {
   }()));
 
 });
-define('learning/templates/components/topic-graph', ['exports'], function (exports) {
+define('learning/templates/index', ['exports'], function (exports) {
 
   'use strict';
 
@@ -409,14 +416,75 @@ define('learning/templates/components/topic-graph', ['exports'], function (expor
       cachedFragment: null,
       hasRendered: false,
       build: function build(dom) {
-        var el0 = dom.createElement("div");
-        dom.setAttribute(el0,"class","topic-graph");
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","ui center aligned segment");
+        var el2 = dom.createTextNode("\n\n	");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("h2");
+        dom.setAttribute(el2,"class","ui icon header");
+        var el3 = dom.createTextNode("\n	  ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("i");
+        dom.setAttribute(el3,"class","teal cloud icon");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n	  ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","content");
+        var el4 = dom.createTextNode("\n	    Cumulus\n	    ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("div");
+        dom.setAttribute(el4,"class","sub header");
+        var el5 = dom.createTextNode("Your one-stop learning resource.");
+        dom.appendChild(el4, el5);
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n	  ");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n	");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n\n\n	");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("form");
+        dom.setAttribute(el2,"class","ui item centered form");
+        dom.setAttribute(el2,"style","width: 100%");
+        var el3 = dom.createTextNode("\n		");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createElement("div");
+        dom.setAttribute(el3,"class","ui small left icon input");
+        var el4 = dom.createTextNode("\n		  ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createElement("i");
+        dom.setAttribute(el4,"class","search icon");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("\n		  ");
+        dom.appendChild(el3, el4);
+        var el4 = dom.createTextNode("	\n		");
+        dom.appendChild(el3, el4);
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n	");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
         return el0;
       },
       render: function render(context, env, contextualElement) {
         var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, element = hooks.element, inline = hooks.inline, content = hooks.content;
         dom.detectNamespace(contextualElement);
         var fragment;
         if (env.useFragmentCache && dom.canClone) {
@@ -434,6 +502,12 @@ define('learning/templates/components/topic-graph', ['exports'], function (expor
         } else {
           fragment = this.build(dom);
         }
+        var element0 = dom.childAt(fragment, [0, 3]);
+        var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),2,3);
+        var morph1 = dom.createMorphAt(dom.childAt(fragment, [2]),0,1);
+        element(env, element0, context, "action", ["search", get(env, context, "query")], {"on": "submit"});
+        inline(env, morph0, context, "input", [], {"class": "ui left icon", "value": get(env, context, "query"), "placeholder": "Search for a topic, concept, or idea (e.g. 'algorithms')"});
+        content(env, morph1, context, "outlet");
         return fragment;
       }
     };
@@ -456,8 +530,20 @@ define('learning/templates/results', ['exports'], function (exports) {
           var el1 = dom.createTextNode("	");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("div");
-          dom.setAttribute(el1,"class","ui header");
-          var el2 = dom.createTextNode(" Results (double click to go to topic page) ");
+          dom.setAttribute(el1,"class","ui large centered header");
+          var el2 = dom.createTextNode(" \n	  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("i");
+          dom.setAttribute(el2,"class","small idea icon");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n	  ");
+          dom.appendChild(el1, el2);
+          var el2 = dom.createElement("div");
+          dom.setAttribute(el2,"class","content");
+          var el3 = dom.createTextNode("\n	  	Results \n	  ");
+          dom.appendChild(el2, el3);
+          dom.appendChild(el1, el2);
+          var el2 = dom.createTextNode("\n	");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n	");
@@ -503,7 +589,7 @@ define('learning/templates/results', ['exports'], function (exports) {
           var el1 = dom.createTextNode("	");
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("div");
-          dom.setAttribute(el1,"class","ui header");
+          dom.setAttribute(el1,"class","ui centered header");
           var el2 = dom.createTextNode(" No results ");
           dom.appendChild(el1, el2);
           dom.appendChild(el0, el1);
@@ -1181,6 +1267,16 @@ define('learning/tests/routes/application.jshint', function () {
   });
 
 });
+define('learning/tests/routes/index.jshint', function () {
+
+  'use strict';
+
+  module('JSHint - routes');
+  test('routes/index.js should pass jshint', function() { 
+    ok(true, 'routes/index.js should pass jshint.'); 
+  });
+
+});
 define('learning/tests/routes/results.jshint', function () {
 
   'use strict';
@@ -1720,7 +1816,7 @@ define('learning/tests/views/topic-graph.jshint', function () {
 
   module('JSHint - views');
   test('views/topic-graph.js should pass jshint', function() { 
-    ok(false, 'views/topic-graph.js should pass jshint.\nviews/topic-graph.js: line 133, col 13, \'d3\' is not defined.\nviews/topic-graph.js: line 139, col 17, \'d3\' is not defined.\n\n2 errors'); 
+    ok(false, 'views/topic-graph.js should pass jshint.\nviews/topic-graph.js: line 138, col 13, \'d3\' is not defined.\nviews/topic-graph.js: line 153, col 17, \'d3\' is not defined.\n\n2 errors'); 
   });
 
 });
@@ -1730,23 +1826,29 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
 
   exports['default'] = Ember['default'].View.extend({
     attributeBindings: ["style"],
-    classNames: ["topic-graph"],
+    classNames: ["topic-graph", "ui", "segment", "raised"],
     svgClassName: "topic-graph",
 
     setDimensions: function setDimensions() {
 
+      // Build strings used to form style attribute
       var defaultWidth = 700;
       var defaultHeight = 300;
+      var widthString = "width: " + defaultWidth + "px;";
+      var heightString = "height: " + defaultHeight + "px;";
 
-      var heightString = "width: " + defaultWidth + "px; ";
-      var widthString = "height: " + defaultHeight + "px;";
-
+      // Get the passed-in width and height arguments.
       var width = this.get("width");
       var height = this.get("height");
 
+      // If user passed in a width, use the passed-in width to construct
+      // the <style> string (see below)
       if (width !== undefined) {
-        widthString = "width: " + width + "px; ";
-      } else {
+        widthString = "width: " + width + "px;";
+      }
+
+      // Otherwise, go with the default width
+      else {
         this.set("width", defaultWidth);
       }
 
@@ -1756,8 +1858,8 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
         this.set("height", defaultHeight);
       }
 
-      var style = widthString + heightString;
-      this.set("style", style);
+      // var style = widthString + heightString;
+      // this.set('style', style);
     },
 
     isArray: function isArray(obj) {
@@ -1845,7 +1947,14 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
       var svg = this.get("svg");
       if (svg === undefined) {
         var svgClass = this.getClassName(this.get("svgClassName"));
-        svg = d3.select(svgClass).append("svg").attr("width", width).attr("height", height);
+        svg = d3.select(svgClass).append("div").classed("svg-container", true) // container class to make it responsive
+        .append("svg").attr("preserveAspectRatio", "xMinYMin meet").attr("viewBox", "0 0 600 400")
+        //class to make it responsive
+        .classed("svg-content-responsive", true);
+        /*      
+        .attr("width", width)
+        .attr("height", height);
+        */
         this.set("svg", svg);
       }
 
@@ -1855,15 +1964,13 @@ define('learning/views/topic-graph', ['exports', 'ember'], function (exports, Em
 
       var link = svg.selectAll(".link").data(edges).enter().append("line").attr("class", "link");
 
-      var node = svg.selectAll(".node").data(nodes).enter().append("g").attr("class", "node").call(force.drag);
+      var node = svg.selectAll(".node").data(nodes).enter().append("g").attr("class", "node");
 
-      node.append("circle").attr("x", -8).attr("y", -8).attr("class", "node").attr("r", 5).on("dblclick", function (d) {
-        context.goToResult(d);
-      });
+      node.append("circle").attr("x", -8).attr("y", -8).attr("class", "node").attr("r", 5).call(force.drag);
 
       node.append("text").attr("dx", 12).attr("dy", ".35em").text(function (d) {
         return d.name;
-      }).on("dblclick", function (d) {
+      }).on("click", function (d) {
         context.goToResult(d);
       });
 
@@ -1931,7 +2038,7 @@ catch(err) {
 if (runningTests) {
   require("learning/tests/test-helper");
 } else {
-  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.8103c59e"});
+  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.1cf3d859"});
 }
 
 /* jshint ignore:end */
