@@ -19,5 +19,6 @@ export default Ember.Route.extend({
 		var parentsList = this.getParentsList(model);
 		this._super(controller, model);
 		controller.set('parents', parentsList);
+		debugger;
 	},
 });

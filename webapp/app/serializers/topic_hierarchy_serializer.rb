@@ -5,8 +5,6 @@ class TopicHierarchySerializer < ActiveModel::Serializer
   has_one :parent, key: :parent_id
   has_many :children, key: :child_ids
 
-  # TODO may need to set serializer if serializing parents and children
-  # doesn't default to TopicSerializer
   
   # Rename "parents" to "topics" in JSON output so that ember can recognize it
   # has_one :topic
