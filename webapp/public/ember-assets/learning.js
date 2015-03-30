@@ -185,6 +185,11 @@ define('learning/routes/application', ['exports', 'ember'], function (exports, E
 	'use strict';
 
 	exports['default'] = Ember['default'].Route.extend({
+
+		model: function model() {
+			console.log("HEY GUYS");
+		},
+
 		actions: {
 			search: function search(query) {
 				this.transitionTo("results", query);
@@ -205,13 +210,20 @@ define('learning/routes/results', ['exports', 'ember'], function (exports, Ember
 	'use strict';
 
 	exports['default'] = Ember['default'].Route.extend({
+
+		beforeModel: function beforeModel() {
+			console.log("in beforemodel hook for results");
+		},
+
 		model: function model(params) {
+			console.log("in model hook for results");
 			return this.store.find("topic", { name: params.query });
 		},
 
 		setupController: function setupController(controller, model) {
 			controller.set("nodes_exist", model.content.length !== 0);
 			this._super(controller, model);
+			debugger;
 		}
 	});
 
@@ -472,19 +484,11 @@ define('learning/templates/index', ['exports'], function (exports) {
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n\n");
         dom.appendChild(el0, el1);
-        var el1 = dom.createElement("div");
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        var el2 = dom.createTextNode("\n");
-        dom.appendChild(el1, el2);
-        dom.appendChild(el0, el1);
-        var el1 = dom.createTextNode("\n");
-        dom.appendChild(el0, el1);
         return el0;
       },
       render: function render(context, env, contextualElement) {
         var dom = env.dom;
-        var hooks = env.hooks, get = hooks.get, element = hooks.element, inline = hooks.inline, content = hooks.content;
+        var hooks = env.hooks, get = hooks.get, element = hooks.element, inline = hooks.inline;
         dom.detectNamespace(contextualElement);
         var fragment;
         if (env.useFragmentCache && dom.canClone) {
@@ -504,10 +508,8 @@ define('learning/templates/index', ['exports'], function (exports) {
         }
         var element0 = dom.childAt(fragment, [0, 3]);
         var morph0 = dom.createMorphAt(dom.childAt(element0, [1]),2,3);
-        var morph1 = dom.createMorphAt(dom.childAt(fragment, [2]),0,1);
         element(env, element0, context, "action", ["search", get(env, context, "query")], {"on": "submit"});
         inline(env, morph0, context, "input", [], {"class": "ui left icon", "value": get(env, context, "query"), "placeholder": "Search for a topic, concept, or idea (e.g. 'algorithms')"});
-        content(env, morph1, context, "outlet");
         return fragment;
       }
     };
@@ -1283,7 +1285,7 @@ define('learning/tests/routes/results.jshint', function () {
 
   module('JSHint - routes');
   test('routes/results.js should pass jshint', function() { 
-    ok(true, 'routes/results.js should pass jshint.'); 
+    ok(false, 'routes/results.js should pass jshint.\nroutes/results.js: line 17, col 9, Forgotten \'debugger\' statement?\n\n1 error'); 
   });
 
 });
@@ -2038,7 +2040,7 @@ catch(err) {
 if (runningTests) {
   require("learning/tests/test-helper");
 } else {
-  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.1cf3d859"});
+  require("learning/app")["default"].create({"name":"learning","version":"0.0.0.da9bafc0"});
 }
 
 /* jshint ignore:end */

@@ -197,6 +197,6 @@ for topic_hash in topic_list
   parent = Topic.find_by_name(parent_name)
   if parent != nil
   	topic = parent.children.create({name: name})
-    create_links(topic)    
+    # create_links(topic)    
   end
 end	
