@@ -1,18 +1,13 @@
-
 <div class="ui segment">
-	<div class="ui list">
-		{{#each topic in model}}
-			{{#link-to 'topic' topic class="item"}} {{topic.name}} {{/link-to}}
-		{{/each}}
+{{#if nodes_exist}}
+	<div class="ui large centered header"> 
+	  <i class="small idea icon" />
+	  <div class="content">
+	  	Results 
+	  </div>
 	</div>
-
-	{{#if noResults}}
-		<div class="ui message"> No results </div>
-	{{/if}}
-</div>
-
-
-
-<div>
-{{outlet}}
+	{{view "topic-graph" nodes=model}} 
+{{else}}
+	<div class="ui centered header"> No results </div>
+{{/if}}
 </div>

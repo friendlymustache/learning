@@ -1,3 +1,4 @@
+require 'json'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -6,5 +7,196 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-root = Topic.create(name: 'Algorithms')
-root.children.create([{name: 'Mathematical Foundations'}, {name: 'Dynamic Programming'}, {name: 'Greedy Algorithms'}])
+algebra = Topic.create(name: 'Algebra')
+addition = Topic.create(name: 'Addition')
+algebra.add_prereq(addition)
+
+algorithms = Topic.create(name: 'Algorithms')
+
+topic_list = [
+    {
+        "name" => "Foundations",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "The Role of Algorithms in Computing",
+        "parent" => "Foundations"
+    },
+    {
+        "name" => "Getting Started",
+        "parent" => "Foundations"
+    },
+    {
+        "name" => "Growth of Functions",
+        "parent" => "Foundations"
+    },
+    {
+        "name" => "Recurrences",
+        "parent" => "Foundations"
+    },
+    {
+        "name" => "Probabilistic Analysis and Randomized Algorithms",
+        "parent" => "Foundations"
+    },
+    {
+        "name" => "Sorting and Order Statistics",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "Heapsort",
+        "parent" => "Sorting and Order Statistics"
+    },
+    {
+        "name" => "Quicksort",
+        "parent" => "Sorting and Order Statistics"
+    },
+    {
+        "name" => "Sorting in Linear Time",
+        "parent" => "Sorting and Order Statistics"
+    },
+    {
+        "name" => "Medians and Order Statistics",
+        "parent" => "Sorting and Order Statistics"
+    },
+    {
+        "name" => "Data Structures",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "Elementary Data Structures",
+        "parent" => "Data Structures"
+    },
+    {
+        "name" => "Hash Table",
+        "parent" => "Data Structures"
+    },
+    {
+        "name" => "Binary Search Trees",
+        "parent" => "Data Structures"
+    },
+    {
+        "name" => "Red-Black Trees",
+        "parent" => "Data Structures"
+    },
+    {
+        "name" => "Augmenting Data Structures",
+        "parent" => "Data Structures"
+    },
+    {
+        "name" => "Advanced Design and Analysis Techniques",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "Dynamic Programming",
+        "parent" => "Advanced Design and Analysis Techniques"
+    },
+    {
+        "name" => "Greedy Algorithms",
+        "parent" => "Advanced Design and Analysis Techniques"
+    },
+    {
+        "name" => "Amortized Analysis",
+        "parent" => "Advanced Design and Analysis Techniques"
+    },
+    {
+        "name" => "Advanced Data Structures",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "B-Trees",
+        "parent" => "Advanced Data Structures"
+    },
+    {
+        "name" => "Binomial Heaps",
+        "parent" => "Advanced Data Structures"
+    },
+    {
+        "name" => "Fibonacci Heaps",
+        "parent" => "Advanced Data Structures"
+    },
+    {
+        "name" => "Data Structures for Disjoint Sets",
+        "parent" => "Advanced Data Structures"
+    },
+    {
+        "name" => "Graph Algorithms",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "Elementary Graph Algorithms",
+        "parent" => "Graph Algorithms"
+    },
+    {
+        "name" => "Minimum Spanning Trees",
+        "parent" => "Graph Algorithms"
+    },
+    {
+        "name" => "Single-Source Shortest Paths",
+        "parent" => "Graph Algorithms"
+    },
+    {
+        "name" => "All-Pairs Shortest Paths",
+        "parent" => "Graph Algorithms"
+    },
+    {
+        "name" => "Maximum Flow",
+        "parent" => "Graph Algorithms"
+    },
+    {
+        "name" => "Selected Topics",
+        "parent" => "Algorithms"
+    },
+    {
+        "name" => "Sorting Networks",
+        "parent" => "Selected Topics"
+    },
+    {
+        "name" => "Matrix Operations",
+        "parent" => "Selected Topics"
+    },
+    {
+        "name" => "Linear Programming",
+        "parent" => "Selected Topics"
+    },
+    {
+        "name" => "Polynomials and the FFT",
+        "parent" => "Selected Topics"
+    },
+    {
+        "name" => "Number-Theoretic Algorithms",
+        "parent" => "Selected Topics"
+    },
+    {
+        "name" => "String Matching",
+        "parent" => "Selected Topics"
+    },
+    {
+        "name" => "Computational Geometry",
+        "parent" => "Selected Topics"
+    }
+]
+
+
+def buildScrapingCommand(name)
+    return "python ../scraping/KhanScraper.py #{name}"
+end
+
+def create_links(topic)
+    puts "Getting links for topic: #{topic.name}"
+    command = buildScrapingCommand(topic.name)
+    result = JSON.parse(`#{command}`)
+    for link in result
+        topic.links.create({title: link["name"], url: link["url"]})
+    end
+
+end
+
+for topic_hash in topic_list
+  name = topic_hash["name"]
+  parent_name = topic_hash["parent"]
+  parent = Topic.find_by_name(parent_name)
+  if parent != nil
+  	topic = parent.children.create({name: name})
+    # create_links(topic)    
+  end
+end	

@@ -1,9 +1,30 @@
-<ul>
 
-</ul>
-
+<div class="ui centered header"> {{name}} </div>
 
 
-<div>
-{{outlet}}
+<div class="ui breadcrumb">
+  {{#each par in parents}}
+  	  {{#link-to 'topic' par.name class="section"}} {{par.name}} {{/link-to}}
+	  <i class="right chevron icon divider"></i>
+  {{/each}}
+  <div class="active section">{{name}}</div>
 </div>
+
+<div class="ui link list">
+
+	{{#if children}}
+		<div class="ui small header"> Subtopics </div>
+		{{#each topic in displayChildren}}
+			{{#link-to 'topic' topic.name class="item"}} {{topic.name}} {{/link-to}}
+		{{/each}}
+	{{/if}}
+
+	{{#if links}}
+	    <div class="ui small header"> Suggested Links </div>
+		{{#each link in links}}
+				<a target="_blank" class="item link" {{bind-attr href="link.url"}}>{{link.title}}</a>
+		{{/each}}
+	{{/if}}	
+</div>
+
+{{outlet}}
