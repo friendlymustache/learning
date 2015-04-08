@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
 	model: function(params) {
 		return this.store.find('topic', params.name);
 	},
@@ -19,6 +20,5 @@ export default Ember.Route.extend({
 		var parentsList = this.getParentsList(model);
 		this._super(controller, model);
 		controller.set('parents', parentsList);
-		debugger;
 	},
 });

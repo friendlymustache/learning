@@ -14,7 +14,7 @@
 
 	{{#if children}}
 		<div class="ui small header"> Subtopics </div>
-		{{#each topic in children}}
+		{{#each topic in displayChildren}}
 			{{#link-to 'topic' topic.name class="item"}} {{topic.name}} {{/link-to}}
 		{{/each}}
 	{{/if}}

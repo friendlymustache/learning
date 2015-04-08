@@ -44,5 +44,9 @@ module.exports = function(environment) {
     ENV.host = 'http://cumulus-beta.herokuapp.com';
   }
 
+  if (environment === 'staging') {
+    ENV.host = 'http://cumulus-staging.herokuapp.com';
+  }
+
   return ENV;
 };

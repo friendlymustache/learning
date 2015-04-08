@@ -19,10 +19,17 @@ function boldMessage {
   echo -e "${color}*************************************${reset}"
 }
  
+build_env="$1"
+
+if [build_env == ""]
+  then
+    build_env="production"
+fi    
+
 #echo -e "${color}Building Ember app${reset}"
-boldMessage 4 "Building Ember app"
+boldMessage 4 "Building Ember app using environment $build_env"
 cd public-src
-ember build --environment production
+ember build --environment $build_env
 cd ../
  
 rm -rf public/ember-assets
