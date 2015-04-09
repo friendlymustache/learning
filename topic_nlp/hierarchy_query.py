@@ -47,7 +47,7 @@ def make_corpus(corpus_location, stoplist):
 
 query_file = "algorithm_query.txt"
 stoplist_file = "stoplist.txt"
-corpus_location = os.getcwd() + "/../test_data/"
+corpus_location = os.getcwd() + "/../articles/test_data/"
 
 s = open(stoplist_file, 'rb')
 stoplist = []
@@ -65,7 +65,7 @@ dictionary, corpus = make_corpus(corpus_location, stoplist)
 tfidf = models.TfidfModel(corpus)
 corpus_tfidf = tfidf[corpus]
 
-lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=10)
+lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=15)
 corpus_lsi = lsi[corpus_tfidf]
 index = similarities.MatrixSimilarity(corpus_lsi)
 
