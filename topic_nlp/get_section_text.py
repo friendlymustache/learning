@@ -90,8 +90,10 @@ for num, page in enumerate(PDFPage.create_pages(document)):
         print 'Adding page ' + str(num+1)
         text_content.append(text)
 
-text_content = ''.join(text_content)
+text_content = ''.join(text_content).encode('utf-8')
 
-print text_content
+out = open('algorithm_query.txt', 'wb')
+out.write(text_content)
 
+out.close()
 fp.close()
