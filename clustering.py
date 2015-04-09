@@ -1,91 +1,127 @@
 ## My approach: Cluster articles together based on similarity to determine 'topics'
 ## Vansh's approach: Match articles to the hierarchy of topics obtained from a textbook
 
-TFIDF_FNAME = 'tfidf_model.mm'
+
 
 import logging, gensim, bz2
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.WARNING)
 
 import glob
-import os
-from gensim.models.tfidfmodel import TfidfModel
 from gensim.corpora.dictionary import Dictionary
 from gensim.corpora.textcorpus import TextCorpus
 from gensim.corpora.mmcorpus import MmCorpus
 import pprint
 import copy 
 from gensim.models import VocabTransform
-import pdb
 
 ## Helper functions/constants
-
-
-def getDocs():
-	os.chdir("articles")
-	output = []
-	for fname in glob.glob("*.txt"):
-		output.append(fname)
-	return output
-
-def buildCorpus(docs, saveFile):
-	f =  open(saveFile, 'w')
-	for doc in docs:
-		for line in doc:
-			f.write(line)
-	f.close()
-
-
 def getWords(fname):
 	f = open(fname)
 	result = f.read()
 	f.close()
 	return result.split()
 
+## Corpus class
 class Corpus(TextCorpus):
 	def get_texts(self):
-		return map(getWords, self.input)	
+		return map(getWords, self.input)
 
-docs = getDocs()
-# tfidf = TfidfModel(docs)
-# print "Built TFIDF model on corpus"
-dictionary = Dictionary(map(getWords, docs))
+## Clusterer class
+class Clusterer:
+	def __init__(self, folderName="articles"):
+		self.folderName = folderName	
+		self.TFIDF_FNAME = 'tfidf_model.mm'
+
+		# Get documents in specified folder and make a corpus
+		# out of them
+		self.docs = self.getDocs()
+		self.corpus = Corpus(self.docs) 
+		self.processedCorpus = None
+
+		# Serialize the corpus in the appropriate format
+		# for the clustering algorithm
+		self.serializeCorpus()
+
+	def getDocs(self):
+		'''
+		Get a list of the filenames of documents our clusterer
+		is going to analyze
+		'''
+		output = []
+		targetFiles = "%s/*.txt"%self.folderName
+		for fname in glob.glob(targetFiles):
+			output.append(fname)
+		return output
+
+	def getDictionaries(self):
+		'''
+		Get GenSim dictionaries (one describing the raw corpus data and the 
+		other describing the corpus data with stop words etc filtered out) 
+		'''
+		docs = self.getDocs()
+		raw_dict = Dictionary(map(getWords, docs))
+		filtered_dict = copy.deepcopy(raw_dict)
+		filtered_dict.filter_extremes()
+		return (raw_dict, filtered_dict)
+
+	def serializeCorpus(self):
+		'''
+		Serialize the corpus in an appropriate format for 
+		the clustering algorithm and stores an object
+		representing the result.
+		'''
+		# Get dicts describing corpuses
+		raw_dict, filtered_dict = self.getDictionaries()
+
+		# Make a copy of the mapping of words to IDs represented
+		# by the filtered dictionary
+		raw_to_filtered = {raw_dict.token2id[token]:new_id for new_id, token in filtered_dict.iteritems()}
+
+		# Set up a transformer object
+		vt = VocabTransform(raw_to_filtered)
+
+		# Transform and serialize the corpus
+		MmCorpus.serialize(self.TFIDF_FNAME, vt[self.corpus], id2word=filtered_dict)
+
+		# Save a handle to the corpus and the filtered dictionary
+		self.filtered_dict = filtered_dict
+		self.processedCorpus = gensim.corpora.MmCorpus(self.TFIDF_FNAME)
+
+	def run(self):
+		'''		
+		Runs LDA clustering algorithm
+		'''
+
+		if self.processedCorpus is None:
+			self.serializeCorpus()
+
+		print "Running LDA"
+		# lda = gensim.models.ldamodel.LdaModel(corpus=mm, id2word=id2word, 
+		#	num_topics=10, update_every=1, chunksize=1000, passes=1)
+		self.lda = gensim.models.ldamodel.LdaModel(corpus=self.processedCorpus, 
+			id2word=self.filtered_dict, num_topics=3, iterations=300, chunksize=100,
+			passes=20)
+
+		print "LDA Results: "
+		topics = self.lda.print_topics()
+		printer = pprint.PrettyPrinter()
+		for i in range(self.lda.num_topics):
+			printer.pprint(self.lda.print_topic(i))
+			print "\n"
 
 
-# filter the dictionary
-old_dict = dictionary
-new_dict = copy.deepcopy(old_dict)
-new_dict.filter_extremes()
-
-# now transform the corpus
-corpus = Corpus(docs)
-old2new = {old_dict.token2id[token]:new_id for new_id, token in new_dict.iteritems()}
-vt = VocabTransform(old2new)
-MmCorpus.serialize(TFIDF_FNAME, vt[corpus], id2word=new_dict)
-
-
+	def consolidateDocs(self, docs, saveFile):
+		'''
+		Writes the contents of multiple files (with filenames specified
+		in <docs>) in order to the file with name <saveFile>
+		'''
+		f =  open(saveFile, 'w')
+		for doc in docs:
+			for line in doc:
+				f.write(line)
+		f.close()
 
 
-
-
-# corpus = Corpus(docs)
-# tfidf = TfidfModel(corpus)
-# tfidf.save(TFIDF_FNAME)
-
-# MmCorpus.serialize(TFIDF_FNAME, corpus)
-mm = gensim.corpora.MmCorpus(TFIDF_FNAME)
-# print mm
-id2word = new_dict
-
-
-print "Running LDA"
-# lda = gensim.models.ldamodel.LdaModel(corpus=mm, id2word=id2word, 
-#	num_topics=10, update_every=1, chunksize=1000, passes=1)
-lda = gensim.models.ldamodel.LdaModel(corpus=mm, 
-	id2word=id2word, num_topics=20, iterations=100, chunksize=100)
-print "LDA Results: "
-topics = lda.print_topics()
-
-# pdb.set_trace()
-printer = pprint.PrettyPrinter()
-for i in range(lda.num_topics):
-	printer.pprint(lda.print_topic(i))
+if __name__ == "__main__":
+	c = Clusterer()
+	c.run()
