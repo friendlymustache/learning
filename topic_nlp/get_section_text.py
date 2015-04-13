@@ -54,11 +54,11 @@ interpreter = PDFPageInterpreter(rsrcmgr, device)
 
 # print document.catalog
 
-# start_keywords = ['Chapter', '15', 'Dynamic', 'Programming']
-# end_keywords = ['Chapter', '16', 'Greedy', 'Algorithms']
+start_keywords = ['Chapter', '15', 'Dynamic', 'Programming']
+end_keywords = ['Chapter', '16', 'Greedy', 'Algorithms']
 
-start_keywords = ['I', 'Foundations']
-end_keywords = ['II', 'Sorting', 'and', 'Order', 'Statistics']
+# start_keywords = ['I', 'Foundations']
+# end_keywords = ['II', 'Sorting', 'and', 'Order', 'Statistics']
 
 # start_keywords = ['Resume', 'Advice']
 # end_keywords = ['Behavioral', 'Preparation']
@@ -95,7 +95,7 @@ for num, page in enumerate(PDFPage.create_pages(document)):
 
 text_content = ''.join(text_content).encode('utf-8')
 
-out = open('test.txt', 'wb')
+out = open('algorithm_query.txt', 'wb')
 out.write(text_content)
 
 out.close()
