@@ -46,8 +46,8 @@ class Clusterer:
 		is going to analyze
 		'''
 		output = []
-		# targetFiles = "%s/*.txt"%self.folderName
-		targetFiles = "articles/found*.txt"
+		targetFiles = "%s/*.txt"%self.folderName
+		# targetFiles = "articles/found*.txt"
 		for fname in glob.glob(targetFiles):
 			output.append(fname)
 		return output
@@ -89,9 +89,9 @@ class Clusterer:
 		self.filtered_dict = filtered_dict
 		self.processedCorpus = gensim.corpora.MmCorpus(self.TFIDF_FNAME)
 
-	def run(self, ntopics=8, num_iter=2000, chunk_size=500, num_passes=20):
+	def run(self, ntopics=8, num_iter=50000, chunk_size=500, num_passes=20):
 		'''		
-		Runs LDA clustering algorithm
+		Trains LDA on the provided documents
 		'''
 
 		if self.processedCorpus is None:
@@ -107,10 +107,16 @@ class Clusterer:
 		print "LDA Results: "
 		topics = self.lda.print_topics()
 		printer = pprint.PrettyPrinter()
+
 		for i in range(self.lda.num_topics):
 			printer.pprint(self.lda.print_topic(i))
 			print "\n"
 
+	def evaluate(self, docname):
+		'''
+		Determines the topic representation of the document with the provided filename
+		'''
+		pass
 
 	def consolidateDocs(self, docs, saveFile):
 		'''

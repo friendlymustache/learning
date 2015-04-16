@@ -1,10 +1,16 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+
+  /*
+  var url = String(process.env.baseURL);
+  console.log("Setting base url to url: " + url);
+  */
+
   var ENV = {
     modulePrefix: 'learning',
     environment: environment,
-    baseURL: '/',
+    baseURL:'/v2',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -18,6 +24,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -48,5 +55,14 @@ module.exports = function(environment) {
     ENV.host = 'http://cumulus-staging.herokuapp.com';
   }
 
+  /*
+  if (process.env !== undefined) {
+    console.log("Old base url: " + ENV.baseURL 
+      + "new base URL: " + process.env.baseURL);
+    ENV.baseURL = process.env.baseURL;
+  }
+
+  console.log("Final value of baseURL:'/v2',
+  */
   return ENV;
 };

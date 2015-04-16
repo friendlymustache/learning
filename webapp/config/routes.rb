@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'landing#index'
   resources :topics 
   resources :links
+  get 'v:version' => 'landing#version_handler'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
