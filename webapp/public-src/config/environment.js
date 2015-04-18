@@ -2,15 +2,11 @@
 
 module.exports = function(environment) {
 
-  /*
-  var url = String(process.env.baseURL);
-  console.log("Setting base url to url: " + url);
-  */
-
   var ENV = {
+    namespace:'v/0',
     modulePrefix: 'learning',
     environment: environment,
-    baseURL:'/v2',
+    baseURL:'/root',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -48,7 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.host = 'http://cumulus-beta.herokuapp.com';
+    // ENV.host = 'http://cumulus-beta.herokuapp.com';
   }
 
   if (environment === 'staging') {
@@ -62,7 +58,7 @@ module.exports = function(environment) {
     ENV.baseURL = process.env.baseURL;
   }
 
-  console.log("Final value of baseURL:'/v2',
+  console.log("Final value of baseURL:'/root',
   */
   return ENV;
 };

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150329064546) do
+ActiveRecord::Schema.define(version: 20150416095020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,9 +33,10 @@ ActiveRecord::Schema.define(version: 20150329064546) do
 
   create_table "links", force: :cascade do |t|
     t.string   "url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.string   "title"
+    t.integer  "version",    default: 0
   end
 
   create_table "prereqs", force: :cascade do |t|
@@ -46,8 +47,9 @@ ActiveRecord::Schema.define(version: 20150329064546) do
   create_table "topics", force: :cascade do |t|
     t.string   "name"
     t.string   "ancestry"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "version",    default: 0
   end
 
   add_index "topics", ["ancestry"], name: "index_topics_on_ancestry", using: :btree

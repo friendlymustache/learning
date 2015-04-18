@@ -1,0 +1,213 @@
+
+{"links" : 
+    [
+    {
+        "title":"What is an algorithm and why should you care?",
+        "url":"https://www.youtube.com/watch?v=S-ws2W6UbPU",
+        "parent_name":"The Role of Algorithms in Computing"
+    },
+    {
+        "title":"Why Study Algorithms?",
+        "url":"https://youtu.be/u2TwK3fED8A",
+        "parent_name":"The Role of Algorithms in Computing"
+    },
+    {
+        "title":"Binary search",
+        "url":"https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search",
+        "parent_name":"Getting Started"
+    },
+    {
+        "title":"Implementing binary search of an array",
+        "url":"https://www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/implementing-binary-search-of-an-array",
+        "parent_name":"Getting Started"
+    },
+    {
+        "title":"Asymptotic notation",
+        "url":"https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation",
+        "parent_name":"Growth of Functions"
+    },
+    {
+        "title":"Big Omega and Theta",
+        "url":"https://youtu.be/2c65MfH3RL4",
+        "parent_name":"Growth of Functions"
+    },
+    {
+        "title":"Overview of quicksort",
+        "url":"https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/overview-of-quicksort",
+        "parent_name":"Quicksort"
+    },
+    {
+        "title":"Analysis of quicksort",
+        "url":"https://www.khanacademy.org/computing/computer-science/algorithms/quick-sort/a/analysis-of-quicksort",
+        "parent_name":"Quicksort"
+    }
+    ],
+
+"topics" :
+    [
+    {
+        "name" : "Algorithms", 
+        "parent_name" : null
+    },
+    {
+        "name" : "Foundations",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "The Role of Algorithms in Computing",
+        "parent_name" : "Foundations"
+    },
+    {
+        "name" : "Getting Started",
+        "parent_name" : "Foundations"
+    },
+    {
+        "name" : "Growth of Functions",
+        "parent_name" : "Foundations"
+    },
+    {
+        "name" : "Recurrences",
+        "parent_name" : "Foundations"
+    },
+    {
+        "name" : "Probabilistic Analysis and Randomized Algorithms",
+        "parent_name" : "Foundations"
+    },
+    {
+        "name" : "Sorting and Order Statistics",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "Heapsort",
+        "parent_name" : "Sorting and Order Statistics"
+    },
+    {
+        "name" : "Quicksort",
+        "parent_name" : "Sorting and Order Statistics"
+    },
+    {
+        "name" : "Sorting in Linear Time",
+        "parent_name" : "Sorting and Order Statistics"
+    },
+    {
+        "name" : "Medians and Order Statistics",
+        "parent_name" : "Sorting and Order Statistics"
+    },
+    {
+        "name" : "Data Structures",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "Elementary Data Structures",
+        "parent_name" : "Data Structures"
+    },
+    {
+        "name" : "Hash Table",
+        "parent_name" : "Data Structures"
+    },
+    {
+        "name" : "Binary Search Trees",
+        "parent_name" : "Data Structures"
+    },
+    {
+        "name" : "Red-Black Trees",
+        "parent_name" : "Data Structures"
+    },
+    {
+        "name" : "Augmenting Data Structures",
+        "parent_name" : "Data Structures"
+    },
+    {
+        "name" : "Advanced Design and Analysis Techniques",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "Dynamic Programming",
+        "parent_name" : "Advanced Design and Analysis Techniques"
+    },
+    {
+        "name" : "Greedy Algorithms",
+        "parent_name" : "Advanced Design and Analysis Techniques"
+    },
+    {
+        "name" : "Amortized Analysis",
+        "parent_name" : "Advanced Design and Analysis Techniques"
+    },
+    {
+        "name" : "Advanced Data Structures",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "B-Trees",
+        "parent_name" : "Advanced Data Structures"
+    },
+    {
+        "name" : "Binomial Heaps",
+        "parent_name" : "Advanced Data Structures"
+    },
+    {
+        "name" : "Fibonacci Heaps",
+        "parent_name" : "Advanced Data Structures"
+    },
+    {
+        "name" : "Data Structures for Disjoint Sets",
+        "parent_name" : "Advanced Data Structures"
+    },
+    {
+        "name" : "Graph Algorithms",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "Elementary Graph Algorithms",
+        "parent_name" : "Graph Algorithms"
+    },
+    {
+        "name" : "Minimum Spanning Trees",
+        "parent_name" : "Graph Algorithms"
+    },
+    {
+        "name" : "Single-Source Shortest Paths",
+        "parent_name" : "Graph Algorithms"
+    },
+    {
+        "name" : "All-Pairs Shortest Paths",
+        "parent_name" : "Graph Algorithms"
+    },
+    {
+        "name" : "Maximum Flow",
+        "parent_name" : "Graph Algorithms"
+    },
+    {
+        "name" : "Selected Topics",
+        "parent_name" : "Algorithms"
+    },
+    {
+        "name" : "Sorting Networks",
+        "parent_name" : "Selected Topics"
+    },
+    {
+        "name" : "Matrix Operations",
+        "parent_name" : "Selected Topics"
+    },
+    {
+        "name" : "Linear Programming",
+        "parent_name" : "Selected Topics"
+    },
+    {
+        "name" : "Polynomials and the FFT",
+        "parent_name" : "Selected Topics"
+    },
+    {
+        "name" : "Number-Theoretic Algorithms",
+        "parent_name" : "Selected Topics"
+    },
+    {
+        "name" : "String Matching",
+        "parent_name" : "Selected Topics"
+    },
+    {
+        "name" : "Computational Geometry",
+        "parent_name" : "Selected Topics"
+    }
+    ]
+}
