@@ -11,6 +11,15 @@ import urllib2
 import sys
 import json
 
+def getSubtitles(text):
+    maps = text.replace("[", "").replace("]", "").replace("}", "").split(", {")
+    maps[0] = maps[0][1:]
+    subs = ""
+    for x in maps:
+        evalStr = ("{" + x + "}").replace("true", "True")
+        map = eval(evalStr)
+        subs = subs + map["text"] + " "
+    return subs
 if len(sys.argv) == 1:
     print "Usage: python KhanScraper.py searchterm"
     quit()
@@ -46,6 +55,8 @@ while x < maxX:
 #now videoLinks is an array that stores the links to the video pages
 #we loop through these links and get the information for each youtube link
 output = []
+subtitles = {} #subtitles is a hashmap, key is name of video, value is transcript
+subsUrl = "https://www.khanacademy.org/api/internal/videos/"
 for x in videoLinks:
     baseHTML = urllib2.urlopen(x.replace(" ", "")).read().split("\n")
     #for each link, we loop through until we find the name and video
@@ -56,9 +67,17 @@ for x in videoLinks:
             tOut = {}
             tOut["name"] = tempOut
             tOut["url"] = y.split("\"")[3]
+            id = subsUrl + tOut["url"].split("/embed/")[1] + "/transcript"
+            idInfo = urllib2.urlopen(id).read()
+            subtitles[tempOut] = getSubtitles(idInfo).replace("\n", " ")
             output.append(tOut)
-            #output[tempOut] = y.split("\"")[3]
-            #output.append((tempOut, y.split("\"")[3]))
             break
 
 print json.dumps(output, sort_keys=True, indent=4, separators=(',', ': '))
+
+#for x in subtitles:
+#    print x
+#    print subtitles[x]
+#    print "\n\n----\n\n"
+
+
