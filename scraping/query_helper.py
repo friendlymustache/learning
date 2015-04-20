@@ -59,15 +59,11 @@ def tfidf_filtering(query, dictionary, tfidf_model):
 	low_score_words = []
 	q_tfidf = sorted(q_tfidf, key=lambda item: item[1])
 
-	print len(query)
-
 	for i in range(len(q_tfidf)/5):
 		low_score_words.append(dictionary[q_tfidf[i][0]])
 
 	for word in low_score_words:
 		query = filter(lambda item: item != word, query)
-
-	print len(query)
 
 	return query
 
@@ -80,6 +76,7 @@ def create_lsi_tfidf_model(dictionary, corpus):
 	index = similarities.MatrixSimilarity(corpus_lsi)
 
 	return tfidf, lsi, index
+
 
 # used by khan academy scraper directly
 def get_top_query_hits(query, stoplist_file, subtitles, links):
@@ -109,7 +106,7 @@ def get_top_query_hits(query, stoplist_file, subtitles, links):
 	final_links = []
 
 	for video in sims:
-		if video[1] > 0.6:
+		if video[1] > 0.75:
 			i = video[0]
 
 			count = 0

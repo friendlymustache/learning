@@ -21,9 +21,11 @@ def getSubtitles(text):
         subs = subs + map["text"] + " "
     return subs
 
-def get_search_results(search_term):
+def get_search_results(search_term, topic):
     searchTerm = '+'.join(search_term.split(' '))
-    urlToSearch = "https://www.khanacademy.org/search?page_search_query=" +  searchTerm + "&kind=Video"
+    print searchTerm
+
+    urlToSearch = "https://www.khanacademy.org/search?page_search_query=" + searchTerm + "&kind=Video"
 
     #now we scan the url for the line that contains our results
     baseHTML = urllib2.urlopen(urlToSearch).read().split("\n")
@@ -60,7 +62,7 @@ def get_search_results(search_term):
                 tempOut = y.split("\"")[3]
             if y.startswith("        <link rel=\"video_src"):
                 tOut = {}
-                tOut["topic"] = searchTerm
+                tOut["topic"] = topic
                 tOut["name"] = tempOut
                 tOut["url"] = y.split("\"")[3]
                 id = subsUrl + tOut["url"].split("/embed/")[1] + "/transcript"

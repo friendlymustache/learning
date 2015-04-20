@@ -66,10 +66,13 @@ def read_in_toc_stoplist(stoplist_file):
 
     return stoplist
 
-def get_section_text(document, interpreter, device, start_keywords, \
-                        end_keywords, ):
-    chapter_start = any([word.isdigit() for word in start_keywords])
-    chapter_end = any([word.isdigit() for word in end_keywords])
+def get_section_text(document, interpreter, device, start_term, \
+                        end_term):
+    chapter_start = any([word.isdigit() for word in start_term])
+    chapter_end = any([word.isdigit() for word in end_term])
+
+    start_keywords = start_term[:]
+    end_keywords = end_term[:]
 
     if chapter_start:
         start_keywords.append('Chapter')
@@ -121,7 +124,7 @@ def generate_queries(pdf_file, toc_stoplist_file):
 
     toc = parse_table_of_contents(toc, toc_stoplist)
 
-    toc = toc[:8]
+    toc = toc[:9]
 
     rsrcmgr = PDFResourceManager()
 
