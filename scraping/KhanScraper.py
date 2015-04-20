@@ -18,7 +18,8 @@ def getSubtitles(text):
     for x in maps:
         evalStr = ("{" + x + "}").replace("true", "True")
         map = eval(evalStr)
-        subs = subs + map["text"] + " "
+        if "text" in map:
+            subs = subs + map["text"] + " "
     return subs
 
 def get_search_results(search_term, topic):
