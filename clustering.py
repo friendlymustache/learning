@@ -1,8 +1,6 @@
 ## My approach: Cluster articles together based on similarity to determine 'topics'
 ## Vansh's approach: Match articles to the hierarchy of topics obtained from a textbook
 
-
-
 import logging, gensim, bz2
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.WARNING)
 
@@ -49,6 +47,7 @@ class Clusterer:
 		'''
 		output = []
 		targetFiles = "%s/*.txt"%self.folderName
+		# targetFiles = "articles/found*.txt"
 		for fname in glob.glob(targetFiles):
 			output.append(fname)
 		return output
@@ -59,9 +58,12 @@ class Clusterer:
 		other describing the corpus data with stop words etc filtered out) 
 		'''
 		docs = self.getDocs()
+		below_threshold = len(docs) / 10
+		above_threshold = round(float(len(docs)) / 2)
+
 		raw_dict = Dictionary(map(getWords, docs))
 		filtered_dict = copy.deepcopy(raw_dict)
-		filtered_dict.filter_extremes()
+		filtered_dict.filter_extremes(no_below=below_threshold, no_above=above_threshold)
 		return (raw_dict, filtered_dict)
 
 	def serializeCorpus(self):
@@ -87,9 +89,9 @@ class Clusterer:
 		self.filtered_dict = filtered_dict
 		self.processedCorpus = gensim.corpora.MmCorpus(self.TFIDF_FNAME)
 
-	def run(self):
+	def run(self, ntopics=8, num_iter=50000, chunk_size=500, num_passes=20):
 		'''		
-		Runs LDA clustering algorithm
+		Trains LDA on the provided documents
 		'''
 
 		if self.processedCorpus is None:
@@ -99,16 +101,22 @@ class Clusterer:
 		# lda = gensim.models.ldamodel.LdaModel(corpus=mm, id2word=id2word, 
 		#	num_topics=10, update_every=1, chunksize=1000, passes=1)
 		self.lda = gensim.models.ldamodel.LdaModel(corpus=self.processedCorpus, 
-			id2word=self.filtered_dict, num_topics=3, iterations=300, chunksize=100,
-			passes=20)
+			id2word=self.filtered_dict, num_topics=ntopics, iterations=num_iter, chunksize=chunk_size,
+			passes=num_passes)
 
 		print "LDA Results: "
 		topics = self.lda.print_topics()
 		printer = pprint.PrettyPrinter()
+
 		for i in range(self.lda.num_topics):
 			printer.pprint(self.lda.print_topic(i))
 			print "\n"
 
+	def evaluate(self, docname):
+		'''
+		Determines the topic representation of the document with the provided filename
+		'''
+		pass
 
 	def consolidateDocs(self, docs, saveFile):
 		'''

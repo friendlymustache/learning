@@ -1,11 +1,29 @@
 class TopicsController < ApplicationController
-	
+	skip_before_action :verify_authenticity_token, :only => [:create]
 	def create
-		@topic = Topic.new(params[:topic])
-		if @topic.save
-			redirect_to 'index'
+		'''
+		Accepts parameters containing values for any/all topic columns and 
+		a "parent_name" parameter. Creates a new topic under the parent with
+		the specified name
+		'''
+
+		parent = Topic.find_by_name(topic_params[:parent_name])
+		topic_hash = topic_params.slice(*(Topic.column_names))
+
+		# Add version to link_hash
+		topic_hash["version"] = topic_params["v_id"]
+
+		if parent != nil
+			@topic = parent.children.new(topic_hash)
 		else
-			render json: {:error => "Failed to create topic"}
+			@topic = Topic.new(topic_hash)
+		end
+
+		if @topic.save
+			render json: {:success => true}
+		else
+			error_message = "Failed to create topic with attributes " + params.to_s
+		 	render json: {:error => error_message}		
 		end
 	end
 
@@ -28,7 +46,8 @@ class TopicsController < ApplicationController
 		# whose names contain the query string and all of their
 		# prereqs, along with the children of each of these topics.
 		if params['name'] != nil
-			render json: Topic.get_subgraph(params['name']), each_serializer: TopicPrereqGraphSerializer
+			render json: Topic.get_subgraph(params['name'], params['v_id']), 
+ 			  each_serializer: TopicPrereqGraphSerializer
 
 		# Use this endpoint without any name parameter as a
 		# means of getting a JSON dump of all topics in development,
@@ -39,5 +58,11 @@ class TopicsController < ApplicationController
 			render json: Topic.none
 		end
 	end
+
+private
+
+  def topic_params
+    params.permit!
+  end
 
 end

@@ -1,10 +1,12 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
+
   var ENV = {
+    namespace:'v/0',
     modulePrefix: 'learning',
     environment: environment,
-    baseURL: '/',
+    baseURL:'/root',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -18,6 +20,7 @@ module.exports = function(environment) {
       // when it is created
     }
   };
+
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
@@ -41,12 +44,21 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.host = 'http://cumulus-beta.herokuapp.com';
+    // ENV.host = 'http://cumulus-beta.herokuapp.com';
   }
 
   if (environment === 'staging') {
     ENV.host = 'http://cumulus-staging.herokuapp.com';
   }
 
+  /*
+  if (process.env !== undefined) {
+    console.log("Old base url: " + ENV.baseURL 
+      + "new base URL: " + process.env.baseURL);
+    ENV.baseURL = process.env.baseURL;
+  }
+
+  console.log("Final value of baseURL:'/root',
+  */
   return ENV;
 };

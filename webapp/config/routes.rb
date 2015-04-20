@@ -4,8 +4,15 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'landing#index'
-  resources :topics 
-  resources :links
+  # resources :topics 
+  # resources :links
+  get 'v/:version' => 'landing#version_handler'
+
+  resources :v do 
+    resources :topics
+    resources :links
+  end
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -2,6 +2,10 @@ class Topic < ActiveRecord::Base
 	# Used to store hierarchy/nestedness of topics
 	has_ancestry
 
+	# Validate uniqueness of name of topic within each version of the site
+	validates :name, :uniqueness => {:scope => :version,
+		 :message => "Can only have one topic with a given name per version"}
+
 	# Outgoing edges are those for which the current topic is a prereq
 	has_many :outgoing_edges, :class_name => "Edge", :foreign_key => "prereq_id"
 	# Incoming edges are those for which the current topic is a postreq
@@ -43,16 +47,21 @@ class Topic < ActiveRecord::Base
 	# Get a list (without duplicates) 
 	# of all topics with names containing the substring <raw_query>
 	# and all of their prereqs.
-	def self.get_subgraph(raw_query)
+	def self.get_subgraph(raw_query, raw_version)
 		# Add % signs as wildcards for pattern matching (so that
 		# we match any topics whose names contain <raw_query>)
 		raw_query = "%" + raw_query + "%"
+		
 		query = Topic.sanitize(raw_query)
+		version = Topic.sanitize(raw_version)
+
+		where_predicate = "name ILIKE #{query} AND ancestry IS " +
+		  "NULL AND version = #{version}"
 
 		safe_sql = """
 		SELECT *
 		 FROM topics
-		 WHERE name ILIKE #{query} AND ancestry IS NULL
+		 WHERE #{where_predicate}
 
 		UNION 
 
@@ -60,7 +69,7 @@ class Topic < ActiveRecord::Base
 		FROM 
 		    (SELECT DISTINCT prereq_id AS id 
 		     FROM topics JOIN edges ON topics.id = edges.topic_id
-		     WHERE name ILIKE #{query} AND ancestry IS NULL) as prereq_ids
+		     WHERE #{where_predicate}) as prereq_ids
 		    NATURAL JOIN 
 		    (SELECT * FROM topics) as topic_ids;
 
