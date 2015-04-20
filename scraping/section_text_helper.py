@@ -104,7 +104,7 @@ def get_section_text(document, interpreter, device, start_keywords, \
 
     return ''.join(text_content).encode('utf-8')
 
-def generate_querys(pdf_file, toc_stoplist_file):
+def generate_queries(pdf_file, toc_stoplist_file):
     # Open a PDF document.
     fp = open(pdf_file, 'rb')
     parser = PDFParser(fp)
@@ -120,6 +120,8 @@ def generate_querys(pdf_file, toc_stoplist_file):
     toc_stoplist = read_in_toc_stoplist(toc_stoplist_file)
 
     toc = parse_table_of_contents(toc, toc_stoplist)
+
+    toc = toc[:8]
 
     rsrcmgr = PDFResourceManager()
 
@@ -153,6 +155,8 @@ def generate_querys(pdf_file, toc_stoplist_file):
 
         prev_level = level
         prev_name = topic[1]
+
+    # can add in section searching for parents as well
 
     fp.close()
 

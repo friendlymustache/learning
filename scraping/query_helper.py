@@ -82,11 +82,13 @@ def create_lsi_tfidf_model(dictionary, corpus):
 	return tfidf, lsi, index
 
 # used by khan academy scraper directly
-def get_top_query_hits(query_file, stoplist_file, subtitles, links):
+def get_top_query_hits(query, stoplist_file, subtitles, links):
 	stoplist = read_stoplist(stoplist_file)
 
-	# query = preprocess_doc(query, stoplist)
-	query = parse_file(query_file, stoplist)
+	# print query
+
+	query = preprocess_doc(query.split(), stoplist)
+	# query = parse_file(query_file, stoplist)
 
 	# make corpus & dictionary given folder of files
 	documents, subtitles, dictionary, corpus = \
@@ -107,7 +109,7 @@ def get_top_query_hits(query_file, stoplist_file, subtitles, links):
 	final_links = []
 
 	for video in sims:
-		if video[1] > 0.8:
+		if video[1] > 0.6:
 			i = video[0]
 
 			count = 0
