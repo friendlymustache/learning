@@ -89,7 +89,7 @@ for i in range(len(q_tfidf)/5):
 	low_score_words.append(dictionary[q_tfidf[i][0]])
 
 for word in low_score_words:
-	print word
+	# print word
 	query = filter(lambda item: item != word, query)
 
 print len(query)

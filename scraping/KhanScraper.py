@@ -11,6 +11,7 @@ import urllib2
 import sys
 import json
 
+
 def getSubtitles(text):
     maps = text.replace("[", "").replace("]", "").replace("}", "").split(", {")
     maps[0] = maps[0][1:]
@@ -20,6 +21,10 @@ def getSubtitles(text):
         map = eval(evalStr)
         subs = subs + map["text"] + " "
     return subs
+
+
+
+
 if len(sys.argv) == 1:
     print "Usage: python KhanScraper.py searchterm"
     quit()
@@ -44,6 +49,7 @@ if results == "":
     quit()
 #results now has the result block, so we'll parse that
 
+
 #we're parsing the html in order to get the links to the videos
 results = results.split("\"relativeUrl\": \"")
 x = 1
@@ -52,6 +58,8 @@ videoLinks = []
 while x < maxX:
     videoLinks.append("https://www.khanacademy.org" + results[x].split("\", ")[0])
     x += 1
+
+
 #now videoLinks is an array that stores the links to the video pages
 #we loop through these links and get the information for each youtube link
 output = []
@@ -65,6 +73,7 @@ for x in videoLinks:
             tempOut = y.split("\"")[3]
         if y.startswith("        <link rel=\"video_src"):
             tOut = {}
+            tOut["topic"] = searchTerm
             tOut["name"] = tempOut
             tOut["url"] = y.split("\"")[3]
             id = subsUrl + tOut["url"].split("/embed/")[1] + "/transcript"
@@ -73,11 +82,13 @@ for x in videoLinks:
             output.append(tOut)
             break
 
+algorithm_book_file = "algo.pdf"
+toc_stoplist_file = "toc_stoplist.txt"
+
+
+query_file = "chapter1_query.txt"
+stoplist_file = "stoplist.txt"
+
+output = get_top_query_hits(query, stoplist_file, subtitles, output)
+
 print json.dumps(output, sort_keys=True, indent=4, separators=(',', ': '))
-
-#for x in subtitles:
-#    print x
-#    print subtitles[x]
-#    print "\n\n----\n\n"
-
-
