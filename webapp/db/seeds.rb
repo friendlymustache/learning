@@ -181,22 +181,44 @@ def buildScrapingCommand(name)
     return "python ../scraping/KhanScraper.py #{name}"
 end
 
-def create_links(topic)
+def create_links
+    '''
     puts "Getting links for topic: #{topic.name}"
     command = buildScrapingCommand(topic.name)
     result = JSON.parse(`#{command}`)
     for link in result
         topic.links.create({title: link["name"], url: link["url"]})
     end
+    '''
+
+    source_path = "datafiles/links.json"
+    file = File.read(source_path)
+    links = JSON.parse(file)["links"]
+
+    links.each do |link_hash|
+        topic_id = link_hash["topic_ids"].first.to_i
+        link_hash = link_hash.slice(*(Link.column_names))
+        link = Link.find_by_url(link_hash["url"])
+        if not link 
+            link = Link.create(link_hash)
+        end
+        parent = Topic.find(topic_id)        
+        parent.links << link
+        link.topics << parent
+    end
 
 end
 
+# Create all topics
 for topic_hash in topic_list
   name = topic_hash["name"]
   parent_name = topic_hash["parent"]
   parent = Topic.find_by_name(parent_name)
   if parent != nil
   	topic = parent.children.create({name: name})
-    # create_links(topic)    
   end
 end	
+
+# Create links
+create_links
+

@@ -1,7 +1,6 @@
 {"links" :
    [  
    {  
-      "id":1,
       "url":"https://www.youtube.com/embed/ayRpoJgph0E",
       "title":"Number patterns: Seeing relationships",
       "topic_ids":[  
@@ -9,7 +8,6 @@
       ]
    },
    {  
-      "id":2,
       "url":"https://www.youtube.com/embed/jyLRpr2P0MQ",
       "title":"Circles: radius, diameter, circumference and Pi",
       "topic_ids":[  
@@ -17,7 +15,6 @@
       ]
    },
    {  
-      "id":3,
       "url":"https://www.youtube.com/embed/y-O_B-wWivQ",
       "title":"Measuring Line Segments",
       "topic_ids":[  
@@ -25,7 +22,6 @@
       ]
    },
    {  
-      "id":4,
       "url":"https://www.youtube.com/embed/tvpp2lAD9iY",
       "title":"Robert Rauschenberg, Bed",
       "topic_ids":[  
@@ -33,7 +29,6 @@
       ]
    },
    {  
-      "id":5,
       "url":"https://www.youtube.com/embed/Pu1WCHsYfKQ",
       "title":"Duccio, The Virgin and Child with Saints Dominic and Aurea",
       "topic_ids":[  
@@ -41,7 +36,6 @@
       ]
    },
    {  
-      "id":6,
       "url":"https://www.youtube.com/embed/47JRs6hF_ic",
       "title":"Decay and interference",
       "topic_ids":[  
@@ -49,7 +43,6 @@
       ]
    },
    {  
-      "id":7,
       "url":"https://www.youtube.com/embed/eXGVAfv08AQ",
       "title":"Appealing a financial aid package",
       "topic_ids":[  
@@ -57,7 +50,6 @@
       ]
    },
    {  
-      "id":8,
       "url":"https://www.youtube.com/embed/Etx366BN34g",
       "title":"Staying grounded",
       "topic_ids":[  
@@ -65,7 +57,6 @@
       ]
    },
    {  
-      "id":9,
       "url":"https://www.youtube.com/embed/gtlaJuBuQvE",
       "title":"Danny O\u0026#39;Neill - President of The Roasterie",
       "topic_ids":[  
@@ -73,7 +64,6 @@
       ]
    },
    {  
-      "id":10,
       "url":"https://www.youtube.com/embed/Z1RpVPbHgzU",
       "title":"Digging through time",
       "topic_ids":[  
@@ -81,7 +71,6 @@
       ]
    },
    {  
-      "id":11,
       "url":"https://www.youtube.com/embed/R5UK0dEFSoM",
       "title":"Bramante, et.al., Saint Peter\u0026#39;s Basilica",
       "topic_ids":[  
@@ -89,7 +78,6 @@
       ]
    },
    {  
-      "id":12,
       "url":"https://www.youtube.com/embed/JBOFe2nwob4",
       "title":"Lara Morgan - Founder of Pacific Direct",
       "topic_ids":[  
@@ -97,7 +85,6 @@
       ]
    },
    {  
-      "id":13,
       "url":"https://www.youtube.com/embed/qv2K1yk0LCE",
       "title":"Piero della Francesca, The Baptism of Christ",
       "topic_ids":[  
@@ -105,7 +92,6 @@
       ]
    },
    {  
-      "id":14,
       "url":"https://www.youtube.com/embed/WGMn16TDTjE",
       "title":"Randomized algorithms (intro)",
       "topic_ids":[  
@@ -113,7 +99,6 @@
       ]
    },
    {  
-      "id":15,
       "url":"https://www.youtube.com/embed/oYUzKAfrx0w",
       "title":"Algorithmic efficiency",
       "topic_ids":[  
@@ -121,7 +106,6 @@
       ]
    },
    {  
-      "id":16,
       "url":"https://www.youtube.com/embed/2IFItASxDVo",
       "title":"Algorithm for mentally computing binomial expansion coefficients",
       "topic_ids":[  
@@ -129,7 +113,6 @@
       ]
    },
    {  
-      "id":17,
       "url":"https://www.youtube.com/embed/h6YWCuuJVj4",
       "title":"Computer memory (space)",
       "topic_ids":[  
@@ -137,7 +120,6 @@
       ]
    },
    {  
-      "id":18,
       "url":"https://www.youtube.com/embed/S-ws2W6UbPU",
       "title":"What is an algorithm and why should you care?",
       "topic_ids":[  
@@ -145,7 +127,6 @@
       ]
    },
    {  
-      "id":19,
       "url":"https://www.youtube.com/embed/SauhB2fYQkM",
       "title":"Role of the sarcoplasmic reticulum in muscle cells",
       "topic_ids":[  
@@ -153,7 +134,6 @@
       ]
    },
    {  
-      "id":20,
       "url":"https://www.youtube.com/embed/O1N2rENXq_Y",
       "title":"Role of phagocytes in innate or nonspecific immunity",
       "topic_ids":[  
@@ -161,7 +141,6 @@
       ]
    },
    {  
-      "id":21,
       "url":"https://www.youtube.com/embed/kjLwVqxwaIM",
       "title":"The lymphatic system\u0026#39;s role in immunity",
       "topic_ids":[  
@@ -169,7 +148,6 @@
       ]
    },
    {  
-      "id":22,
       "url":"https://www.youtube.com/embed/LiOfeSsjrB8",
       "title":"Tropomyosin and troponin and their role in regulating muscle contraction",
       "topic_ids":[  
@@ -177,7 +155,6 @@
       ]
    },
    {  
-      "id":23,
       "url":"https://www.youtube.com/embed/Tal_fgREll0",
       "title":"Similarity example where same side plays different roles",
       "topic_ids":[  
@@ -185,7 +162,6 @@
       ]
    },
    {  
-      "id":24,
       "url":"https://www.youtube.com/embed/Z-gq3nV2mmM",
       "title":"DLab: Students present their computer science project",
       "topic_ids":[  
@@ -193,7 +169,6 @@
       ]
    },
    {  
-      "id":25,
       "url":"https://www.youtube.com/embed/IPxQQNyCxas",
       "title":"Institutional roles in issuing and processing credit cards",
       "topic_ids":[  
@@ -201,7 +176,6 @@
       ]
    },
    {  
-      "id":26,
       "url":"https://www.youtube.com/embed/TktF6unUlso",
       "title":"Role strain and role conflict",
       "topic_ids":[  
@@ -209,7 +183,6 @@
       ]
    },
    {  
-      "id":27,
       "url":"https://www.youtube.com/embed/hBES75bsh64",
       "title":"Danny O\u0026#39;Neill - Getting started",
       "topic_ids":[  
@@ -217,7 +190,6 @@
       ]
    },
    {  
-      "id":28,
       "url":"https://www.youtube.com/embed/TX7-Kdn6lJQ",
       "title":"Meiosis: Where the sex starts",
       "topic_ids":[  
@@ -225,7 +197,6 @@
       ]
    },
    {  
-      "id":29,
       "url":"https://www.youtube.com/embed/wfY2vx3P0cE",
       "title":"Starting and staying in business with friends",
       "topic_ids":[  
@@ -233,7 +204,6 @@
       ]
    },
    {  
-      "id":30,
       "url":"https://www.youtube.com/embed/dqmaxkxInZ4",
       "title":"Getting a new heart",
       "topic_ids":[  
@@ -241,7 +211,6 @@
       ]
    },
    {  
-      "id":31,
       "url":"https://www.youtube.com/embed/h6HmHjkA034",
       "title":"Multiplying binomials to get difference of squares",
       "topic_ids":[  
@@ -249,7 +218,6 @@
       ]
    },
    {  
-      "id":32,
       "url":"https://www.youtube.com/embed/8TIben0bJpU",
       "title":"Getting exactly two heads (combinatorics)",
       "topic_ids":[  
@@ -257,7 +225,6 @@
       ]
    },
    {  
-      "id":33,
       "url":"https://www.youtube.com/embed/jDNalKBb3aA",
       "title":"Bailout 6: Getting an equity infusion",
       "topic_ids":[  
@@ -265,7 +232,6 @@
       ]
    },
    {  
-      "id":34,
       "url":"https://www.youtube.com/embed/-hJj5NpWUXQ",
       "title":"Getting a seed round from a VC",
       "topic_ids":[  
@@ -273,7 +239,6 @@
       ]
    },
    {  
-      "id":35,
       "url":"https://www.youtube.com/embed/gHpl5UcgRkI",
       "title":"Getting data from expected value",
       "topic_ids":[  
@@ -281,7 +246,6 @@
       ]
    },
    {  
-      "id":36,
       "url":"https://www.youtube.com/embed/RpOHZc6cDIw",
       "title":"Why gravity gets so strong near dense objects",
       "topic_ids":[  
@@ -289,7 +253,6 @@
       ]
    },
    {  
-      "id":37,
       "url":"https://www.youtube.com/embed/An46SYAxhtc",
       "title":"Getting to 10 by filling boxes",
       "topic_ids":[  
@@ -297,7 +260,6 @@
       ]
    },
    {  
-      "id":38,
       "url":"https://www.youtube.com/embed/aHzd-u35LuA",
       "title":"Angle to aim to get alien",
       "topic_ids":[  
@@ -305,7 +267,6 @@
       ]
    },
    {  
-      "id":39,
       "url":"https://www.youtube.com/embed/Anab9vKI7i8",
       "title":"\u0026#34;Getting Lost\u0026#34; with Deniz Beyazit",
       "topic_ids":[  
@@ -313,7 +274,6 @@
       ]
    },
    {  
-      "id":40,
       "url":"https://www.youtube.com/embed/6WMZ7J0wwMI",
       "title":"Exponential growth functions",
       "topic_ids":[  
@@ -321,7 +281,6 @@
       ]
    },
    {  
-      "id":41,
       "url":"https://www.youtube.com/embed/gF0aA-si89Y",
       "title":"Childhood growth",
       "topic_ids":[  
@@ -329,7 +288,6 @@
       ]
    },
    {  
-      "id":42,
       "url":"https://www.youtube.com/embed/m5Tf6vgoJtQ",
       "title":"Exponential growth and decay word problems",
       "topic_ids":[  
@@ -337,7 +295,6 @@
       ]
    },
    {  
-      "id":43,
       "url":"https://www.youtube.com/embed/t1-VVUmP0rY",
       "title":"Vocal cord growths",
       "topic_ids":[  
@@ -345,7 +302,6 @@
       ]
    },
    {  
-      "id":44,
       "url":"https://www.youtube.com/embed/WIhR50ttMB4",
       "title":"Human population growth",
       "topic_ids":[  
@@ -353,7 +309,6 @@
       ]
    },
    {  
-      "id":45,
       "url":"https://www.youtube.com/embed/ir-ISPDjGno",
       "title":"Return on capital and economic growth",
       "topic_ids":[  
@@ -361,7 +316,6 @@
       ]
    },
    {  
-      "id":46,
       "url":"https://www.youtube.com/embed/r1ywppAJ1xs",
       "title":"Thomas malthus and population growth",
       "topic_ids":[  
@@ -369,7 +323,6 @@
       ]
    },
    {  
-      "id":47,
       "url":"https://www.youtube.com/embed/Uz0MtFlLD-k",
       "title":"Relations and functions",
       "topic_ids":[  
@@ -377,7 +330,6 @@
       ]
    },
    {  
-      "id":48,
       "url":"https://www.youtube.com/embed/n34dqyVCXs4",
       "title":"Sum of functions",
       "topic_ids":[  
@@ -385,7 +337,6 @@
       ]
    },
    {  
-      "id":49,
       "url":"https://www.youtube.com/embed/KvMyZY9upuA",
       "title":"Difference of functions",
       "topic_ids":[  
@@ -393,7 +344,6 @@
       ]
    },
    {  
-      "id":50,
       "url":"https://www.youtube.com/embed/JKvmAexeMgY",
       "title":"Product of functions",
       "topic_ids":[  
@@ -401,7 +351,6 @@
       ]
    },
    {  
-      "id":51,
       "url":"https://www.youtube.com/embed/u9v_bakOIcU",
       "title":"Quotient of functions",
       "topic_ids":[  
@@ -409,7 +358,6 @@
       ]
    },
    {  
-      "id":52,
       "url":"https://www.youtube.com/embed/a9aUMpGs6c8",
       "title":"Economic growth through investment",
       "topic_ids":[  
@@ -417,7 +365,6 @@
       ]
    },
    {  
-      "id":53,
       "url":"https://www.youtube.com/embed/NpuvcuzXn9w",
       "title":"Myocarditis and pericarditis treatment",
       "topic_ids":[  
@@ -425,7 +372,6 @@
       ]
    },
    {  
-      "id":54,
       "url":"https://www.youtube.com/embed/XaqsqtWiJMw",
       "title":"Pleural effusion diagnosis and treatment",
       "topic_ids":[  
@@ -433,7 +379,6 @@
       ]
    },
    {  
-      "id":55,
       "url":"https://www.youtube.com/embed/DGRnSnPSOqg",
       "title":"Sinusitis diagnosis and treatment",
       "topic_ids":[  
@@ -441,7 +386,6 @@
       ]
    },
    {  
-      "id":56,
       "url":"https://www.youtube.com/embed/7zk0ubr_lzo",
       "title":"Systemic thinking about cancer",
       "topic_ids":[  
@@ -449,7 +393,6 @@
       ]
    },
    {  
-      "id":57,
       "url":"https://www.youtube.com/embed/xHUsdE880so",
       "title":"Thoracic aortic aneurysms",
       "topic_ids":[  
@@ -457,7 +400,6 @@
       ]
    },
    {  
-      "id":58,
       "url":"https://www.youtube.com/embed/XMElagkUBmY",
       "title":"Woodrow Wilson\u0026#39;s Fourteen Points",
       "topic_ids":[  
@@ -465,7 +407,6 @@
       ]
    },
    {  
-      "id":59,
       "url":"https://www.youtube.com/embed/WGMn16TDTjE",
       "title":"Randomized algorithms (intro)",
       "topic_ids":[  
@@ -473,7 +414,6 @@
       ]
    },
    {  
-      "id":60,
       "url":"https://www.youtube.com/embed/3v9w79NhsfI",
       "title":"Random variables",
       "topic_ids":[  
@@ -481,7 +421,6 @@
       ]
    },
    {  
-      "id":61,
       "url":"https://www.youtube.com/embed/oYUzKAfrx0w",
       "title":"Algorithmic efficiency",
       "topic_ids":[  
@@ -489,7 +428,6 @@
       ]
    },
    {  
-      "id":62,
       "url":"https://www.youtube.com/embed/rLdoKZ7w0xI",
       "title":"Variance of differences of random variables",
       "topic_ids":[  
@@ -497,7 +435,6 @@
       ]
    },
    {  
-      "id":63,
       "url":"https://www.youtube.com/embed/S-ws2W6UbPU",
       "title":"What is an algorithm and why should you care?",
       "topic_ids":[  
@@ -505,7 +442,6 @@
       ]
    },
    {  
-      "id":64,
       "url":"https://www.youtube.com/embed/1mjyq51ppT8",
       "title":"Random primality test (warm up)",
       "topic_ids":[  
@@ -513,7 +449,6 @@
       ]
    },
    {  
-      "id":65,
       "url":"https://www.youtube.com/embed/E4rbS0oxg30",
       "title":"Random predictions for 2060",
       "topic_ids":[  
@@ -521,7 +456,6 @@
       ]
    },
    {  
-      "id":66,
       "url":"https://www.youtube.com/embed/dOr0NKyD31Q",
       "title":"Discrete and continuous random variables",
       "topic_ids":[  
@@ -529,7 +463,6 @@
       ]
    },
    {  
-      "id":67,
       "url":"https://www.youtube.com/embed/QwvJ6z49m-c",
       "title":"More fiscal cliff analysis",
       "topic_ids":[  
@@ -537,7 +470,6 @@
       ]
    },
    {  
-      "id":68,
       "url":"https://www.youtube.com/embed/mtL_plJXv3c",
       "title":"Renting vs. buying (detailed analysis)",
       "topic_ids":[  
@@ -545,7 +477,6 @@
       ]
    },
    {  
-      "id":69,
       "url":"https://www.youtube.com/embed/8hcanS-j8Ho",
       "title":"Random sampling intuition",
       "topic_ids":[  
@@ -553,7 +484,6 @@
       ]
    },
    {  
-      "id":70,
       "url":"https://www.youtube.com/embed/sSqxVMbml_k",
       "title":"Simple analysis of cost per job saved from stimulus",
       "topic_ids":[  
@@ -561,7 +491,6 @@
       ]
    },
    {  
-      "id":71,
       "url":"https://www.youtube.com/embed/NaO01BO8X70",
       "title":"Introduction to random sampling",
       "topic_ids":[  
@@ -569,7 +498,6 @@
       ]
    },
    {  
-      "id":72,
       "url":"https://www.youtube.com/embed/5ABpqVSx33I",
       "title":"Z-statistics vs. T-statistics",
       "topic_ids":[  
@@ -577,7 +505,6 @@
       ]
    },
    {  
-      "id":73,
       "url":"https://www.youtube.com/embed/qyYSQDcSNlY",
       "title":"Statistical and non statistical questions",
       "topic_ids":[  
@@ -585,7 +512,6 @@
       ]
    },
    {  
-      "id":74,
       "url":"https://www.youtube.com/embed/uhxtUt_-GyM",
       "title":"Statistics: The average",
       "topic_ids":[  
@@ -593,7 +519,6 @@
       ]
    },
    {  
-      "id":75,
       "url":"https://www.youtube.com/embed/OjzfQDFf7Uk",
       "title":"Statistical questions",
       "topic_ids":[  
@@ -601,7 +526,6 @@
       ]
    },
    {  
-      "id":76,
       "url":"https://www.youtube.com/embed/hV4pdjHCKuA",
       "title":"T-statistic confidence interval",
       "topic_ids":[  
@@ -609,7 +533,6 @@
       ]
    },
    {  
-      "id":77,
       "url":"https://www.youtube.com/embed/h8EYEJ32oQ8",
       "title":"Statistics intro: Mean, median and mode",
       "topic_ids":[  
@@ -617,7 +540,6 @@
       ]
    },
    {  
-      "id":78,
       "url":"https://www.youtube.com/embed/Xg8_iSkJpAE",
       "title":"ANOVA 3: Hypothesis test with F-statistic",
       "topic_ids":[  
@@ -625,7 +547,6 @@
       ]
    },
    {  
-      "id":79,
       "url":"https://www.youtube.com/embed/piIcRV2dx7E",
       "title":"Order of operations: PEMDAS",
       "topic_ids":[  
@@ -633,7 +554,6 @@
       ]
    },
    {  
-      "id":80,
       "url":"https://www.youtube.com/embed/3Po3nfITsok",
       "title":"Order of operations, more examples",
       "topic_ids":[  
@@ -641,7 +561,6 @@
       ]
    },
    {  
-      "id":81,
       "url":"https://www.youtube.com/embed/nrRJkzXl4a4",
       "title":"The classical orders",
       "topic_ids":[  
@@ -649,7 +568,6 @@
       ]
    },
    {  
-      "id":82,
       "url":"https://www.youtube.com/embed/9Wfn-WWV1aY",
       "title":"First order homogenous equations",
       "topic_ids":[  
@@ -657,7 +575,6 @@
       ]
    },
    {  
-      "id":83,
       "url":"https://www.youtube.com/embed/GiSpzFKI5_w",
       "title":"Order of operations example",
       "topic_ids":[  
@@ -665,7 +582,6 @@
       ]
    },
    {  
-      "id":84,
       "url":"https://www.youtube.com/embed/ClYdw4d4OmA",
       "title":"Introduction to order of operations",
       "topic_ids":[  
@@ -673,7 +589,6 @@
       ]
    },
    {  
-      "id":85,
       "url":"https://www.youtube.com/embed/4PCktDZJH8E",
       "title":"Linear transformations",
       "topic_ids":[  
@@ -681,7 +596,6 @@
       ]
    },
    {  
-      "id":86,
       "url":"https://www.youtube.com/embed/pMFv6liWK4M",
       "title":"Linear subspaces",
       "topic_ids":[  
@@ -689,7 +603,6 @@
       ]
    },
    {  
-      "id":87,
       "url":"https://www.youtube.com/embed/Alhcv5d_XOs",
       "title":"More on linear independence",
       "topic_ids":[  
@@ -697,7 +610,6 @@
       ]
    },
    {  
-      "id":88,
       "url":"https://www.youtube.com/embed/f_DTiXZpb8M",
       "title":"Compositions of linear transformations 1",
       "topic_ids":[  
@@ -705,7 +617,6 @@
       ]
    },
    {  
-      "id":89,
       "url":"https://www.youtube.com/embed/CrV1xCWdY-g",
       "title":"Introduction to linear independence",
       "topic_ids":[  
@@ -713,7 +624,6 @@
       ]
    },
    {  
-      "id":90,
       "url":"https://www.youtube.com/embed/mr9Tow8hpCg",
       "title":"Showing that inverses are linear",
       "topic_ids":[  
@@ -721,7 +631,6 @@
       ]
    },
    {  
-      "id":91,
       "url":"https://www.youtube.com/embed/Qm_OS-8COwU",
       "title":"Linear combinations and span",
       "topic_ids":[  
@@ -729,7 +638,6 @@
       ]
    },
    {  
-      "id":92,
       "url":"https://www.youtube.com/embed/AZroE4fJqtQ",
       "title":"Recognizing linear functions",
       "topic_ids":[  
@@ -737,7 +645,6 @@
       ]
    },
    {  
-      "id":93,
       "url":"https://www.youtube.com/embed/awzOvyMKeMA",
       "title":"Solving for time",
       "topic_ids":[  
@@ -745,7 +652,6 @@
       ]
    },
    {  
-      "id":94,
       "url":"https://www.youtube.com/embed/DRtLXagrMHw",
       "title":"Cosmological time scale 1",
       "topic_ids":[  
@@ -753,7 +659,6 @@
       ]
    },
    {  
-      "id":95,
       "url":"https://www.youtube.com/embed/LO7-3MpWijU",
       "title":"Cosmological time scale 2",
       "topic_ids":[  
@@ -761,7 +666,6 @@
       ]
    },
    {  
-      "id":96,
       "url":"https://www.youtube.com/embed/lQ-dvt3V4yQ",
       "title":"Displacement from time and velocity example",
       "topic_ids":[  
@@ -769,7 +673,6 @@
       ]
    },
    {  
-      "id":97,
       "url":"https://www.youtube.com/embed/9YRw0Yk7N8c",
       "title":"Time space tradeoff",
       "topic_ids":[  
@@ -777,7 +680,6 @@
       ]
    },
    {  
-      "id":98,
       "url":"https://www.youtube.com/embed/h8EYEJ32oQ8",
       "title":"Statistics intro: Mean, median and mode",
       "topic_ids":[  
@@ -785,7 +687,6 @@
       ]
    },
    {  
-      "id":99,
       "url":"https://www.youtube.com/embed/uhxtUt_-GyM",
       "title":"Statistics: The average",
       "topic_ids":[  
@@ -793,7 +694,6 @@
       ]
    },
    {  
-      "id":100,
       "url":"https://www.youtube.com/embed/qyYSQDcSNlY",
       "title":"Statistical and non statistical questions",
       "topic_ids":[  
@@ -801,7 +701,6 @@
       ]
    },
    {  
-      "id":101,
       "url":"https://www.youtube.com/embed/5ABpqVSx33I",
       "title":"Z-statistics vs. T-statistics",
       "topic_ids":[  
@@ -809,7 +708,6 @@
       ]
    },
    {  
-      "id":102,
       "url":"https://www.youtube.com/embed/GiGLhXFBtRg",
       "title":"Triangle medians and centroids",
       "topic_ids":[  
@@ -817,7 +715,6 @@
       ]
    },
    {  
-      "id":103,
       "url":"https://www.youtube.com/embed/k3aKKasOmIw",
       "title":"Finding mean, median and mode",
       "topic_ids":[  
@@ -825,7 +722,6 @@
       ]
    },
    {  
-      "id":104,
       "url":"https://www.youtube.com/embed/OjzfQDFf7Uk",
       "title":"Statistical questions",
       "topic_ids":[  
@@ -833,7 +729,6 @@
       ]
    },
    {  
-      "id":105,
       "url":"https://www.youtube.com/embed/hV4pdjHCKuA",
       "title":"T-statistic confidence interval",
       "topic_ids":[  
@@ -841,7 +736,6 @@
       ]
    },
    {  
-      "id":106,
       "url":"https://www.youtube.com/embed/k45QTFCHSVs",
       "title":"Median centroid right triangle example",
       "topic_ids":[  
@@ -849,7 +743,6 @@
       ]
    },
    {  
-      "id":107,
       "url":"https://www.youtube.com/embed/n6xCyzOP900",
       "title":"Exploring the mean and median",
       "topic_ids":[  
@@ -857,7 +750,6 @@
       ]
    },
    {  
-      "id":108,
       "url":"https://www.youtube.com/embed/0cHCpgQD_8k",
       "title":"Median and range puzzle",
       "topic_ids":[  
@@ -865,7 +757,6 @@
       ]
    },
    {  
-      "id":109,
       "url":"https://www.youtube.com/embed/Vc09LURoMQ8",
       "title":"Triangle medians and centroids (2D proof)",
       "topic_ids":[  
@@ -873,7 +764,6 @@
       ]
    },
    {  
-      "id":110,
       "url":"https://www.youtube.com/embed/W3C07uH-b9o",
       "title":"Statistical significance on bus speeds",
       "topic_ids":[  
@@ -881,7 +771,6 @@
       ]
    },
    {  
-      "id":111,
       "url":"https://www.youtube.com/embed/nXgL7C7emDQ",
       "title":"The structure of the eye",
       "topic_ids":[  
@@ -889,7 +778,6 @@
       ]
    },
    {  
-      "id":112,
       "url":"https://www.youtube.com/embed/XEPdMvZqCHQ",
       "title":"Condensed structures",
       "topic_ids":[  
@@ -897,7 +785,6 @@
       ]
    },
    {  
-      "id":113,
       "url":"https://www.youtube.com/embed/DK1lCc9b7bg",
       "title":"Inflation data",
       "topic_ids":[  
@@ -905,7 +792,6 @@
       ]
    },
    {  
-      "id":114,
       "url":"https://www.youtube.com/embed/pMoA65Dj-zk",
       "title":"Representing structures of organic molecules",
       "topic_ids":[  
@@ -913,7 +799,6 @@
       ]
    },
    {  
-      "id":115,
       "url":"https://www.youtube.com/embed/YEZMReBbkP0",
       "title":"Basic capital structure differences",
       "topic_ids":[  
@@ -921,7 +806,6 @@
       ]
    },
    {  
-      "id":116,
       "url":"https://www.youtube.com/embed/-1w9RXhCmsE",
       "title":"Data wires",
       "topic_ids":[  
@@ -929,7 +813,6 @@
       ]
    },
    {  
-      "id":117,
       "url":"https://www.youtube.com/embed/4AxZ-6MOznY",
       "title":"Structure of the earth",
       "topic_ids":[  
@@ -937,7 +820,6 @@
       ]
    },
    {  
-      "id":118,
       "url":"https://www.youtube.com/embed/4Azskeheo_g",
       "title":"Data on Chinese M1 increase in 2010",
       "topic_ids":[  
@@ -945,7 +827,6 @@
       ]
    },
    {  
-      "id":119,
       "url":"https://www.youtube.com/embed/1h4kW8RX-6k",
       "title":"Overview of neuron structure",
       "topic_ids":[  
@@ -953,7 +834,6 @@
       ]
    },
    {  
-      "id":120,
       "url":"https://www.youtube.com/embed/iNemmT1hnzA",
       "title":"Data on Chinese US balance of payments",
       "topic_ids":[  
@@ -961,7 +841,6 @@
       ]
    },
    {  
-      "id":121,
       "url":"https://www.youtube.com/embed/RBbJKOOZ6FY",
       "title":"Structural (constitutional) isomers",
       "topic_ids":[  
@@ -969,7 +848,6 @@
       ]
    },
    {  
-      "id":122,
       "url":"https://www.youtube.com/embed/0ZKtsUkrgFQ",
       "title":"Ways to represent data",
       "topic_ids":[  
@@ -977,7 +855,6 @@
       ]
    },
    {  
-      "id":123,
       "url":"https://www.youtube.com/embed/8AwKNC1texM",
       "title":"Bond-line structures",
       "topic_ids":[  
@@ -985,7 +862,6 @@
       ]
    },
    {  
-      "id":124,
       "url":"https://www.youtube.com/embed/vIZ0LnLo3jE",
       "title":"Elementary rate laws",
       "topic_ids":[  
@@ -993,7 +869,6 @@
       ]
    },
    {  
-      "id":125,
       "url":"https://www.youtube.com/embed/nXgL7C7emDQ",
       "title":"The structure of the eye",
       "topic_ids":[  
@@ -1001,7 +876,6 @@
       ]
    },
    {  
-      "id":126,
       "url":"https://www.youtube.com/embed/XEPdMvZqCHQ",
       "title":"Condensed structures",
       "topic_ids":[  
@@ -1009,7 +883,6 @@
       ]
    },
    {  
-      "id":127,
       "url":"https://www.youtube.com/embed/DK1lCc9b7bg",
       "title":"Inflation data",
       "topic_ids":[  
@@ -1017,7 +890,6 @@
       ]
    },
    {  
-      "id":128,
       "url":"https://www.youtube.com/embed/pMoA65Dj-zk",
       "title":"Representing structures of organic molecules",
       "topic_ids":[  
@@ -1025,7 +897,6 @@
       ]
    },
    {  
-      "id":129,
       "url":"https://www.youtube.com/embed/YEZMReBbkP0",
       "title":"Basic capital structure differences",
       "topic_ids":[  
@@ -1033,7 +904,6 @@
       ]
    },
    {  
-      "id":130,
       "url":"https://www.youtube.com/embed/-1w9RXhCmsE",
       "title":"Data wires",
       "topic_ids":[  
@@ -1041,7 +911,6 @@
       ]
    },
    {  
-      "id":131,
       "url":"https://www.youtube.com/embed/4AxZ-6MOznY",
       "title":"Structure of the earth",
       "topic_ids":[  
@@ -1049,7 +918,6 @@
       ]
    },
    {  
-      "id":132,
       "url":"https://www.youtube.com/embed/4Azskeheo_g",
       "title":"Data on Chinese M1 increase in 2010",
       "topic_ids":[  
@@ -1057,7 +925,6 @@
       ]
    },
    {  
-      "id":133,
       "url":"https://www.youtube.com/embed/1h4kW8RX-6k",
       "title":"Overview of neuron structure",
       "topic_ids":[  
@@ -1065,7 +932,6 @@
       ]
    },
    {  
-      "id":134,
       "url":"https://www.youtube.com/embed/iNemmT1hnzA",
       "title":"Data on Chinese US balance of payments",
       "topic_ids":[  
@@ -1073,7 +939,6 @@
       ]
    },
    {  
-      "id":135,
       "url":"https://www.youtube.com/embed/RBbJKOOZ6FY",
       "title":"Structural (constitutional) isomers",
       "topic_ids":[  
@@ -1081,7 +946,6 @@
       ]
    },
    {  
-      "id":136,
       "url":"https://www.youtube.com/embed/0ZKtsUkrgFQ",
       "title":"Ways to represent data",
       "topic_ids":[  
@@ -1089,7 +953,6 @@
       ]
    },
    {  
-      "id":137,
       "url":"https://www.youtube.com/embed/0WiTaBI82Mc",
       "title":"Bitcoin: Cryptographic hash functions",
       "topic_ids":[  
@@ -1097,7 +960,6 @@
       ]
    },
    {  
-      "id":138,
       "url":"https://www.youtube.com/embed/xO_1bYgoQvA",
       "title":"Multiplication 2: The multiplication tables",
       "topic_ids":[  
@@ -1105,7 +967,6 @@
       ]
    },
    {  
-      "id":139,
       "url":"https://www.youtube.com/embed/hpWdDmgsIRE",
       "title":"Contingency table chi-square test",
       "topic_ids":[  
@@ -1113,7 +974,6 @@
       ]
    },
    {  
-      "id":140,
       "url":"https://www.youtube.com/embed/nh3_IGxHA5A",
       "title":"Graphing a parabola  with a table of values",
       "topic_ids":[  
@@ -1121,7 +981,6 @@
       ]
    },
    {  
-      "id":141,
       "url":"https://www.youtube.com/embed/jNUz0P5MG9M",
       "title":"Analyzing proportional relationships from a table",
       "topic_ids":[  
@@ -1129,7 +988,6 @@
       ]
    },
    {  
-      "id":142,
       "url":"https://www.youtube.com/embed/CIoPn6BnLNM",
       "title":"Patterns in multiplication tables practice",
       "topic_ids":[  
@@ -1137,7 +995,6 @@
       ]
    },
    {  
-      "id":143,
       "url":"https://www.youtube.com/embed/4QwfrTNuwE4",
       "title":"Joseph Beuys, Table with Accumulator",
       "topic_ids":[  
@@ -1145,7 +1002,6 @@
       ]
    },
    {  
-      "id":144,
       "url":"https://www.youtube.com/embed/gdE46YSedvE",
       "title":"Frequency tables and dot plots",
       "topic_ids":[  
@@ -1153,7 +1009,6 @@
       ]
    },
    {  
-      "id":145,
       "url":"https://www.youtube.com/embed/qihoczo1Ujk",
       "title":"Multiplication 3: 10,11,12 times tables",
       "topic_ids":[  
@@ -1161,7 +1016,6 @@
       ]
    },
    {  
-      "id":146,
       "url":"https://www.youtube.com/embed/kfySynqWWos",
       "title":"Solving ratio problems with tables example 2",
       "topic_ids":[  
@@ -1169,7 +1023,6 @@
       ]
    },
    {  
-      "id":147,
       "url":"https://www.youtube.com/embed/EblnaLMjdNg",
       "title":"Unlocking an 18th-century French mechanical table",
       "topic_ids":[  
@@ -1177,7 +1030,6 @@
       ]
    },
    {  
-      "id":148,
       "url":"https://www.youtube.com/embed/kCM2mSb4qIU",
       "title":"The periodic table - transition metals",
       "topic_ids":[  
@@ -1185,7 +1037,6 @@
       ]
    },
    {  
-      "id":149,
       "url":"https://www.youtube.com/embed/t_f8bB1kf6M",
       "title":"The periodic table - classification of elements",
       "topic_ids":[  
@@ -1193,7 +1044,6 @@
       ]
    },
    {  
-      "id":150,
       "url":"https://www.youtube.com/embed/e4MSN6IImpI",
       "title":"Doodling in math: Binary trees",
       "topic_ids":[  
@@ -1201,7 +1051,6 @@
       ]
    },
    {  
-      "id":151,
       "url":"https://www.youtube.com/embed/d7zqiCrfiUE",
       "title":"Searching for scholarships",
       "topic_ids":[  
@@ -1209,7 +1058,6 @@
       ]
    },
    {  
-      "id":152,
       "url":"https://www.youtube.com/embed/RgklPQ8rbkg",
       "title":"Adding in binary",
       "topic_ids":[  
@@ -1217,7 +1065,6 @@
       ]
    },
    {  
-      "id":153,
       "url":"https://www.youtube.com/embed/YlhDUSntCI4",
       "title":"Friedrich, The Lone Tree",
       "topic_ids":[  
@@ -1225,7 +1072,6 @@
       ]
    },
    {  
-      "id":154,
       "url":"https://www.youtube.com/embed/xHWKYFhhtJQ",
       "title":"Multiplying in binary",
       "topic_ids":[  
@@ -1233,7 +1079,6 @@
       ]
    },
    {  
-      "id":155,
       "url":"https://www.youtube.com/embed/oHvLlS_Sc54",
       "title":"Taxonomy and the tree of life",
       "topic_ids":[  
@@ -1241,7 +1086,6 @@
       ]
    },
    {  
-      "id":156,
       "url":"https://www.youtube.com/embed/wQq2xOs2BYU",
       "title":"O\u0026#39;Keeffe, The Lawrence Tree",
       "topic_ids":[  
@@ -1249,7 +1093,6 @@
       ]
    },
    {  
-      "id":157,
       "url":"https://www.youtube.com/embed/OCYZTg3jahU",
       "title":"Binary hand dance",
       "topic_ids":[  
@@ -1257,7 +1100,6 @@
       ]
    },
    {  
-      "id":158,
       "url":"https://www.youtube.com/embed/jmfcACEGW-0",
       "title":"Biliary tree",
       "topic_ids":[  
@@ -1265,7 +1107,6 @@
       ]
    },
    {  
-      "id":159,
       "url":"https://www.youtube.com/embed/H4BstqvgBow",
       "title":"Converting from decimal to binary",
       "topic_ids":[  
@@ -1273,7 +1114,6 @@
       ]
    },
    {  
-      "id":160,
       "url":"https://www.youtube.com/embed/8T4F7WboWPQ",
       "title":"Converting directly from binary to hexadecimal",
       "topic_ids":[  
@@ -1281,7 +1121,6 @@
       ]
    },
    {  
-      "id":161,
       "url":"https://www.youtube.com/embed/ku4KOFQ-bB4",
       "title":"Introduction to number systems and binary",
       "topic_ids":[  
@@ -1289,7 +1128,6 @@
       ]
    },
    {  
-      "id":162,
       "url":"https://www.youtube.com/embed/Z-yv3Yq4Aw4",
       "title":"The bronchial tree",
       "topic_ids":[  
@@ -1297,7 +1135,6 @@
       ]
    },
    {  
-      "id":163,
       "url":"https://www.youtube.com/embed/JoL2pO3O0rg",
       "title":"Black holes",
       "topic_ids":[  
@@ -1305,7 +1142,6 @@
       ]
    },
    {  
-      "id":164,
       "url":"https://www.youtube.com/embed/DxkkAHnqlpY",
       "title":"Supermassive black holes",
       "topic_ids":[  
@@ -1313,7 +1149,6 @@
       ]
    },
    {  
-      "id":165,
       "url":"https://www.youtube.com/embed/EdYyuUUY-nc",
       "title":"White and black dwarfs",
       "topic_ids":[  
@@ -1321,7 +1156,6 @@
       ]
    },
    {  
-      "id":166,
       "url":"https://www.youtube.com/embed/fLKOBQ6cZHA",
       "title":"Red blood cells",
       "topic_ids":[  
@@ -1329,7 +1163,6 @@
       ]
    },
    {  
-      "id":167,
       "url":"https://www.youtube.com/embed/kJSOqlcFpJw",
       "title":"Becoming a red giant",
       "topic_ids":[  
@@ -1337,7 +1170,6 @@
       ]
    },
    {  
-      "id":168,
       "url":"https://www.youtube.com/embed/ofJS_K0Fj2Q",
       "title":"Gauguin, The Red Cow",
       "topic_ids":[  
@@ -1345,7 +1177,6 @@
       ]
    },
    {  
-      "id":169,
       "url":"https://www.youtube.com/embed/2Vv9BhnE0SQ",
       "title":"Cézanne, The Red Rock",
       "topic_ids":[  
@@ -1353,7 +1184,6 @@
       ]
    },
    {  
-      "id":170,
       "url":"https://www.youtube.com/embed/YlhDUSntCI4",
       "title":"Friedrich, The Lone Tree",
       "topic_ids":[  
@@ -1361,7 +1191,6 @@
       ]
    },
    {  
-      "id":171,
       "url":"https://www.youtube.com/embed/oHvLlS_Sc54",
       "title":"Taxonomy and the tree of life",
       "topic_ids":[  
@@ -1369,7 +1198,6 @@
       ]
    },
    {  
-      "id":172,
       "url":"https://www.youtube.com/embed/wQq2xOs2BYU",
       "title":"O\u0026#39;Keeffe, The Lawrence Tree",
       "topic_ids":[  
@@ -1377,7 +1205,6 @@
       ]
    },
    {  
-      "id":173,
       "url":"https://www.youtube.com/embed/mx2M_ZKXM_c",
       "title":"Red shift",
       "topic_ids":[  
@@ -1385,7 +1212,6 @@
       ]
    },
    {  
-      "id":174,
       "url":"https://www.youtube.com/embed/W-huWpNU-9w",
       "title":"Matisse, The Red Studio",
       "topic_ids":[  
@@ -1393,7 +1219,6 @@
       ]
    },
    {  
-      "id":175,
       "url":"https://www.youtube.com/embed/jmfcACEGW-0",
       "title":"Biliary tree",
       "topic_ids":[  
@@ -1401,7 +1226,6 @@
       ]
    },
    {  
-      "id":176,
       "url":"https://www.youtube.com/embed/nXgL7C7emDQ",
       "title":"The structure of the eye",
       "topic_ids":[  
@@ -1409,7 +1233,6 @@
       ]
    },
    {  
-      "id":177,
       "url":"https://www.youtube.com/embed/XEPdMvZqCHQ",
       "title":"Condensed structures",
       "topic_ids":[  
@@ -1417,7 +1240,6 @@
       ]
    },
    {  
-      "id":178,
       "url":"https://www.youtube.com/embed/DK1lCc9b7bg",
       "title":"Inflation data",
       "topic_ids":[  
@@ -1425,7 +1247,6 @@
       ]
    },
    {  
-      "id":179,
       "url":"https://www.youtube.com/embed/pMoA65Dj-zk",
       "title":"Representing structures of organic molecules",
       "topic_ids":[  
@@ -1433,7 +1254,6 @@
       ]
    },
    {  
-      "id":180,
       "url":"https://www.youtube.com/embed/YEZMReBbkP0",
       "title":"Basic capital structure differences",
       "topic_ids":[  
@@ -1441,7 +1261,6 @@
       ]
    },
    {  
-      "id":181,
       "url":"https://www.youtube.com/embed/-1w9RXhCmsE",
       "title":"Data wires",
       "topic_ids":[  
@@ -1449,7 +1268,6 @@
       ]
    },
    {  
-      "id":182,
       "url":"https://www.youtube.com/embed/4AxZ-6MOznY",
       "title":"Structure of the earth",
       "topic_ids":[  
@@ -1457,7 +1275,6 @@
       ]
    },
    {  
-      "id":183,
       "url":"https://www.youtube.com/embed/4Azskeheo_g",
       "title":"Data on Chinese M1 increase in 2010",
       "topic_ids":[  
@@ -1465,7 +1282,6 @@
       ]
    },
    {  
-      "id":184,
       "url":"https://www.youtube.com/embed/1h4kW8RX-6k",
       "title":"Overview of neuron structure",
       "topic_ids":[  
@@ -1473,7 +1289,6 @@
       ]
    },
    {  
-      "id":185,
       "url":"https://www.youtube.com/embed/iNemmT1hnzA",
       "title":"Data on Chinese US balance of payments",
       "topic_ids":[  
@@ -1481,7 +1296,6 @@
       ]
    },
    {  
-      "id":186,
       "url":"https://www.youtube.com/embed/RBbJKOOZ6FY",
       "title":"Structural (constitutional) isomers",
       "topic_ids":[  
@@ -1489,7 +1303,6 @@
       ]
    },
    {  
-      "id":187,
       "url":"https://www.youtube.com/embed/0ZKtsUkrgFQ",
       "title":"Ways to represent data",
       "topic_ids":[  
@@ -1497,7 +1310,6 @@
       ]
    },
    {  
-      "id":188,
       "url":"https://www.youtube.com/embed/8AwKNC1texM",
       "title":"Bond-line structures",
       "topic_ids":[  
@@ -1505,7 +1317,6 @@
       ]
    },
    {  
-      "id":189,
       "url":"https://www.youtube.com/embed/qxOEz9aPZNY",
       "title":"Intelligent design and evolution",
       "topic_ids":[  
@@ -1513,7 +1324,6 @@
       ]
    },
    {  
-      "id":190,
       "url":"https://www.youtube.com/embed/PASSD2OcU0c",
       "title":"Advanced ratio problems",
       "topic_ids":[  
@@ -1521,7 +1331,6 @@
       ]
    },
    {  
-      "id":191,
       "url":"https://www.youtube.com/embed/ItA_hhRtUuw",
       "title":"More advanced ratio problem with algebra",
       "topic_ids":[  
@@ -1529,7 +1338,6 @@
       ]
    },
    {  
-      "id":192,
       "url":"https://www.youtube.com/embed/QwvJ6z49m-c",
       "title":"More fiscal cliff analysis",
       "topic_ids":[  
@@ -1537,7 +1345,6 @@
       ]
    },
    {  
-      "id":193,
       "url":"https://www.youtube.com/embed/mtL_plJXv3c",
       "title":"Renting vs. buying (detailed analysis)",
       "topic_ids":[  
@@ -1545,7 +1352,6 @@
       ]
    },
    {  
-      "id":194,
       "url":"https://www.youtube.com/embed/Qz0n0ZwdCpQ",
       "title":"Design review (calibration)",
       "topic_ids":[  
@@ -1553,7 +1359,6 @@
       ]
    },
    {  
-      "id":195,
       "url":"https://www.youtube.com/embed/GacKM9yxiw4",
       "title":"The Painting Techniques of Barnett Newman",
       "topic_ids":[  
@@ -1561,7 +1366,6 @@
       ]
    },
    {  
-      "id":196,
       "url":"https://www.youtube.com/embed/9JcpyE01Yzc",
       "title":"The inlay technique of marquetry",
       "topic_ids":[  
@@ -1569,7 +1373,6 @@
       ]
    },
    {  
-      "id":197,
       "url":"https://www.youtube.com/embed/EncR_T0faKM",
       "title":"The Painting Techniques of Jackson Pollock",
       "topic_ids":[  
@@ -1577,7 +1380,6 @@
       ]
    },
    {  
-      "id":198,
       "url":"https://www.youtube.com/embed/sSqxVMbml_k",
       "title":"Simple analysis of cost per job saved from stimulus",
       "topic_ids":[  
@@ -1585,7 +1387,6 @@
       ]
    },
    {  
-      "id":199,
       "url":"https://www.youtube.com/embed/MRv20I13vqM",
       "title":"Art as concept: Duchamp, In Advance of the Broken Arm",
       "topic_ids":[  
@@ -1593,7 +1394,6 @@
       ]
    },
    {  
-      "id":200,
       "url":"https://www.youtube.com/embed/vSiu8qzHV6c",
       "title":"The Painting Techniques of Mark Rothko",
       "topic_ids":[  
@@ -1601,7 +1401,6 @@
       ]
    },
    {  
-      "id":201,
       "url":"https://www.youtube.com/embed/jSGGHmTXA3o",
       "title":"The Painting Techniques of Ad Reinhardt",
       "topic_ids":[  
@@ -1609,7 +1408,6 @@
       ]
    },
    {  
-      "id":202,
       "url":"https://www.youtube.com/embed/eIndU6kmH58",
       "title":"What is Programming?",
       "topic_ids":[  
@@ -1617,7 +1415,6 @@
       ]
    },
    {  
-      "id":203,
       "url":"https://www.youtube.com/embed/3quWEMobksw",
       "title":"Introduction to programming",
       "topic_ids":[  
@@ -1625,7 +1422,6 @@
       ]
    },
    {  
-      "id":204,
       "url":"https://www.youtube.com/embed/jsDOHy8pHTg",
       "title":"A Tour of Programming on Khan Academy",
       "topic_ids":[  
@@ -1633,7 +1429,6 @@
       ]
    },
    {  
-      "id":205,
       "url":"https://www.youtube.com/embed/SJVhtIGAkKs",
       "title":"Euler\u0026#39;s method program code",
       "topic_ids":[  
@@ -1641,7 +1436,6 @@
       ]
    },
    {  
-      "id":206,
       "url":"https://www.youtube.com/embed/GLEJgVSL0Ac",
       "title":"Umberto Boccioni, \u0026#34;Dynamism of a Soccer Player\u0026#34;",
       "topic_ids":[  
@@ -1649,7 +1443,6 @@
       ]
    },
    {  
-      "id":207,
       "url":"https://www.youtube.com/embed/XLMs9jqMYOY",
       "title":"DLab: Instructor reflections on the Explore program",
       "topic_ids":[  
@@ -1657,7 +1450,6 @@
       ]
    },
    {  
-      "id":208,
       "url":"https://www.youtube.com/embed/twhqVIokAQc",
       "title":"Membrane dynamics",
       "topic_ids":[  
@@ -1665,7 +1457,6 @@
       ]
    },
    {  
-      "id":209,
       "url":"https://www.youtube.com/embed/4CAQN-nc8Ac",
       "title":"Population dynamics",
       "topic_ids":[  
@@ -1673,7 +1464,6 @@
       ]
    },
    {  
-      "id":210,
       "url":"https://www.youtube.com/embed/cbD_MVIUBf8",
       "title":"Video tour: Teaching programming in the classroom",
       "topic_ids":[  
@@ -1681,7 +1471,6 @@
       ]
    },
    {  
-      "id":211,
       "url":"https://www.youtube.com/embed/PLjyj1FJqig",
       "title":"Interest rate swap 1",
       "topic_ids":[  
@@ -1689,7 +1478,6 @@
       ]
    },
    {  
-      "id":212,
       "url":"https://www.youtube.com/embed/ju4adbg0DB8",
       "title":"Meet Me | Art Discussion Programs for Individuals with Dementia",
       "topic_ids":[  
@@ -1697,7 +1485,6 @@
       ]
    },
    {  
-      "id":213,
       "url":"https://www.youtube.com/embed/hhvsPG3STho",
       "title":"Meet Me | Art Making Programs for Individuals with Dementia",
       "topic_ids":[  
@@ -1705,7 +1492,6 @@
       ]
    },
    {  
-      "id":214,
       "url":"https://www.youtube.com/embed/_ka1HZS-Egc",
       "title":"Geithner plan 4",
       "topic_ids":[  
@@ -1713,7 +1499,6 @@
       ]
    },
    {  
-      "id":215,
       "url":"https://www.youtube.com/embed/WGMn16TDTjE",
       "title":"Randomized algorithms (intro)",
       "topic_ids":[  
@@ -1721,7 +1506,6 @@
       ]
    },
    {  
-      "id":216,
       "url":"https://www.youtube.com/embed/oYUzKAfrx0w",
       "title":"Algorithmic efficiency",
       "topic_ids":[  
@@ -1729,7 +1513,6 @@
       ]
    },
    {  
-      "id":217,
       "url":"https://www.youtube.com/embed/S-ws2W6UbPU",
       "title":"What is an algorithm and why should you care?",
       "topic_ids":[  
@@ -1737,7 +1520,6 @@
       ]
    },
    {  
-      "id":218,
       "url":"https://www.youtube.com/embed/2IFItASxDVo",
       "title":"Algorithm for mentally computing binomial expansion coefficients",
       "topic_ids":[  
@@ -1745,7 +1527,6 @@
       ]
    },
    {  
-      "id":219,
       "url":"https://www.youtube.com/embed/1byR9UEQJN0",
       "title":"Synthetic division",
       "topic_ids":[  
@@ -1753,7 +1534,6 @@
       ]
    },
    {  
-      "id":220,
       "url":"https://www.youtube.com/embed/3Ee_huKclEQ",
       "title":"Synthetic division example 2",
       "topic_ids":[  
@@ -1761,7 +1541,6 @@
       ]
    },
    {  
-      "id":221,
       "url":"https://www.youtube.com/embed/kFkUSizmR3k",
       "title":"Summary (what\u0026#39;s next?)",
       "topic_ids":[  
@@ -1769,7 +1548,6 @@
       ]
    },
    {  
-      "id":222,
       "url":"https://www.youtube.com/embed/XspzfNSSqyk",
       "title":"Primality test with sieve",
       "topic_ids":[  
@@ -1777,7 +1555,6 @@
       ]
    },
    {  
-      "id":223,
       "url":"https://www.youtube.com/embed/xHWKYFhhtJQ",
       "title":"Multiplying in binary",
       "topic_ids":[  
@@ -1785,7 +1562,6 @@
       ]
    },
    {  
-      "id":224,
       "url":"https://www.youtube.com/embed/1mjyq51ppT8",
       "title":"Random primality test (warm up)",
       "topic_ids":[  
@@ -1793,7 +1569,6 @@
       ]
    },
    {  
-      "id":225,
       "url":"https://www.youtube.com/embed/9YRw0Yk7N8c",
       "title":"Time space tradeoff",
       "topic_ids":[  
@@ -1801,7 +1576,6 @@
       ]
    },
    {  
-      "id":226,
       "url":"https://www.youtube.com/embed/0WiTaBI82Mc",
       "title":"Bitcoin: Cryptographic hash functions",
       "topic_ids":[  
@@ -1809,7 +1583,6 @@
       ]
    },
    {  
-      "id":227,
       "url":"https://www.youtube.com/embed/xMj3jzFDZ38",
       "title":"Fermat primality test",
       "topic_ids":[  
@@ -1817,7 +1590,6 @@
       ]
    },
    {  
-      "id":228,
       "url":"https://www.youtube.com/embed/XfR3JSkSkJM",
       "title":"Amortization",
       "topic_ids":[  
@@ -1825,7 +1597,6 @@
       ]
    },
    {  
-      "id":229,
       "url":"https://www.youtube.com/embed/eKw3Aq0vvbo",
       "title":"Amortization and depreciation",
       "topic_ids":[  
@@ -1833,7 +1604,6 @@
       ]
    },
    {  
-      "id":230,
       "url":"https://www.youtube.com/embed/mtL_plJXv3c",
       "title":"Renting vs. buying (detailed analysis)",
       "topic_ids":[  
@@ -1841,7 +1611,6 @@
       ]
    },
    {  
-      "id":231,
       "url":"https://www.youtube.com/embed/QwvJ6z49m-c",
       "title":"More fiscal cliff analysis",
       "topic_ids":[  
@@ -1849,7 +1618,6 @@
       ]
    },
    {  
-      "id":232,
       "url":"https://www.youtube.com/embed/sSqxVMbml_k",
       "title":"Simple analysis of cost per job saved from stimulus",
       "topic_ids":[  
@@ -1857,7 +1625,6 @@
       ]
    },
    {  
-      "id":233,
       "url":"https://www.youtube.com/embed/FwuPXchH2rA",
       "title":"Basic complex analysis",
       "topic_ids":[  
@@ -1865,7 +1632,6 @@
       ]
    },
    {  
-      "id":234,
       "url":"https://www.youtube.com/embed/hIAdCTNi1S8",
       "title":"Treating units algebraically and dimensional analysis",
       "topic_ids":[  
@@ -1873,7 +1639,6 @@
       ]
    },
    {  
-      "id":235,
       "url":"https://www.youtube.com/embed/qfqbomqKZqY",
       "title":"Maurice Ravel: Daphnis et Chloé, analysis by Gerard Schwarz",
       "topic_ids":[  
@@ -1881,7 +1646,6 @@
       ]
    },
    {  
-      "id":236,
       "url":"https://www.youtube.com/embed/-rGXAfc643A",
       "title":"Ludwig van Beethoven: Symphony No. 5, analysis by Gerard Schwarz (part 1)",
       "topic_ids":[  
@@ -1889,7 +1653,6 @@
       ]
    },
    {  
-      "id":237,
       "url":"https://www.youtube.com/embed/iFCIgn3Q9XE",
       "title":"Ludwig van Beethoven: Symphony No. 5 Analysis by Gerard Schwarz (part 2)",
       "topic_ids":[  
@@ -1897,7 +1660,6 @@
       ]
    },
    {  
-      "id":238,
       "url":"https://www.youtube.com/embed/rTF_WrVSPPQ",
       "title":"Paint Analysis of Jackson Pollock\u0026#39;s Mural",
       "topic_ids":[  
@@ -1905,7 +1667,6 @@
       ]
    },
    {  
-      "id":239,
       "url":"https://www.youtube.com/embed/EFdlFoHI_0I",
       "title":"ANOVA 1: Calculating SST (total sum of squares)",
       "topic_ids":[  
@@ -1913,7 +1674,6 @@
       ]
    },
    {  
-      "id":240,
       "url":"https://www.youtube.com/embed/ksK2mbPgiLI",
       "title":"Ludwig van Beethoven: Symphony No. 5,  analysis  by Gerard Schwarz (part 3 \u0026amp; 4)",
       "topic_ids":[  
@@ -1921,7 +1681,6 @@
       ]
    },
    {  
-      "id":241,
       "url":"https://www.youtube.com/embed/PASSD2OcU0c",
       "title":"Advanced ratio problems",
       "topic_ids":[  
@@ -1929,7 +1688,6 @@
       ]
    },
    {  
-      "id":242,
       "url":"https://www.youtube.com/embed/ItA_hhRtUuw",
       "title":"More advanced ratio problem with algebra",
       "topic_ids":[  
@@ -1937,7 +1695,6 @@
       ]
    },
    {  
-      "id":243,
       "url":"https://www.youtube.com/embed/nXgL7C7emDQ",
       "title":"The structure of the eye",
       "topic_ids":[  
@@ -1945,7 +1702,6 @@
       ]
    },
    {  
-      "id":244,
       "url":"https://www.youtube.com/embed/XEPdMvZqCHQ",
       "title":"Condensed structures",
       "topic_ids":[  
@@ -1953,7 +1709,6 @@
       ]
    },
    {  
-      "id":245,
       "url":"https://www.youtube.com/embed/DK1lCc9b7bg",
       "title":"Inflation data",
       "topic_ids":[  
@@ -1961,7 +1716,6 @@
       ]
    },
    {  
-      "id":246,
       "url":"https://www.youtube.com/embed/pMoA65Dj-zk",
       "title":"Representing structures of organic molecules",
       "topic_ids":[  
@@ -1969,7 +1723,6 @@
       ]
    },
    {  
-      "id":247,
       "url":"https://www.youtube.com/embed/YEZMReBbkP0",
       "title":"Basic capital structure differences",
       "topic_ids":[  
@@ -1977,7 +1730,6 @@
       ]
    },
    {  
-      "id":248,
       "url":"https://www.youtube.com/embed/-1w9RXhCmsE",
       "title":"Data wires",
       "topic_ids":[  
@@ -1985,7 +1737,6 @@
       ]
    },
    {  
-      "id":249,
       "url":"https://www.youtube.com/embed/4AxZ-6MOznY",
       "title":"Structure of the earth",
       "topic_ids":[  
@@ -1993,7 +1744,6 @@
       ]
    },
    {  
-      "id":250,
       "url":"https://www.youtube.com/embed/4Azskeheo_g",
       "title":"Data on Chinese M1 increase in 2010",
       "topic_ids":[  
@@ -2001,7 +1751,6 @@
       ]
    },
    {  
-      "id":251,
       "url":"https://www.youtube.com/embed/1h4kW8RX-6k",
       "title":"Overview of neuron structure",
       "topic_ids":[  
@@ -2009,7 +1758,6 @@
       ]
    },
    {  
-      "id":252,
       "url":"https://www.youtube.com/embed/iNemmT1hnzA",
       "title":"Data on Chinese US balance of payments",
       "topic_ids":[  
@@ -2017,7 +1765,6 @@
       ]
    },
    {  
-      "id":253,
       "url":"https://www.youtube.com/embed/RBbJKOOZ6FY",
       "title":"Structural (constitutional) isomers",
       "topic_ids":[  
@@ -2025,7 +1772,6 @@
       ]
    },
    {  
-      "id":254,
       "url":"https://www.youtube.com/embed/Z36dUduOk1Y",
       "title":"B lymphocytes (B cells)",
       "topic_ids":[  
@@ -2033,7 +1779,6 @@
       ]
    },
    {  
-      "id":255,
       "url":"https://www.youtube.com/embed/yEAxG_D1HDw",
       "title":"Proof: a log b = log(b^a), log a - log b = log(a/b)",
       "topic_ids":[  
@@ -2041,7 +1786,6 @@
       ]
    },
    {  
-      "id":256,
       "url":"https://www.youtube.com/embed/YlhDUSntCI4",
       "title":"Friedrich, The Lone Tree",
       "topic_ids":[  
@@ -2049,7 +1793,6 @@
       ]
    },
    {  
-      "id":257,
       "url":"https://www.youtube.com/embed/oHvLlS_Sc54",
       "title":"Taxonomy and the tree of life",
       "topic_ids":[  
@@ -2057,7 +1800,6 @@
       ]
    },
    {  
-      "id":258,
       "url":"https://www.youtube.com/embed/wQq2xOs2BYU",
       "title":"O\u0026#39;Keeffe, The Lawrence Tree",
       "topic_ids":[  
@@ -2065,7 +1807,6 @@
       ]
    },
    {  
-      "id":259,
       "url":"https://www.youtube.com/embed/czIYvs9zj2g",
       "title":"Unique rowspace solution to Ax = b",
       "topic_ids":[  
@@ -2073,7 +1814,6 @@
       ]
    },
    {  
-      "id":260,
       "url":"https://www.youtube.com/embed/jmfcACEGW-0",
       "title":"Biliary tree",
       "topic_ids":[  
@@ -2081,7 +1821,6 @@
       ]
    },
    {  
-      "id":261,
       "url":"https://www.youtube.com/embed/Z-yv3Yq4Aw4",
       "title":"The bronchial tree",
       "topic_ids":[  
@@ -2089,7 +1828,6 @@
       ]
    },
    {  
-      "id":262,
       "url":"https://www.youtube.com/embed/qdf2CuMGdKs",
       "title":"Rowspace solution to Ax = b example",
       "topic_ids":[  
@@ -2097,7 +1835,6 @@
       ]
    },
    {  
-      "id":263,
       "url":"https://www.youtube.com/embed/Zxvc6iPKdec",
       "title":"Count outcomes using tree diagram",
       "topic_ids":[  
@@ -2105,7 +1842,6 @@
       ]
    },
    {  
-      "id":264,
       "url":"https://www.youtube.com/embed/1PsNIzUJPkc",
       "title":"Exploring the solution set of Ax = b",
       "topic_ids":[  
@@ -2113,7 +1849,6 @@
       ]
    },
    {  
-      "id":265,
       "url":"https://www.youtube.com/embed/_DgeQ7rpIHI",
       "title":"Friedrich, Abbey among Oak Trees",
       "topic_ids":[  
@@ -2121,7 +1856,6 @@
       ]
    },
    {  
-      "id":266,
       "url":"https://www.youtube.com/embed/m28RAgUySGQ",
       "title":"Going back to the till: Series B",
       "topic_ids":[  
@@ -2129,7 +1863,6 @@
       ]
    },
    {  
-      "id":267,
       "url":"https://www.youtube.com/embed/xjkbR7Gjgjs",
       "title":"Square a binomial",
       "topic_ids":[  
@@ -2137,7 +1870,6 @@
       ]
    },
    {  
-      "id":268,
       "url":"https://www.youtube.com/embed/4GcNzvILqtM",
       "title":"Squaring a binomial",
       "topic_ids":[  
@@ -2145,7 +1877,6 @@
       ]
    },
    {  
-      "id":269,
       "url":"https://www.youtube.com/embed/bFtjG45-Udk",
       "title":"Special products of binomials",
       "topic_ids":[  
@@ -2153,7 +1884,6 @@
       ]
    },
    {  
-      "id":270,
       "url":"https://www.youtube.com/embed/ZMLFfTX615w",
       "title":"FOIL for multiplying binomials",
       "topic_ids":[  
@@ -2161,7 +1891,6 @@
       ]
    },
    {  
-      "id":271,
       "url":"https://www.youtube.com/embed/yAH3722GrP8",
       "title":"Multiplying binomials with radicals",
       "topic_ids":[  
@@ -2169,7 +1898,6 @@
       ]
    },
    {  
-      "id":272,
       "url":"https://www.youtube.com/embed/xF_hJaXUNfE",
       "title":"Binomial theorem combinatorics connection",
       "topic_ids":[  
@@ -2177,7 +1905,6 @@
       ]
    },
    {  
-      "id":273,
       "url":"https://www.youtube.com/embed/SqcxYnNlI3Y",
       "title":"Expected value of binomial distribution",
       "topic_ids":[  
@@ -2185,7 +1912,6 @@
       ]
    },
    {  
-      "id":274,
       "url":"https://www.youtube.com/embed/4fQeHtSdw80",
       "title":"Squaring a binomial example 2",
       "topic_ids":[  
@@ -2193,7 +1919,6 @@
       ]
    },
    {  
-      "id":275,
       "url":"https://www.youtube.com/embed/fGThIRpWEE4",
       "title":"Multiplying binomials and polynomials",
       "topic_ids":[  
@@ -2201,7 +1926,6 @@
       ]
    },
    {  
-      "id":276,
       "url":"https://www.youtube.com/embed/J1HAY8E3gms",
       "title":"Multiplying binomials word problem",
       "topic_ids":[  
@@ -2209,7 +1933,6 @@
       ]
    },
    {  
-      "id":277,
       "url":"https://www.youtube.com/embed/h6HmHjkA034",
       "title":"Multiplying binomials to get difference of squares",
       "topic_ids":[  
@@ -2217,7 +1940,6 @@
       ]
    },
    {  
-      "id":278,
       "url":"https://www.youtube.com/embed/iPwrDWQ7hPc",
       "title":"Binomial theorem",
       "topic_ids":[  
@@ -2225,7 +1947,6 @@
       ]
    },
    {  
-      "id":279,
       "url":"https://www.youtube.com/embed/AOsWph2FNLw",
       "title":"Generalizing with binomial coefficients (bit advanced)",
       "topic_ids":[  
@@ -2233,7 +1954,6 @@
       ]
    },
    {  
-      "id":280,
       "url":"https://www.youtube.com/embed/lOIP_Z_-0Hs",
       "title":"Doodling in math: Spirals, Fibonacci, and being a plant [2 of 3]",
       "topic_ids":[  
@@ -2241,7 +1961,6 @@
       ]
    },
    {  
-      "id":281,
       "url":"https://www.youtube.com/embed/14-NdQwKz9w",
       "title":"Doodling in math: Spirals, Fibonacci, and being a plant [3 of 3]",
       "topic_ids":[  
@@ -2249,7 +1968,6 @@
       ]
    },
    {  
-      "id":282,
       "url":"https://www.youtube.com/embed/ahXIMUkSXX0",
       "title":"Doodling in math: Spirals, Fibonacci, and being a plant [1 of 3]",
       "topic_ids":[  
@@ -2257,7 +1975,6 @@
       ]
    },
    {  
-      "id":283,
       "url":"https://www.youtube.com/embed/gBxeju8dMho",
       "title":"Open letter to Nickelodeon, re: SpongeBob\u0026#39;s pineapple under the sea",
       "topic_ids":[  
@@ -2265,7 +1982,6 @@
       ]
    },
    {  
-      "id":284,
       "url":"https://www.youtube.com/embed/ArvnBba_ogI",
       "title":"Comparing areas of plots of land",
       "topic_ids":[  
@@ -2273,7 +1989,6 @@
       ]
    },
    {  
-      "id":285,
       "url":"https://www.youtube.com/embed/SZUDoEdjTzg",
       "title":"Benford\u0026#39;s law explanation (sequel to mysteries of Benford\u0026#39;s law)",
       "topic_ids":[  
@@ -2281,7 +1996,6 @@
       ]
    },
    {  
-      "id":286,
       "url":"https://www.youtube.com/embed/6KmeGpjeLZ0",
       "title":"Vi and Sal talk about the mysteries of Benford\u0026#39;s law",
       "topic_ids":[  
@@ -2289,7 +2003,6 @@
       ]
    },
    {  
-      "id":287,
       "url":"https://www.youtube.com/embed/GFLkou8NvJo",
       "title":"Wau: The most amazing, ancient, and singular number",
       "topic_ids":[  
@@ -2297,7 +2010,6 @@
       ]
    },
    {  
-      "id":288,
       "url":"https://www.youtube.com/embed/sxnX5_LbBDU",
       "title":"The Gauss Christmath Special",
       "topic_ids":[  
@@ -2305,7 +2017,6 @@
       ]
    },
    {  
-      "id":289,
       "url":"https://www.youtube.com/embed/xNb7djjLNuU",
       "title":"Michael Landy and Jean Tinguely: Art that breaks down ",
       "topic_ids":[  
@@ -2313,7 +2024,6 @@
       ]
    },
    {  
-      "id":290,
       "url":"https://www.youtube.com/embed/dAOWQC-OBv0",
       "title":"Early embryogenesis - Cleavage, blastulation, gastrulation, and neurulation",
       "topic_ids":[  
@@ -2321,7 +2031,6 @@
       ]
    },
    {  
-      "id":291,
       "url":"https://www.youtube.com/embed/gnyHsgTFXIY",
       "title":"Reading bar charts: comparing two sets of data",
       "topic_ids":[  
@@ -2329,7 +2038,6 @@
       ]
    },
    {  
-      "id":292,
       "url":"https://www.youtube.com/embed/zVsGtU8lIWs",
       "title":"Preimage of a set",
       "topic_ids":[  
@@ -2337,7 +2045,6 @@
       ]
    },
    {  
-      "id":293,
       "url":"https://www.youtube.com/embed/Ksu1lo312BM",
       "title":"Number sets",
       "topic_ids":[  
@@ -2345,7 +2052,6 @@
       ]
    },
    {  
-      "id":294,
       "url":"https://www.youtube.com/embed/qfQv8GzyjB4",
       "title":"Number sets 2",
       "topic_ids":[  
@@ -2353,7 +2059,6 @@
       ]
    },
    {  
-      "id":295,
       "url":"https://www.youtube.com/embed/psyWUUkI-aw",
       "title":"Number sets 3",
       "topic_ids":[  
@@ -2361,7 +2066,6 @@
       ]
    },
    {  
-      "id":296,
       "url":"https://www.youtube.com/embed/aqsIWLqlDhE",
       "title":"Number sets 1",
       "topic_ids":[  
@@ -2369,7 +2073,6 @@
       ]
    },
    {  
-      "id":297,
       "url":"https://www.youtube.com/embed/nXgL7C7emDQ",
       "title":"The structure of the eye",
       "topic_ids":[  
@@ -2377,7 +2080,6 @@
       ]
    },
    {  
-      "id":298,
       "url":"https://www.youtube.com/embed/XEPdMvZqCHQ",
       "title":"Condensed structures",
       "topic_ids":[  
@@ -2385,7 +2087,6 @@
       ]
    },
    {  
-      "id":299,
       "url":"https://www.youtube.com/embed/DK1lCc9b7bg",
       "title":"Inflation data",
       "topic_ids":[  
@@ -2393,7 +2094,6 @@
       ]
    },
    {  
-      "id":300,
       "url":"https://www.youtube.com/embed/pMoA65Dj-zk",
       "title":"Representing structures of organic molecules",
       "topic_ids":[  
@@ -2401,7 +2101,6 @@
       ]
    },
    {  
-      "id":301,
       "url":"https://www.youtube.com/embed/YEZMReBbkP0",
       "title":"Basic capital structure differences",
       "topic_ids":[  
@@ -2409,7 +2108,6 @@
       ]
    },
    {  
-      "id":302,
       "url":"https://www.youtube.com/embed/-1w9RXhCmsE",
       "title":"Data wires",
       "topic_ids":[  
@@ -2417,7 +2115,6 @@
       ]
    },
    {  
-      "id":303,
       "url":"https://www.youtube.com/embed/4AxZ-6MOznY",
       "title":"Structure of the earth",
       "topic_ids":[  
@@ -2425,7 +2122,6 @@
       ]
    },
    {  
-      "id":304,
       "url":"https://www.youtube.com/embed/WGMn16TDTjE",
       "title":"Randomized algorithms (intro)",
       "topic_ids":[  
@@ -2433,7 +2129,6 @@
       ]
    },
    {  
-      "id":305,
       "url":"https://www.youtube.com/embed/oYUzKAfrx0w",
       "title":"Algorithmic efficiency",
       "topic_ids":[  
@@ -2441,7 +2136,6 @@
       ]
    },
    {  
-      "id":306,
       "url":"https://www.youtube.com/embed/S-ws2W6UbPU",
       "title":"What is an algorithm and why should you care?",
       "topic_ids":[  
@@ -2449,7 +2143,6 @@
       ]
    },
    {  
-      "id":307,
       "url":"https://www.youtube.com/embed/4JqH55rLGKY",
       "title":"Reading pie graphs (circle graphs)",
       "topic_ids":[  
@@ -2457,7 +2150,6 @@
       ]
    },
    {  
-      "id":308,
       "url":"https://www.youtube.com/embed/unSBFwK881s",
       "title":"Graphing inequalities",
       "topic_ids":[  
@@ -2465,7 +2157,6 @@
       ]
    },
    {  
-      "id":309,
       "url":"https://www.youtube.com/embed/gs-OPF3KEGU",
       "title":"Misleading line graphs",
       "topic_ids":[  
@@ -2473,7 +2164,6 @@
       ]
    },
    {  
-      "id":310,
       "url":"https://www.youtube.com/embed/DuYgVVU_BwY",
       "title":"Graphing logarithmic functions",
       "topic_ids":[  
@@ -2481,7 +2171,6 @@
       ]
    },
    {  
-      "id":311,
       "url":"https://www.youtube.com/embed/SdHwokUU8xI",
       "title":"Example: Graph of cosine",
       "topic_ids":[  
@@ -2489,7 +2178,6 @@
       ]
    },
    {  
-      "id":312,
       "url":"https://www.youtube.com/embed/nh3_IGxHA5A",
       "title":"Graphing a parabola  with a table of values",
       "topic_ids":[  
@@ -2497,7 +2185,6 @@
       ]
    },
    {  
-      "id":313,
       "url":"https://www.youtube.com/embed/-aTy1ED1m5I",
       "title":"Graphing inequalities 2",
       "topic_ids":[  
@@ -2505,7 +2192,6 @@
       ]
    },
    {  
-      "id":314,
       "url":"https://www.youtube.com/embed/xmjy-0TxgI8",
       "title":"Graphing natural logarithm function",
       "topic_ids":[  
@@ -2513,7 +2199,6 @@
       ]
    },
    {  
-      "id":315,
       "url":"https://www.youtube.com/embed/9SOSfRNCQZQ",
       "title":"Graphing exponential functions",
       "topic_ids":[  
@@ -2521,7 +2206,6 @@
       ]
    },
    {  
-      "id":316,
       "url":"https://www.youtube.com/embed/YjT3QYfoy4Q",
       "title":"Graphing systems of inequalities",
       "topic_ids":[  
@@ -2529,7 +2213,6 @@
       ]
    },
    {  
-      "id":317,
       "url":"https://www.youtube.com/embed/WGMn16TDTjE",
       "title":"Randomized algorithms (intro)",
       "topic_ids":[  
@@ -2537,7 +2220,6 @@
       ]
    },
    {  
-      "id":318,
       "url":"https://www.youtube.com/embed/oYUzKAfrx0w",
       "title":"Algorithmic efficiency",
       "topic_ids":[  
@@ -2545,7 +2227,6 @@
       ]
    },
    {  
-      "id":319,
       "url":"https://www.youtube.com/embed/S-ws2W6UbPU",
       "title":"What is an algorithm and why should you care?",
       "topic_ids":[  
@@ -2553,7 +2234,6 @@
       ]
    },
    {  
-      "id":320,
       "url":"https://www.youtube.com/embed/vIZ0LnLo3jE",
       "title":"Elementary rate laws",
       "topic_ids":[  
@@ -2561,7 +2241,6 @@
       ]
    },
    {  
-      "id":321,
       "url":"https://www.youtube.com/embed/4JqH55rLGKY",
       "title":"Reading pie graphs (circle graphs)",
       "topic_ids":[  
@@ -2569,7 +2248,6 @@
       ]
    },
    {  
-      "id":322,
       "url":"https://www.youtube.com/embed/unSBFwK881s",
       "title":"Graphing inequalities",
       "topic_ids":[  
@@ -2577,7 +2255,6 @@
       ]
    },
    {  
-      "id":323,
       "url":"https://www.youtube.com/embed/gs-OPF3KEGU",
       "title":"Misleading line graphs",
       "topic_ids":[  
@@ -2585,7 +2262,6 @@
       ]
    },
    {  
-      "id":324,
       "url":"https://www.youtube.com/embed/DuYgVVU_BwY",
       "title":"Graphing logarithmic functions",
       "topic_ids":[  
@@ -2593,7 +2269,6 @@
       ]
    },
    {  
-      "id":325,
       "url":"https://www.youtube.com/embed/SdHwokUU8xI",
       "title":"Example: Graph of cosine",
       "topic_ids":[  
@@ -2601,7 +2276,6 @@
       ]
    },
    {  
-      "id":326,
       "url":"https://www.youtube.com/embed/nh3_IGxHA5A",
       "title":"Graphing a parabola  with a table of values",
       "topic_ids":[  
@@ -2609,7 +2283,6 @@
       ]
    },
    {  
-      "id":327,
       "url":"https://www.youtube.com/embed/-aTy1ED1m5I",
       "title":"Graphing inequalities 2",
       "topic_ids":[  
@@ -2617,7 +2290,6 @@
       ]
    },
    {  
-      "id":328,
       "url":"https://www.youtube.com/embed/xmjy-0TxgI8",
       "title":"Graphing natural logarithm function",
       "topic_ids":[  
@@ -2625,7 +2297,6 @@
       ]
    },
    {  
-      "id":329,
       "url":"https://www.youtube.com/embed/9SOSfRNCQZQ",
       "title":"Graphing exponential functions",
       "topic_ids":[  
@@ -2633,7 +2304,6 @@
       ]
    },
    {  
-      "id":330,
       "url":"https://www.youtube.com/embed/Qm_OS-8COwU",
       "title":"Linear combinations and span",
       "topic_ids":[  
@@ -2641,7 +2311,6 @@
       ]
    },
    {  
-      "id":331,
       "url":"https://www.youtube.com/embed/yrlLKwmb5dY",
       "title":"Alternative minimum tax",
       "topic_ids":[  
@@ -2649,7 +2318,6 @@
       ]
    },
    {  
-      "id":332,
       "url":"https://www.youtube.com/embed/9kW6zFK5E5c",
       "title":"Span and linear independence example",
       "topic_ids":[  
@@ -2657,7 +2325,6 @@
       ]
    },
    {  
-      "id":333,
       "url":"https://www.youtube.com/embed/j0c2vmFGbtk",
       "title":"Minimum wage and price floors",
       "topic_ids":[  
@@ -2665,7 +2332,6 @@
       ]
    },
    {  
-      "id":334,
       "url":"https://www.youtube.com/embed/CkQOCnLWPUA",
       "title":"Showing that the candidate basis does span C(A)",
       "topic_ids":[  
@@ -2673,7 +2339,6 @@
       ]
    },
    {  
-      "id":335,
       "url":"https://www.youtube.com/embed/YlhDUSntCI4",
       "title":"Friedrich, The Lone Tree",
       "topic_ids":[  
@@ -2681,7 +2346,6 @@
       ]
    },
    {  
-      "id":336,
       "url":"https://www.youtube.com/embed/oHvLlS_Sc54",
       "title":"Taxonomy and the tree of life",
       "topic_ids":[  
@@ -2689,7 +2353,6 @@
       ]
    },
    {  
-      "id":337,
       "url":"https://www.youtube.com/embed/wQq2xOs2BYU",
       "title":"O\u0026#39;Keeffe, The Lawrence Tree",
       "topic_ids":[  
@@ -2697,7 +2360,6 @@
       ]
    },
    {  
-      "id":338,
       "url":"https://www.youtube.com/embed/jmfcACEGW-0",
       "title":"Biliary tree",
       "topic_ids":[  
@@ -2705,7 +2367,6 @@
       ]
    },
    {  
-      "id":339,
       "url":"https://www.youtube.com/embed/LSIgi9krswU",
       "title":"Identifying relative minimum and maximum values",
       "topic_ids":[  
@@ -2713,7 +2374,6 @@
       ]
    },
    {  
-      "id":340,
       "url":"https://www.youtube.com/embed/Z-yv3Yq4Aw4",
       "title":"The bronchial tree",
       "topic_ids":[  
@@ -2721,7 +2381,6 @@
       ]
    },
    {  
-      "id":341,
       "url":"https://www.youtube.com/embed/Zxvc6iPKdec",
       "title":"Count outcomes using tree diagram",
       "topic_ids":[  
@@ -2729,7 +2388,6 @@
       ]
    },
    {  
-      "id":342,
       "url":"https://www.youtube.com/embed/_DgeQ7rpIHI",
       "title":"Friedrich, Abbey among Oak Trees",
       "topic_ids":[  
@@ -2737,7 +2395,6 @@
       ]
    },
    {  
-      "id":343,
       "url":"https://www.youtube.com/embed/K_fgnCJOI8I",
       "title":"Path independence for line integrals",
       "topic_ids":[  
@@ -2745,7 +2402,6 @@
       ]
    },
    {  
-      "id":344,
       "url":"https://www.youtube.com/embed/9QduzzW10uA",
       "title":"Path counting brain teaser",
       "topic_ids":[  
@@ -2753,7 +2409,6 @@
       ]
    },
    {  
-      "id":345,
       "url":"https://www.youtube.com/embed/eGRZKkmI_fo",
       "title":"Parametrization of a reverse path",
       "topic_ids":[  
@@ -2761,7 +2416,6 @@
       ]
    },
    {  
-      "id":346,
       "url":"https://www.youtube.com/embed/4Xgk3vusxT8",
       "title":"When the source and the wave move at the same velocity",
       "topic_ids":[  
@@ -2769,7 +2423,6 @@
       ]
    },
    {  
-      "id":347,
       "url":"https://www.youtube.com/embed/musBo7Kafic",
       "title":"Source encoding",
       "topic_ids":[  
@@ -2777,7 +2430,6 @@
       ]
    },
    {  
-      "id":348,
       "url":"https://www.youtube.com/embed/wRxzDOloS3o",
       "title":"3D path counting brain teaser",
       "topic_ids":[  
@@ -2785,7 +2437,6 @@
       ]
    },
    {  
-      "id":349,
       "url":"https://www.youtube.com/embed/JrTsNuUQXzU",
       "title":"Caravaggio, Narcissus at the Source",
       "topic_ids":[  
@@ -2793,7 +2444,6 @@
       ]
    },
    {  
-      "id":350,
       "url":"https://www.youtube.com/embed/I1KmEWmmozc",
       "title":"16 Shortest path",
       "topic_ids":[  
@@ -2801,7 +2451,6 @@
       ]
    },
    {  
-      "id":351,
       "url":"https://www.youtube.com/embed/99pD1-6ZpuM",
       "title":"Scalar field line integral independent of path direction",
       "topic_ids":[  
@@ -2809,7 +2458,6 @@
       ]
    },
    {  
-      "id":352,
       "url":"https://www.youtube.com/embed/BIZNBfBuu1w",
       "title":"Dot structures I: Single bonds",
       "topic_ids":[  
@@ -2817,7 +2465,6 @@
       ]
    },
    {  
-      "id":353,
       "url":"https://www.youtube.com/embed/KkJ0wL9f2VY",
       "title":"Doppler effect formula when source is moving away",
       "topic_ids":[  
@@ -2825,7 +2472,6 @@
       ]
    },
    {  
-      "id":354,
       "url":"https://www.youtube.com/embed/fuSOY9r1R6w",
       "title":"Vector field line integrals dependent on path direction",
       "topic_ids":[  
@@ -2833,7 +2479,6 @@
       ]
    },
    {  
-      "id":355,
       "url":"https://www.youtube.com/embed/zM4cHiV3kF4",
       "title":"16-18  Shortest paths on grid",
       "topic_ids":[  
@@ -2841,7 +2486,6 @@
       ]
    },
    {  
-      "id":356,
       "url":"https://www.youtube.com/embed/K_fgnCJOI8I",
       "title":"Path independence for line integrals",
       "topic_ids":[  
@@ -2849,7 +2493,6 @@
       ]
    },
    {  
-      "id":357,
       "url":"https://www.youtube.com/embed/9QduzzW10uA",
       "title":"Path counting brain teaser",
       "topic_ids":[  
@@ -2857,7 +2500,6 @@
       ]
    },
    {  
-      "id":358,
       "url":"https://www.youtube.com/embed/eGRZKkmI_fo",
       "title":"Parametrization of a reverse path",
       "topic_ids":[  
@@ -2865,7 +2507,6 @@
       ]
    },
    {  
-      "id":359,
       "url":"https://www.youtube.com/embed/wRxzDOloS3o",
       "title":"3D path counting brain teaser",
       "topic_ids":[  
@@ -2873,7 +2514,6 @@
       ]
    },
    {  
-      "id":360,
       "url":"https://www.youtube.com/embed/HUn4XwV7o9I",
       "title":"Ordered pair solutions to equations",
       "topic_ids":[  
@@ -2881,7 +2521,6 @@
       ]
    },
    {  
-      "id":361,
       "url":"https://www.youtube.com/embed/SSNA9gaAOVc",
       "title":"Ordered pair solutions to equations",
       "topic_ids":[  
@@ -2889,7 +2528,6 @@
       ]
    },
    {  
-      "id":362,
       "url":"https://www.youtube.com/embed/5ctsUsvIp8w",
       "title":"Coordinate plane: plot ordered pairs",
       "topic_ids":[  
@@ -2897,7 +2535,6 @@
       ]
    },
    {  
-      "id":363,
       "url":"https://www.youtube.com/embed/I1KmEWmmozc",
       "title":"16 Shortest path",
       "topic_ids":[  
@@ -2905,7 +2542,6 @@
       ]
    },
    {  
-      "id":364,
       "url":"https://www.youtube.com/embed/99pD1-6ZpuM",
       "title":"Scalar field line integral independent of path direction",
       "topic_ids":[  
@@ -2913,7 +2549,6 @@
       ]
    },
    {  
-      "id":365,
       "url":"https://www.youtube.com/embed/fuSOY9r1R6w",
       "title":"Vector field line integrals dependent on path direction",
       "topic_ids":[  
@@ -2921,7 +2556,6 @@
       ]
    },
    {  
-      "id":366,
       "url":"https://www.youtube.com/embed/zM4cHiV3kF4",
       "title":"16-18  Shortest paths on grid",
       "topic_ids":[  
@@ -2929,7 +2563,6 @@
       ]
    },
    {  
-      "id":367,
       "url":"https://www.youtube.com/embed/vAlazPPFlyY",
       "title":"Vertical, adjacent and linearly paired angles",
       "topic_ids":[  
@@ -2937,7 +2570,6 @@
       ]
    },
    {  
-      "id":368,
       "url":"https://www.youtube.com/embed/L5OkFR8GScU",
       "title":"Pair of Centaurs Fighting Cats of Prey from Hadrian\u0026#39;s Villa, Tivoli",
       "topic_ids":[  
@@ -2945,7 +2577,6 @@
       ]
    },
    {  
-      "id":369,
       "url":"https://www.youtube.com/embed/tzR9jUCSniQ",
       "title":"IIT JEE trigonometric maximum",
       "topic_ids":[  
@@ -2953,7 +2584,6 @@
       ]
    },
    {  
-      "id":370,
       "url":"https://www.youtube.com/embed/uX2w0b8Qlss",
       "title":"Depreciation in cash flow",
       "topic_ids":[  
@@ -2961,7 +2591,6 @@
       ]
    },
    {  
-      "id":371,
       "url":"https://www.youtube.com/embed/7XaftdE_h60",
       "title":"Flow through the heart",
       "topic_ids":[  
@@ -2969,7 +2598,6 @@
       ]
    },
    {  
-      "id":372,
       "url":"https://www.youtube.com/embed/ePwN6rHhNyU",
       "title":"Flow and perfusion",
       "topic_ids":[  
@@ -2977,7 +2605,6 @@
       ]
    },
    {  
-      "id":373,
       "url":"https://www.youtube.com/embed/Mioqyv_IW3E",
       "title":"Basic cash flow statement",
       "topic_ids":[  
@@ -2985,7 +2612,6 @@
       ]
    },
    {  
-      "id":374,
       "url":"https://www.youtube.com/embed/Hfz1bwK5C4o",
       "title":"Circular flow of income and expenditures",
       "topic_ids":[  
@@ -2993,7 +2619,6 @@
       ]
    },
    {  
-      "id":375,
       "url":"https://www.youtube.com/embed/LSIgi9krswU",
       "title":"Identifying relative minimum and maximum values",
       "topic_ids":[  
@@ -3001,7 +2626,6 @@
       ]
    },
    {  
-      "id":376,
       "url":"https://www.youtube.com/embed/F2uzWHppVrk",
       "title":"Putting it all together: Pressure, flow, and resistance",
       "topic_ids":[  
@@ -3009,7 +2633,6 @@
       ]
    },
    {  
-      "id":377,
       "url":"https://www.youtube.com/embed/LcyEXlCIkmA",
       "title":"Compliance - increased blood flow",
       "topic_ids":[  
@@ -3017,7 +2640,6 @@
       ]
    },
    {  
-      "id":378,
       "url":"https://www.youtube.com/embed/s5smas8uum4",
       "title":"Depolarization waves flowing through the heart",
       "topic_ids":[  
@@ -3025,7 +2647,6 @@
       ]
    },
    {  
-      "id":441,
       "url":"https://www.youtube.com/embed/D6mivA_8L8U",
       "title":"Multiplying polynomials example 3",
       "topic_ids":[  
@@ -3033,7 +2654,6 @@
       ]
    },
    {  
-      "id":379,
       "url":"https://www.youtube.com/embed/6WCfVjUTTEY",
       "title":"Present value 4 (and discounted cash flow)",
       "topic_ids":[  
@@ -3041,7 +2661,6 @@
       ]
    },
    {  
-      "id":380,
       "url":"https://www.youtube.com/embed/PK4mJ2F9lvA",
       "title":"7 Maximum distance on two spheres",
       "topic_ids":[  
@@ -3049,7 +2668,6 @@
       ]
    },
    {  
-      "id":381,
       "url":"https://www.youtube.com/embed/G3bO8RcRgxQ",
       "title":"Viscosity and Poiseuille flow",
       "topic_ids":[  
@@ -3057,7 +2675,6 @@
       ]
    },
    {  
-      "id":382,
       "url":"https://www.youtube.com/embed/bQfZXeksysw",
       "title":"Natural Selection",
       "topic_ids":[  
@@ -3065,7 +2682,6 @@
       ]
    },
    {  
-      "id":383,
       "url":"https://www.youtube.com/embed/qpsaHE_uZic",
       "title":"Theories of selective attention",
       "topic_ids":[  
@@ -3073,7 +2689,6 @@
       ]
    },
    {  
-      "id":384,
       "url":"https://www.youtube.com/embed/2h6RdAxIMO8",
       "title":"Comparing highly selective vs  selective vs  nonselective colleges",
       "topic_ids":[  
@@ -3081,7 +2696,6 @@
       ]
    },
    {  
-      "id":385,
       "url":"https://www.youtube.com/embed/EsQyCHs4IBY",
       "title":"Clonal selection",
       "topic_ids":[  
@@ -3089,7 +2703,6 @@
       ]
    },
    {  
-      "id":386,
       "url":"https://www.youtube.com/embed/GcjgWov7mTM",
       "title":"Introduction to evolution and natural selection",
       "topic_ids":[  
@@ -3097,7 +2710,6 @@
       ]
    },
    {  
-      "id":387,
       "url":"https://www.youtube.com/embed/q71hYD9Xhek",
       "title":"Selecting your college",
       "topic_ids":[  
@@ -3105,7 +2717,6 @@
       ]
    },
    {  
-      "id":388,
       "url":"https://www.youtube.com/embed/dR_BFmDMRaI",
       "title":"Natural selection and the owl butterfly",
       "topic_ids":[  
@@ -3113,7 +2724,6 @@
       ]
    },
    {  
-      "id":389,
       "url":"https://www.youtube.com/embed/s4JBqLoY3tY",
       "title":"Divided attention, selective attention, inattentional blindness, \u0026amp; change blindness",
       "topic_ids":[  
@@ -3121,7 +2731,6 @@
       ]
    },
    {  
-      "id":390,
       "url":"https://www.youtube.com/embed/RB7H7paHXd0",
       "title":"Alternative selection",
       "topic_ids":[  
@@ -3129,7 +2738,6 @@
       ]
    },
    {  
-      "id":391,
       "url":"https://www.youtube.com/embed/Me_041nrRZk",
       "title":"Evolution and natural selection",
       "topic_ids":[  
@@ -3137,7 +2745,6 @@
       ]
    },
    {  
-      "id":392,
       "url":"https://www.youtube.com/embed/EQhBl75ZiKQ",
       "title":"Student story: Prioritizing size, campus, major, and selectivity in the college search",
       "topic_ids":[  
@@ -3145,7 +2752,6 @@
       ]
    },
    {  
-      "id":393,
       "url":"https://www.youtube.com/embed/Jdu1scUjIHQ",
       "title":"Student story: Prioritizing size, selectivity, diversity and financial aid in the college search",
       "topic_ids":[  
@@ -3153,7 +2759,6 @@
       ]
    },
    {  
-      "id":394,
       "url":"https://www.youtube.com/embed/sNgsCT0E7Es",
       "title":"Biodiversity and natural selection",
       "topic_ids":[  
@@ -3161,7 +2766,6 @@
       ]
    },
    {  
-      "id":395,
       "url":"https://www.youtube.com/embed/Rw_pDVbnfQk",
       "title":"Covalent networks, metallic, and ionic crystals",
       "topic_ids":[  
@@ -3169,7 +2773,6 @@
       ]
    },
    {  
-      "id":396,
       "url":"https://www.youtube.com/embed/0RSMKyRVuV8",
       "title":"Semantic networks and spreading activation",
       "topic_ids":[  
@@ -3177,7 +2780,6 @@
       ]
    },
    {  
-      "id":397,
       "url":"https://www.youtube.com/embed/MFoXK57sw9k",
       "title":"Sorting absolute values on number line",
       "topic_ids":[  
@@ -3185,7 +2787,6 @@
       ]
    },
    {  
-      "id":398,
       "url":"https://www.youtube.com/embed/ivQ85hdpsBE",
       "title":"Network solids and carbon",
       "topic_ids":[  
@@ -3193,7 +2794,6 @@
       ]
    },
    {  
-      "id":399,
       "url":"https://www.youtube.com/embed/-bE-Pydad7U",
       "title":"Ecosystems and ecological networks",
       "topic_ids":[  
@@ -3201,7 +2801,6 @@
       ]
    },
    {  
-      "id":400,
       "url":"https://www.youtube.com/embed/gSEYtAjuZ-Y",
       "title":"Histograms",
       "topic_ids":[  
@@ -3209,7 +2808,6 @@
       ]
    },
    {  
-      "id":401,
       "url":"https://www.youtube.com/embed/c02vjunQsJM",
       "title":"Interpreting histograms",
       "topic_ids":[  
@@ -3217,7 +2815,6 @@
       ]
    },
    {  
-      "id":402,
       "url":"https://www.youtube.com/embed/wjCRcXQ3EHg",
       "title":"Philip Rosedale - Evolving ideas vs. new ideas",
       "topic_ids":[  
@@ -3225,7 +2822,6 @@
       ]
    },
    {  
-      "id":403,
       "url":"https://www.youtube.com/embed/jHPr-CuvHhs",
       "title":"Welcome to the web!",
       "topic_ids":[  
@@ -3233,7 +2829,6 @@
       ]
    },
    {  
-      "id":404,
       "url":"https://www.youtube.com/embed/Y-w7SnQWwVA",
       "title":"Bitcoin: Overview",
       "topic_ids":[  
@@ -3241,7 +2836,6 @@
       ]
    },
    {  
-      "id":405,
       "url":"https://www.youtube.com/embed/hiRGC4lS9k8",
       "title":"The Silk Road and ancient trade",
       "topic_ids":[  
@@ -3249,7 +2843,6 @@
       ]
    },
    {  
-      "id":406,
       "url":"https://www.youtube.com/embed/JuWYLAtz3Y4",
       "title":"Bitcoin: The money supply",
       "topic_ids":[  
@@ -3257,7 +2850,6 @@
       ]
    },
    {  
-      "id":407,
       "url":"https://www.youtube.com/embed/IPxQQNyCxas",
       "title":"Institutional roles in issuing and processing credit cards",
       "topic_ids":[  
@@ -3265,7 +2857,6 @@
       ]
    },
    {  
-      "id":408,
       "url":"https://www.youtube.com/embed/O1-9f1g0OsI",
       "title":"Defined and undefined matrix operations",
       "topic_ids":[  
@@ -3273,7 +2864,6 @@
       ]
    },
    {  
-      "id":409,
       "url":"https://www.youtube.com/embed/2t0003_sxtU",
       "title":"Transpose of a matrix",
       "topic_ids":[  
@@ -3281,7 +2871,6 @@
       ]
    },
    {  
-      "id":410,
       "url":"https://www.youtube.com/embed/OMA2Mwo0aZg",
       "title":"Multiplying a matrix by a matrix",
       "topic_ids":[  
@@ -3289,7 +2878,6 @@
       ]
    },
    {  
-      "id":411,
       "url":"https://www.youtube.com/embed/Hhc96U_HvQE",
       "title":"Matrix product associativity",
       "topic_ids":[  
@@ -3297,7 +2885,6 @@
       ]
    },
    {  
-      "id":412,
       "url":"https://www.youtube.com/embed/Z19-ObbmHJE",
       "title":"More on matrix addition and scalar multiplication",
       "topic_ids":[  
@@ -3305,7 +2892,6 @@
       ]
    },
    {  
-      "id":413,
       "url":"https://www.youtube.com/embed/r9aTLTN16V4",
       "title":"Example of finding matrix inverse",
       "topic_ids":[  
@@ -3313,7 +2899,6 @@
       ]
    },
    {  
-      "id":414,
       "url":"https://www.youtube.com/embed/gfVY7cW7VLQ",
       "title":"Example using orthogonal change-of-basis matrix to find transformation matrix",
       "topic_ids":[  
@@ -3321,7 +2906,6 @@
       ]
    },
    {  
-      "id":415,
       "url":"https://www.youtube.com/embed/ND-Bbp_q46s",
       "title":"New operator definitions",
       "topic_ids":[  
@@ -3329,7 +2913,6 @@
       ]
    },
    {  
-      "id":416,
       "url":"https://www.youtube.com/embed/st6D5OdFV9M",
       "title":"Column space of a matrix",
       "topic_ids":[  
@@ -3337,7 +2920,6 @@
       ]
    },
    {  
-      "id":417,
       "url":"https://www.youtube.com/embed/3Po3nfITsok",
       "title":"Order of operations, more examples",
       "topic_ids":[  
@@ -3345,7 +2927,6 @@
       ]
    },
    {  
-      "id":418,
       "url":"https://www.youtube.com/embed/kpG7xySkivg",
       "title":"Determinant after row operations",
       "topic_ids":[  
@@ -3353,7 +2934,6 @@
       ]
    },
    {  
-      "id":419,
       "url":"https://www.youtube.com/embed/7Mo4S2wyMg4",
       "title":"Matrix vector products",
       "topic_ids":[  
@@ -3361,7 +2941,6 @@
       ]
    },
    {  
-      "id":420,
       "url":"https://www.youtube.com/embed/oMWTMj78cwc",
       "title":"Distributive property of matrix products",
       "topic_ids":[  
@@ -3369,7 +2948,6 @@
       ]
    },
    {  
-      "id":421,
       "url":"https://www.youtube.com/embed/eIndU6kmH58",
       "title":"What is Programming?",
       "topic_ids":[  
@@ -3377,7 +2955,6 @@
       ]
    },
    {  
-      "id":422,
       "url":"https://www.youtube.com/embed/4PCktDZJH8E",
       "title":"Linear transformations",
       "topic_ids":[  
@@ -3385,7 +2962,6 @@
       ]
    },
    {  
-      "id":423,
       "url":"https://www.youtube.com/embed/3quWEMobksw",
       "title":"Introduction to programming",
       "topic_ids":[  
@@ -3393,7 +2969,6 @@
       ]
    },
    {  
-      "id":424,
       "url":"https://www.youtube.com/embed/pMFv6liWK4M",
       "title":"Linear subspaces",
       "topic_ids":[  
@@ -3401,7 +2976,6 @@
       ]
    },
    {  
-      "id":425,
       "url":"https://www.youtube.com/embed/Alhcv5d_XOs",
       "title":"More on linear independence",
       "topic_ids":[  
@@ -3409,7 +2983,6 @@
       ]
    },
    {  
-      "id":426,
       "url":"https://www.youtube.com/embed/f_DTiXZpb8M",
       "title":"Compositions of linear transformations 1",
       "topic_ids":[  
@@ -3417,7 +2990,6 @@
       ]
    },
    {  
-      "id":427,
       "url":"https://www.youtube.com/embed/CrV1xCWdY-g",
       "title":"Introduction to linear independence",
       "topic_ids":[  
@@ -3425,7 +2997,6 @@
       ]
    },
    {  
-      "id":428,
       "url":"https://www.youtube.com/embed/mr9Tow8hpCg",
       "title":"Showing that inverses are linear",
       "topic_ids":[  
@@ -3433,7 +3004,6 @@
       ]
    },
    {  
-      "id":429,
       "url":"https://www.youtube.com/embed/AZroE4fJqtQ",
       "title":"Recognizing linear functions",
       "topic_ids":[  
@@ -3441,7 +3011,6 @@
       ]
    },
    {  
-      "id":430,
       "url":"https://www.youtube.com/embed/Qm_OS-8COwU",
       "title":"Linear combinations and span",
       "topic_ids":[  
@@ -3449,7 +3018,6 @@
       ]
    },
    {  
-      "id":431,
       "url":"https://www.youtube.com/embed/jsDOHy8pHTg",
       "title":"A Tour of Programming on Khan Academy",
       "topic_ids":[  
@@ -3457,7 +3025,6 @@
       ]
    },
    {  
-      "id":432,
       "url":"https://www.youtube.com/embed/ondmopWLiEg",
       "title":"Matrix vector products as linear transformations",
       "topic_ids":[  
@@ -3465,7 +3032,6 @@
       ]
    },
    {  
-      "id":433,
       "url":"https://www.youtube.com/embed/lPWfIq5DzqI",
       "title":"Linear transformation examples: Rotations in R2",
       "topic_ids":[  
@@ -3473,7 +3039,6 @@
       ]
    },
    {  
-      "id":434,
       "url":"https://www.youtube.com/embed/Oe1PKI_6-38",
       "title":"Adding polynomials",
       "topic_ids":[  
@@ -3481,7 +3046,6 @@
       ]
    },
    {  
-      "id":435,
       "url":"https://www.youtube.com/embed/IGs7IB48Fvg",
       "title":"Polynomials 2",
       "topic_ids":[  
@@ -3489,7 +3053,6 @@
       ]
    },
    {  
-      "id":436,
       "url":"https://www.youtube.com/embed/8SsC5st4LnI",
       "title":"Taylor polynomials",
       "topic_ids":[  
@@ -3497,7 +3060,6 @@
       ]
    },
    {  
-      "id":437,
       "url":"https://www.youtube.com/embed/FXgV9ySNusc",
       "title":"Polynomial division",
       "topic_ids":[  
@@ -3505,7 +3067,6 @@
       ]
    },
    {  
-      "id":438,
       "url":"https://www.youtube.com/embed/5ZdxnFspyP8",
       "title":"Subtracting polynomials",
       "topic_ids":[  
@@ -3513,7 +3074,6 @@
       ]
    },
    {  
-      "id":439,
       "url":"https://www.youtube.com/embed/vN0aL-_vIKM",
       "title":"Simplify a polynomial",
       "topic_ids":[  
@@ -3521,7 +3081,6 @@
       ]
    },
    {  
-      "id":440,
       "url":"https://www.youtube.com/embed/ZgFXL6SEUiI",
       "title":"Addition and subtraction of polynomials",
       "topic_ids":[  
@@ -3529,7 +3088,6 @@
       ]
    },
    {  
-      "id":442,
       "url":"https://www.youtube.com/embed/9eWyvWq9CCs",
       "title":"Sum of polynomial roots (proof)",
       "topic_ids":[  
@@ -3537,7 +3095,6 @@
       ]
    },
    {  
-      "id":443,
       "url":"https://www.youtube.com/embed/EvvxBdNIUeQ",
       "title":"Polynomials 1",
       "topic_ids":[  
@@ -3545,7 +3102,6 @@
       ]
    },
    {  
-      "id":444,
       "url":"https://www.youtube.com/embed/REiDXCN0lGU",
       "title":"Terms coefficients and exponents in a polynomial",
       "topic_ids":[  
@@ -3553,7 +3109,6 @@
       ]
    },
    {  
-      "id":445,
       "url":"https://www.youtube.com/embed/ZGl2ExHwdak",
       "title":"Adding and subtracting polynomials 2",
       "topic_ids":[  
@@ -3561,7 +3116,6 @@
       ]
    },
    {  
-      "id":446,
       "url":"https://www.youtube.com/embed/DMyhUb1pZT0",
       "title":"Adding and subtracting polynomials 3",
       "topic_ids":[  
@@ -3569,7 +3123,6 @@
       ]
    },
    {  
-      "id":447,
       "url":"https://www.youtube.com/embed/WGMn16TDTjE",
       "title":"Randomized algorithms (intro)",
       "topic_ids":[  
@@ -3577,7 +3130,6 @@
       ]
    },
    {  
-      "id":448,
       "url":"https://www.youtube.com/embed/oYUzKAfrx0w",
       "title":"Algorithmic efficiency",
       "topic_ids":[  
@@ -3585,7 +3137,6 @@
       ]
    },
    {  
-      "id":449,
       "url":"https://www.youtube.com/embed/S-ws2W6UbPU",
       "title":"What is an algorithm and why should you care?",
       "topic_ids":[  
@@ -3593,7 +3144,6 @@
       ]
    },
    {  
-      "id":450,
       "url":"https://www.youtube.com/embed/tXlcE_K_C-Y",
       "title":"Comparing theoretical to experimental probabilites",
       "topic_ids":[  
@@ -3601,7 +3151,6 @@
       ]
    },
    {  
-      "id":451,
       "url":"https://www.youtube.com/embed/V8C15AfL6Gk",
       "title":"Mixed numbers on a number line",
       "topic_ids":[  
@@ -3609,7 +3158,6 @@
       ]
    },
    {  
-      "id":452,
       "url":"https://www.youtube.com/embed/qW-Ce44ll0Q",
       "title":"Negative numbers and number line examples",
       "topic_ids":[  
@@ -3617,7 +3165,6 @@
       ]
    },
    {  
-      "id":453,
       "url":"https://www.youtube.com/embed/Ksu1lo312BM",
       "title":"Number sets",
       "topic_ids":[  
@@ -3625,7 +3172,6 @@
       ]
    },
    {  
-      "id":454,
       "url":"https://www.youtube.com/embed/mIStB5X4U8M",
       "title":"Prime numbers",
       "topic_ids":[  
@@ -3633,7 +3179,6 @@
       ]
    },
    {  
-      "id":455,
       "url":"https://www.youtube.com/embed/I-Or4bUAIfo",
       "title":"Atomic number, mass number, and isotopes",
       "topic_ids":[  
@@ -3641,7 +3186,6 @@
       ]
    },
    {  
-      "id":456,
       "url":"https://www.youtube.com/embed/GtOt7EBNEwQ",
       "title":"Pseudorandom number generators",
       "topic_ids":[  
@@ -3649,7 +3193,6 @@
       ]
    },
    {  
-      "id":457,
       "url":"https://www.youtube.com/embed/2IFItASxDVo",
       "title":"Algorithm for mentally computing binomial expansion coefficients",
       "topic_ids":[  
@@ -3657,7 +3200,6 @@
       ]
    },
    {  
-      "id":458,
       "url":"https://www.youtube.com/embed/p729tFmpOXg",
       "title":"Multiplying fractions and whole numbers: mixed number answer",
       "topic_ids":[  
@@ -3665,7 +3207,6 @@
       ]
    },
    {  
-      "id":459,
       "url":"https://www.youtube.com/embed/VlaGxYjnoPY",
       "title":"Mach numbers",
       "topic_ids":[  
@@ -3673,7 +3214,6 @@
       ]
    },
    {  
-      "id":460,
       "url":"https://www.youtube.com/embed/QWX39H9kKvE",
       "title":"Performing a rotation to match figures",
       "topic_ids":[  
@@ -3681,7 +3221,6 @@
       ]
    },
    {  
-      "id":461,
       "url":"https://www.youtube.com/embed/onmNaDrxwmo",
       "title":"Matching rational functions to their graphs",
       "topic_ids":[  
@@ -3689,7 +3228,6 @@
       ]
    },
    {  
-      "id":462,
       "url":"https://www.youtube.com/embed/WffVdYETdng",
       "title":"Matching ratios to trig functions",
       "topic_ids":[  
@@ -3697,7 +3235,6 @@
       ]
    },
    {  
-      "id":463,
       "url":"https://www.youtube.com/embed/EwEbZI57P1o",
       "title":"Matching functions to their graphs",
       "topic_ids":[  
@@ -3705,7 +3242,6 @@
       ]
    },
    {  
-      "id":464,
       "url":"https://www.youtube.com/embed/Uteoh0PtWwI",
       "title":"Matching radical functions with graphs exercise example",
       "topic_ids":[  
@@ -3713,7 +3249,6 @@
       ]
    },
    {  
-      "id":465,
       "url":"https://www.youtube.com/embed/iQk1M3-WvZM",
       "title":"Matching expressions to define intervals of functions example",
       "topic_ids":[  
@@ -3721,7 +3256,6 @@
       ]
    },
    {  
-      "id":466,
       "url":"https://www.youtube.com/embed/-ScrE9jd4Do",
       "title":"5 Equations that match constraints",
       "topic_ids":[  
@@ -3729,7 +3263,6 @@
       ]
    },
    {  
-      "id":467,
       "url":"https://www.youtube.com/embed/bUw5AKm1Frw",
       "title":"\u0026#34;String Theory\u0026#34; with Jayson Kerr Dobney",
       "topic_ids":[  
@@ -3737,7 +3270,6 @@
       ]
    },
    {  
-      "id":468,
       "url":"https://www.youtube.com/embed/ao9cx8JlJIU",
       "title":"Interpreting linear expressions, 1",
       "topic_ids":[  
@@ -3745,7 +3277,6 @@
       ]
    },
    {  
-      "id":469,
       "url":"https://www.youtube.com/embed/edVnqL2Z59A",
       "title":"Interpreting linear expressions, 2",
       "topic_ids":[  
@@ -3753,7 +3284,6 @@
       ]
    },
    {  
-      "id":470,
       "url":"https://www.youtube.com/embed/2mzuFKCuDg4",
       "title":"Identify the angle example",
       "topic_ids":[  
@@ -3761,7 +3291,6 @@
       ]
    },
    {  
-      "id":471,
       "url":"https://www.youtube.com/embed/3zU90x0OZ0Y",
       "title":"Giacometti, The Palace at 4am",
       "topic_ids":[  
@@ -3769,7 +3298,6 @@
       ]
    },
    {  
-      "id":472,
       "url":"https://www.youtube.com/embed/1pHhMX0_4Bw",
       "title":"Quadrilaterals: classifying shapes",
       "topic_ids":[  
@@ -3777,7 +3305,6 @@
       ]
    },
    {  
-      "id":473,
       "url":"https://www.youtube.com/embed/h6YWCuuJVj4",
       "title":"Computer memory (space)",
       "topic_ids":[  
@@ -3785,7 +3312,6 @@
       ]
    },
    {  
-      "id":474,
       "url":"https://www.youtube.com/embed/il0EJrY64qE",
       "title":"Basic geometry: language and labels",
       "topic_ids":[  
@@ -3793,7 +3319,6 @@
       ]
    },
    {  
-      "id":475,
       "url":"https://www.youtube.com/embed/WqzK3UAXaHs",
       "title":"Euclid as the father of geometry",
       "topic_ids":[  
@@ -3801,7 +3326,6 @@
       ]
    },
    {  
-      "id":476,
       "url":"https://www.youtube.com/embed/4PPMnI8-Zsc",
       "title":"CA Geometry: More proofs",
       "topic_ids":[  
@@ -3809,7 +3333,6 @@
       ]
    },
    {  
-      "id":477,
       "url":"https://www.youtube.com/embed/MyvRxKM0xns",
       "title":"CA Geometry: Basic trigonometry",
       "topic_ids":[  
@@ -3817,7 +3340,6 @@
       ]
    },
    {  
-      "id":478,
       "url":"https://www.youtube.com/embed/GluohfOedQE",
       "title":"CA Geometry: Deductive reasoning",
       "topic_ids":[  
@@ -3825,7 +3347,6 @@
       ]
    },
    {  
-      "id":479,
       "url":"https://www.youtube.com/embed/u6O0YHyarlI",
       "title":"CA Geometry: Proof by contradiction",
       "topic_ids":[  
@@ -3833,7 +3354,6 @@
       ]
    },
    {  
-      "id":480,
       "url":"https://www.youtube.com/embed/h0FFEBHBufo",
       "title":"CA Geometry: Triangles and parallelograms",
       "topic_ids":[  
@@ -3841,7 +3361,6 @@
       ]
    },
    {  
-      "id":481,
       "url":"https://www.youtube.com/embed/Ncg1HB5uVLc",
       "title":"CA Geometry: Exterior angles",
       "topic_ids":[  
@@ -3849,7 +3368,6 @@
       ]
    },
    {  
-      "id":482,
       "url":"https://www.youtube.com/embed/79lagkER9qY",
       "title":"CA Geometry: Compass construction",
       "topic_ids":[  
@@ -3857,7 +3375,6 @@
       ]
    },
    {  
-      "id":483,
       "url":"https://www.youtube.com/embed/8YBQQ0GeusM",
       "title":"CA Geometry: More trig",
       "topic_ids":[  
@@ -3865,7 +3382,6 @@
       ]
    },
    {  
-      "id":484,
       "url":"https://www.youtube.com/embed/FVSgVMVZZ-4",
       "title":"CA Geometry: More on congruent and similar triangles",
       "topic_ids":[  
@@ -3873,7 +3389,6 @@
       ]
    },
    {  
-      "id":485,
       "url":"https://www.youtube.com/embed/BJSk1joCQsM",
       "title":"CA Geometry: Area, circumference, volume",
       "topic_ids":[  
