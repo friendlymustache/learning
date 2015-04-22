@@ -33,6 +33,7 @@ def save_db_objects(source_path, version)
             topic_hash["version"] = version
             topic_hash = topic_hash.slice(*(Topic.column_names))
 
+            # puts "Hash: " + topic_hash.to_s
             if parent != nil
     		  parent.children.create(topic_hash)
             else
@@ -52,6 +53,8 @@ def save_db_objects(source_path, version)
                 :version => version)
             if parent_topic != nil
                 link_hash = link_hash.slice(*(Link.column_names))
+                link_hash["version"] = version
+                # puts "Hash: " + link_hash.to_s
         		link = Link.create(link_hash)
         		parent_topic.links << link
         		link.topics << parent_topic
@@ -82,7 +85,7 @@ namespace :db do
      puts "Version: #{args.version}, source: #{source_path}, " +
        "delete existing database entries: #{args.delete_existing}"
 
-     if args.delete_existing
+     if args.delete_existing == "true"
      	puts "Deleting all database entries for version #{args.version}"
      	delete_all(args.version)
      end

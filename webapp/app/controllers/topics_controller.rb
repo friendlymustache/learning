@@ -34,7 +34,8 @@ class TopicsController < ApplicationController
 		paramValue = params[:id]
 		# If we're searching by name, use the hierarchy serializer
 		if paramValue.to_i == 0
-			render json: Topic.find_by_name(params[:id]), serializer: TopicHierarchySerializer, root: "topic"
+
+			render json: Topic.find_by(:name => params[:id], :version => params[:v_id]), serializer: TopicHierarchySerializer, root: "topic"
 		# If we're searching by ID, use the topic serializer (default)
 		else
 			render json: Topic.find(paramValue.to_i)
