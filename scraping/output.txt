@@ -1,0 +1,83 @@
+[
+    {
+        "name": "What is an algorithm and why should you care?",
+        "parent": "Foundations",
+        "section_name": "The Role of Algorithms in Computing",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/S-ws2W6UbPU"
+    }
+]
+[
+    {
+        "name": "Summary (what&#39;s next?)",
+        "parent": "Foundations",
+        "section_name": "Getting Started",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/kFkUSizmR3k"
+    },
+    {
+        "name": "Algorithmic efficiency",
+        "parent": "Foundations",
+        "section_name": "Getting Started",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/oYUzKAfrx0w"
+    }
+]
+[]
+[]
+[
+    {
+        "name": "Random variables",
+        "parent": "Foundations",
+        "section_name": "Probabilistic Analysis and Randomized Algorithms",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/3v9w79NhsfI"
+    }
+]
+[]
+[]
+[]
+[]
+[
+    {
+        "name": "Time space tradeoff",
+        "parent": "Data Structures",
+        "section_name": "Elementary Data Structures",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/9YRw0Yk7N8c"
+    },
+    {
+        "name": "Primality test with sieve",
+        "parent": "Data Structures",
+        "section_name": "Elementary Data Structures",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/XspzfNSSqyk"
+    }
+]
+[
+    {
+        "name": "Bitcoin: Cryptographic hash functions",
+        "parent": "Data Structures",
+        "section_name": "Hash Tables",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/0WiTaBI82Mc"
+    }
+]
+[]
+[]
+[
+    {
+        "name": "Summary (what&#39;s next?)",
+        "parent": "Data Structures",
+        "section_name": "Augmenting Data Structures",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/kFkUSizmR3k"
+    },
+    {
+        "name": "Algorithmic efficiency",
+        "parent": "Data Structures",
+        "section_name": "Augmenting Data Structures",
+        "topic": "algorithms",
+        "url": "https://www.youtube.com/embed/oYUzKAfrx0w"
+    }
+]

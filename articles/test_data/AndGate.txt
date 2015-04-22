@@ -1,0 +1,123 @@
+
+AND gate
+From Wikipedia, the free encyclopedia
+INPUT	OUTPUT
+A	B	A AND B
+0	0	0
+0	1	0
+1	0	0
+1	1	1
+The AND gate is a basic digital logic gate that implements logical conjunction - it behaves according to the truth table to the right. A HIGH output (1) results only if both the inputs to the AND gate are HIGH (1). If neither or only one input to the AND gate is HIGH, a LOW output results. In another sense, the function of AND effectively finds the minimum between two binary digits, just as the OR function finds the maximum. Therefore, the output is always 0 except when all the inputs are 1s.
+
+Contents  [hide] 
+1 Symbols
+2 Implementations
+2.1 Alternatives
+3 See also
+4 References
+Symbols[edit]
+There are three symbols for AND gates: the American (ANSI or 'military') symbol and the IEC ('European' or 'rectangular') symbol, as well as the deprecated DIN symbol. For more information see Logic Gate Symbols.
+
+
+
+AND ANSI.svg	AND IEC.svg	AND DIN.svg
+MIL/ANSI Symbol	IEC Symbol	DIN Symbol
+The AND gate with inputs A and B and output C implements the logical expression C = A \cdot B.
+
+Implementations[edit]
+
+NMOS AND gate
+
+AND gate using diodes
+
+AND gate using transistors
+An AND gate is usually designed using N-channel (pictured) or P-channel MOSFETs. The digital inputs a and b cause the output F to have the same result as the AND function.
+
+Alternatives[edit]
+If no specific AND gates are available, one can be made from NAND or NOR gates, because NAND and NOR gates are considered the "universal gates," [1] meaning that they can be used to make all the others. XOR Gates can also be used to simulate AND functions, but are rarely used to do so.
+
+Desired gate	NAND construction	NOR construction
+AND ANSI Labelled.svg	AND from NAND.svg	AND using NOR.svg
+See also[edit]
+	Wikimedia Commons has media related to AND gates.
+OR gate
+NOT gate
+NAND gate
+NOR gate
+XOR gate
+XNOR gate
+Boolean algebra
+Logic gate
+[hide] v t e
+Logical connectives
+Tautology \top
+Logical connectives Hasse diagram.svg
+NAND \uparrow Converse implication \leftarrow Implication \rightarrow OR \or
+Negation \neg XOR \oplus Biconditional \leftrightarrow Statement
+NOR \downarrow Nonimplication \nrightarrow Converse nonimplication \nleftarrow AND \and
+Contradiction \bot
+References[edit]
+Jump up ^ Mano, M. Morris and Charles R. Kime. Logic and Computer Design Fundamentals, Third Edition. Prentice Hall, 2004. p. 73.
+Categories: Logic gates
+Navigation menu
+Create accountLog inArticleTalkReadEditView history
+
+Main page
+Contents
+Featured content
+Current events
+Random article
+Donate to Wikipedia
+Wikipedia store
+Interaction
+Help
+About Wikipedia
+Community portal
+Recent changes
+Contact page
+Tools
+What links here
+Related changes
+Upload file
+Special pages
+Permanent link
+Page information
+Wikidata item
+Cite this page
+Print/export
+Create a book
+Download as PDF
+Printable version
+Languages
+አማርኛ
+العربية
+Azərbaycanca
+Català
+Deutsch
+Eesti
+Español
+Euskara
+فارسی
+Français
+Hrvatski
+Italiano
+Latina
+മലയാളം
+Nederlands
+日本語
+ਪੰਜਾਬੀ
+پنجابی
+Português
+Română
+Simple English
+Slovenčina
+Српски / srpski
+Suomi
+தமிழ்
+Türkçe
+Tiếng Việt
+中文
+Edit links
+This page was last modified on 18 September 2014, at 23:28.
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaDevelopersMobile viewWikimedia Foundation Powered by MediaWiki

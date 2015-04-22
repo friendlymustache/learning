@@ -1,0 +1,83 @@
+Outline of object recognition
+From Wikipedia, the free encyclopedia
+  (Redirected from Object recognition)
+The following outline is provided as an overview of and topical guide to object recognition:
+
+Object recognition – task (within computer vision) of finding and identifying objects in an image or video sequence. Humans recognize a multitude of objects in images with little effort, despite the fact that the image of the objects may vary somewhat in different view points, in many different sizes and scales or even when they are translated or rotated. Objects can even be recognized when they are partially obstructed from view. This task is still a challenge for computer vision systems. Many approaches to the task have been implemented over multiple decades.
+
+Contents  [hide] 
+1 Approaches based on CAD-like object models
+2 Appearance-based methods
+3 Feature-based methods
+4 Genetic algorithm
+5 Other approaches
+6 Applications
+7 Surveys
+8 See also
+9 Notes
+10 References
+11 External links
+Approaches based on CAD-like object models[edit]
+Edge detection
+Primal sketch
+Marr, Mohan and Nevatia
+Lowe
+Olivier Faugeras
+Recognition by parts[edit]
+Generalized cylinders (Thomas Binford)
+Geons (Irving Biederman)
+Dickinson, Forsyth and Ponce
+Appearance-based methods[edit]
+- Use example images (called templates or exemplars) of the objects to perform recognition
+
+- Objects look different under varying conditions:
+
+Changes in lighting or color
+Changes in viewing direction
+Changes in size / shape
+- A single exemplar is unlikely to succeed reliably. However, it is impossible to represent all appearances of an object.
+
+1. Edge matching
+
+Uses edge detection techniques, such as the Canny edge detection, to find edges.
+Changes in lighting and color usually don’t have much effect on image edges
+Strategy:
+Detect edges in template and image
+Compare edges images to find the template
+Must consider range of possible template positions
+Measurements:
+Good – count the number of overlapping edges. Not robust to changes in shape
+Better – count the number of template edge pixels with some distance of an edge in the search image
+Best – determine probability distribution of distance to nearest edge in search image (if template at correct position). Estimate likelihood of each template position generating image
+2. Divide-and-Conquer search
+
+Strategy:
+Consider all positions as a set (a cell in the space of positions)
+Determine lower bound on score at best position in cell
+If bound is too large, prune cell
+If bound is not too large, divide cell into subcells and try each subcell recursively
+Process stops when cell is “small enough”
+Unlike multi-resolution search, this technique is guaranteed to find all matches that meet the criterion (assuming that the lower bound is accurate)
+Finding the Bound:
+To find the lower bound on the best score, look at score for the template position represented by the center of the cell
+Subtract maximum change from the “center” position for any other position in cell (occurs at cell corners)
+Complexities arise from determining bounds on distance
+3. Greyscale matching
+
+Edges are (mostly) robust to illumination changes, however they throw away a lot of information
+Must compute pixel distance as a function of both pixel position and pixel intensity
+Can be applied to color also
+4. Gradient matching
+
+Another way to be robust to illumination changes without throwing away as much information is to compare image gradients
+Matching is performed like matching greyscale images
+Simple alternative: Use (normalized) correlation
+5. Histograms of receptive field responses
+
+Avoids explicit point correspondences
+Relations between different image points implicitly coded in the receptive field responses
+Swain and Ballard (1991),[1] Schiele and Crowley (2000),[2] Linde and Lindeberg (2004, 2012)[3][4]
+6. Large modelbases
+
+One approach to efficiently searching the database for a specific image to use eigenvectors of the templates (called eigenfaces)
+Modelbases are a collection of geometric models of the objects that should be recognised

@@ -1,0 +1,72 @@
+Artificial neural network
+From Wikipedia, the free encyclopedia
+  (Redirected from Neural networks)
+"Neural network" redirects here. For networks of living neurons, see Biological neural network. For the journal, see Neural Networks (journal). For the evolutionary concept, see Neutral network (evolution).
+Machine learning and
+data mining
+Scatterplot featuring a linear support vector machine's decision boundary (dashed line)
+Problems
+Classification Clustering Regression Anomaly detection Association rules Reinforcement learning Structured prediction Feature learning Online learning Semi-supervised learning Grammar induction
+Supervised learning
+(classification • regression)
+Decision trees Ensembles (Bagging, Boosting, Random forest) k-NN Linear regression Naive Bayes Neural networks Logistic regression Perceptron Support vector machine (SVM) Relevance vector machine (RVM)
+Clustering
+BIRCH Hierarchical k-means Expectation-maximization (EM)
+DBSCAN OPTICS Mean-shift
+Dimensionality reduction
+Factor analysis CCA ICA LDA NMF PCA t-SNE
+Structured prediction
+Graphical models (Bayes net, CRF, HMM)
+Anomaly detection
+k-NN Local outlier factor
+Neural nets
+Autoencoder Deep learning Multilayer perceptron RNN Restricted Boltzmann machine SOM Convolutional neural network
+Theory
+Bias-variance dilemma Computational learning theory Empirical risk minimization PAC learning Statistical learning VC theory
+Portal icon Machine learning portal
+Portal icon Computer science portal
+Portal icon Statistics portal
+v t e
+
+An artificial neural network is an interconnected group of nodes, akin to the vast network of neurons in a brain. Here, each circular node represents an artificial neuron and an arrow represents a connection from the output of one neuron to the input of another.
+In machine learning and cognitive science, artificial neural networks (ANNs) are a family of statistical learning algorithms inspired by biological neural networks (the central nervous systems of animals, in particular the brain) and are used to estimate or approximate functions that can depend on a large number of inputs and are generally unknown. Artificial neural networks are generally presented as systems of interconnected "neurons" which can compute values from inputs, and are capable of machine learning as well as pattern recognition thanks to their adaptive nature.
+
+For example, a neural network for handwriting recognition is defined by a set of input neurons which may be activated by the pixels of an input image. After being weighted and transformed by a function (determined by the network's designer), the activations of these neurons are then passed on to other neurons. This process is repeated until finally, an output neuron is activated. This determines which character was read.
+
+Like other machine learning methods - systems that learn from data - neural networks have been used to solve a wide variety of tasks that are hard to solve using ordinary rule-based programming, including computer vision and speech recognition.
+
+Contents  [hide] 
+1 Background
+2 History
+2.1 Improvements since 2006
+3 Models
+3.1 Network function
+3.2 Learning
+3.2.1 Choosing a cost function
+3.3 Learning paradigms
+3.3.1 Supervised learning
+3.3.2 Unsupervised learning
+3.3.3 Reinforcement learning
+3.4 Learning algorithms
+4 Employing artificial neural networks
+5 Applications
+5.1 Real-life applications
+5.2 Neural networks and neuroscience
+5.2.1 Types of models
+6 Neural network software
+7 Types of artificial neural networks
+8 Theoretical properties
+8.1 Computational power
+8.2 Capacity
+8.3 Convergence
+8.4 Generalization and statistics
+9 Controversies
+9.1 Training issues
+9.2 Hardware issues
+9.3 Practical counterexamples to criticisms
+9.4 Hybrid approaches
+10 Gallery
+11 See also
+12 References
+13 Bibliography
+14 External links

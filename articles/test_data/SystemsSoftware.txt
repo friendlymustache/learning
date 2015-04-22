@@ -1,0 +1,88 @@
+
+System software
+From Wikipedia, the free encyclopedia
+Not to be confused with Software system.
+System software (systems software) is computer software designed to operate and control the computer hardware and to provide a platform for running application software.[1] System software can be separated into two different categories, operating systems and utility software.
+
+The operating system (prominent examples being z/OS, Microsoft Windows, Mac OS X and Linux), allows the parts of a computer to work together by performing tasks like transferring data between memory and disks or rendering output onto a display device. It also provides a platform to run high-level system software and application software.
+A kernel is the core part of the operating system that defines an API for applications programs (including some system software) and an interface to device drivers.
+Device drivers such as computer BIOS and device firmware provide basic functionality to operate and control the hardware connected to or built into the computer.
+A user interface "allows users to interact with a computer."[2] Since the 1980s the graphical user interface (GUI) has been perhaps the most common user interface technology. The command-line interface is still a commonly used alternative.
+Utility software helps to analyze, configure, optimize and maintain the computer, such as virus protection.[3]
+In some publications, the term system software also includes software development tools (like a compiler, linker or debugger).[4]
+
+In contrast to system software, software that allows users to do things like create text documents, play games, listen to music, or web browsers to surf the web are called application software.[5] The line where the distinction should be drawn isn't always clear. Most operating systems bundle such software. Such software is not considered system software when it can be uninstalled without affecting the functioning of other software. Exceptions could be e.g. web browsers such as Internet Explorer where Microsoft argued in court that it was system software that could not be uninstalled. Later examples are Chrome OS and Firefox OS where the browser functions as the only user interface and the only way to run programs (and other web browser can not be installed in their place), then they can well be argued to be (part of) the operating system and then system software.
+
+See also[edit]
+Systems programming language
+References[edit]
+Jump up ^ {{cite web|url=http://searchsoa.techtarget.com/sDefinition/0,,sid26_gci213024,00.html |title=What is software? - Definition from Italic text}
+Jump up ^ Daeryong, Kim. "Microcomputer Information Technology". Retrieved 2013-09-22.
+Jump up ^ "What is System Software?". Alverno.edu. 2011-07-24. Archived from the original on 2011-07-24. Retrieved 2012-06-24.[dead link]
+Jump up ^ "What is systems software? - A Word Definition From the Webopedia Computer Dictionary". Webopedia.com. Retrieved 2012-06-24.
+Jump up ^ W. W. Milner, Ann Montgomery-Smith (2000). Information and Communication technology for Intermediate Gnvq. p.126
+External links[edit]
+	Wikiversity has learning materials about Introduction to Computers/System software
+Sammet, Jean (October 1971). "Brief Survey of Languages Used for Systems Implementation". SCM SIGPLAN Notices 6 (9): 1–19. doi:10.1145/942596.807055.
+Stub icon	This article related to a type of software is a stub. You can help Wikipedia by expanding it.
+Categories: System softwareSoftware type stubs
+Navigation menu
+Create accountLog inArticleTalkReadEditView history
+
+Main page
+Contents
+Featured content
+Current events
+Random article
+Donate to Wikipedia
+Wikipedia store
+Interaction
+Help
+About Wikipedia
+Community portal
+Recent changes
+Contact page
+Tools
+What links here
+Related changes
+Upload file
+Special pages
+Permanent link
+Page information
+Wikidata item
+Cite this page
+Print/export
+Create a book
+Download as PDF
+Printable version
+Languages
+العربية
+Azərbaycanca
+বাংলা
+Беларуская
+Български
+Bosanski
+Català
+Čeština
+Deutsch
+Español
+فارسی
+Français
+한국어
+Hrvatski
+Bahasa Indonesia
+עברית
+മലയാളം
+日本語
+ਪੰਜਾਬੀ
+Русский
+සිංහල
+Tagalog
+ไทย
+Українська
+Tiếng Việt
+中文
+Edit links
+This page was last modified on 7 April 2015, at 13:40.
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaDevelopersMobile viewWikimedia Foundation Powered by MediaWiki

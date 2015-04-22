@@ -124,7 +124,7 @@ def generate_queries(pdf_file, toc_stoplist_file):
 
     toc = parse_table_of_contents(toc, toc_stoplist)
 
-    toc = toc[:9]
+    # toc = toc[:9]
 
     rsrcmgr = PDFResourceManager()
 

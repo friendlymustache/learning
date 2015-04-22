@@ -1,0 +1,50 @@
+Optical character recognition
+From Wikipedia, the free encyclopedia
+Optical character recognition (OCR) is the mechanical or electronic conversion of images of typewritten or printed text into machine-encoded text. It is widely used as a form of data entry from printed paper data records, whether passport documents, invoices, bank statements, computerized receipts, business cards, mail, printouts of static-data, or any suitable documentation. It is a common method of digitizing printed texts so that it can be electronically edited, searched, stored more compactly, displayed on-line, and used in machine processes such as machine translation, text-to-speech, key data and text mining. OCR is a field of research in pattern recognition, artificial intelligence and computer vision.
+
+Early versions needed to be trained with images of each character, and worked on one font at a time. Advanced systems that have a high degree of recognition accuracy for most fonts are now common. Some systems are capable of reproducing formatted output that closely approximates the original page including images, columns, and other non-textual components.
+
+Contents  [hide] 
+1 History
+1.1 Blind and visually impaired users
+2 Applications
+3 Types
+4 Techniques
+4.1 Pre-processing
+4.2 Character recognition
+4.3 Post-processing
+4.4 Application-specific optimizations
+5 Workarounds
+5.1 Forcing better input
+5.2 Crowdsourcing
+6 Accuracy
+7 Unicode
+8 See also
+9 References
+10 External links
+History[edit]
+Early optical character recognition may be traced to technologies involving telegraphy and creating reading devices for the blind.[1] In 1914, Emanuel Goldberg developed a machine that read characters and converted them into standard telegraph code.[citation needed] Concurrently, Edmund Fournier d'Albe developed the Optophone, a handheld scanner that when moved across a printed page, produced tones that corresponded to specific letters or characters.[2]
+
+In the late 1920s and into the 1930s Emanuel Goldberg developed what he called a "Statistical Machine" for searching microfilm archives using an optical code recognition system. In 1931 he was granted USA Patent number 1,838,389 for the invention. The patent was acquired by IBM.
+
+Blind and visually impaired users[edit]
+In 1974, Ray Kurzweil started the company Kurzweil Computer Products, Inc. and continued development of omni-font OCR, which could recognize text printed in virtually any font (Kurzweil is often credited with inventing omni-font OCR, but it was in use by companies, including CompuScan, in the late 1960s and 1970s.[1][3]) Kurzweil decided that the best application of this technology would be to create a reading machine for the blind, which would allow blind people to have a computer read text to them out loud. This device required the invention of two enabling technologies – the CCD flatbed scanner and the text-to-speech synthesizer. On January 13, 1976, the successful finished product was unveiled during a widely reported news conference headed by Kurzweil and the leaders of the National Federation of the Blind[citation needed]. In 1978, Kurzweil Computer Products began selling a commercial version of the optical character recognition computer program. LexisNexis was one of the first customers, and bought the program to upload legal paper and news documents onto its nascent online databases. Two years later, Kurzweil sold his company to Xerox, which had an interest in further commercializing paper-to-computer text conversion. Xerox eventually spun it off as Scansoft, which merged with Nuance Communications.[citation needed]. The research group headed by Prof. A. G. Ramakrishnan at the Medical intelligence and language engineering lab, Indian Institute of Science, has developed PrintToBraille tool, an open source GUI frontend[4] that can be used by any OCR to convert scanned images of printed books to Braille books.
+
+In the 2000s, OCR was made available online as a service (WebOCR), in a cloud computing environment, and in mobile applications like real-time translation of foreign-language signs on a smartphone.
+
+Various commercial and open source OCR systems are available for most common writing systems, including Latin, Cyrillic, Arabic, Hebrew, Indic, Bengali (Bangla), Devanagari, Tamil, Chinese, Japanese, and Korean characters.
+
+Applications[edit]
+OCR engines have been developed into many kinds of object-oriented OCR applications, such as receipt OCR, invoice OCR, check OCR, legal billing document OCR.
+
+They can be used for:
+
+Data entry for business documents, e.g. check, passport, invoice, bank statement and receipt
+Automatic number plate recognition
+Automatic insurance documents key information extraction
+Extracting business card information into a contact list
+More quickly make textual versions of printed documents, e.g. book scanning for Project Gutenberg
+Make electronic images of printed documents searchable, e.g. Google Books
+Converting handwriting in real time to control a computer (pen computing)
+Defeating CAPTCHA anti-bot systems, though these are specifically designed to prevent OCR[5][6][7]
+Assistive technology for blind and visually impaired users

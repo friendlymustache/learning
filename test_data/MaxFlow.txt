@@ -1,0 +1,228 @@
+
+Maximum flow problem
+From Wikipedia, the free encyclopedia
+  (Redirected from Max flow)
+
+A network with an example of maximum flow. The source is s, and the sink t. The numbers denote flow and capacity.
+In optimization theory, maximum flow problems involve finding a feasible flow through a single-source, single-sink flow network that is maximum.
+
+The maximum flow problem can be seen as a special case of more complex network flow problems, such as the circulation problem. The maximum value of an s-t flow (i.e., flow from source s to sink t) is equal to the minimum capacity of an s-t cut (i.e., cut severing s from t) in the network, as stated in the max-flow min-cut theorem.
+
+Contents  [hide] 
+1 History
+2 Definition
+3 Solutions
+4 Integral flow theorem
+5 Application
+5.1 Multi-source multi-sink maximum flow problem
+5.2 Minimum path cover in directed acyclic graph
+5.3 Maximum cardinality bipartite matching
+5.4 Maximum flow problem with vertex capacities
+5.5 Maximum edge-disjoint path
+5.6 Maximum independent (vertex-disjoint) path
+6 Real world applications
+6.1 Baseball Elimination
+6.2 Airline scheduling
+6.3 Circulation-demand problem
+6.4 Fairness in car sharing (carpool)
+7 See also
+8 References
+9 Further reading
+History[edit]
+The maximum flow problem was first formulated in 1954 by T. E. Harris and F. S. Ross as a simplified model of Soviet railway traffic flow.[1][2][3] In 1955, Lester R. Ford, Jr. and Delbert R. Fulkerson created the first known algorithm, the Ford–Fulkerson algorithm.[4][5]
+
+Over the years, various improved solutions to the maximum flow problem were discovered, notably the shortest augmenting path algorithm of Edmonds and Karp and independently Dinitz; the blocking flow algorithm of Dinitz; the push-relabel algorithm of Goldberg and Tarjan; and the binary blocking flow algorithm of Goldberg and Rao. The electrical flow algorithm of Christiano, Kelner, Madry, and Spielman finds an approximately optimal maximum flow but only works in undirected graphs.[6][7]
+
+Definition[edit]
+
+A flow network, with source s and sink t. The numbers next to the edge are the capacities.
+Let \scriptstyle N = (V, E) be a network with \scriptstyle s, t \in V being the source and the sink of \scriptstyle N respectively.
+
+The capacity of an edge is a mapping \scriptstyle c : E \to \mathbb{R}^+, denoted by \scriptstyle c_{uv} or \scriptstyle c(u, v). It represents the maximum amount of flow that can pass through an edge.
+A flow is a mapping \scriptstyle f : E \to \mathbb{R}^+, denoted by \scriptstyle f_{uv} or \scriptstyle f(u, v), subject to the following two constraints:
+1. \scriptstyle f_{uv} \leq c_{uv}, for each \scriptstyle (u, v) \in E (capacity constraint: the flow of an edge cannot exceed its capacity)
+2. \scriptstyle \sum_{u:(u, v) \in E} f_{uv} = \sum_{u:(v, u) \in E} f_{vu}, for each \scriptstyle v \in V \setminus \{s, t\} (conservation of flows: the sum of the flows entering a node must equal the sum of the flows exiting a node, except for the source and the sink nodes)
+The value of flow is defined by \scriptstyle |f| = \sum_{v:(s,v) \in E} f_{sv}, where \scriptstyle s is the source of \scriptstyle N. It represents the amount of flow passing from the source to the sink.
+The maximum flow problem is to maximize \scriptstyle |f|, that is, to route as much flow as possible from \scriptstyle s to \scriptstyle t.
+
+Solutions[edit]
+We can define the Residual Graph, which provides a systematic way to search for forward-backward operations in order to find the maximum flow.
+
+Given a flow network \scriptstyle G, and a flow \scriptstyle f on \scriptstyle G, we define the residual graph \scriptstyle G_{f} of \scriptstyle G with respect to \scriptstyle f as follows.
+
+1. The node set of \scriptstyle G_{f} is the same as that of \scriptstyle G.
+
+2. Each edge \scriptstyle e = (u, v) of \scriptstyle G_{f} is with a capacity of \scriptstyle c_{e} - f(e).
+
+3. Each edge \scriptstyle e' = (v, u) of \scriptstyle G_{f} is with a capacity of \scriptstyle f(e).
+
+The following table lists algorithms for solving the maximum flow problem.
+
+Method	Complexity	Description
+Linear programming		Constraints given by the definition of a legal flow. See the linear program here.
+Ford–Fulkerson algorithm	O(E max| f |)	As long as there is an open path through the residual graph, send the minimum of the residual capacities on the path.
+The algorithm works only if all weights are integers. Otherwise it is possible that the Ford–Fulkerson algorithm will not converge to the maximum value.
+
+Edmonds–Karp algorithm	O(VE2)	A specialization of Ford–Fulkerson, finding augmenting paths with breadth-first search.
+Dinic's blocking flow algorithm	O(V2E)	In each phase the algorithms builds a layered graph with breadth-first search on the residual graph. The maximum flow in a layered graph can be calculated in O(VE) time, and the maximum number of the phases is n-1. In networks with unit capacities, Dinic's algorithm terminates in \scriptscriptstyle  O(E\sqrt{V}) time.
+General push-relabel maximum flow algorithm	O(V2E)	The push relabel algorithm maintains a preflow, i.e. a flow function with the possibility of excess in the vertices. The algorithm runs while there is a vertex with positive excess, i.e. an active vertex in the graph. The push operation increases the flow on a residual edge, and a height function on the vertices controls which residual edges can be pushed. The height function is changed with a relabel operation. The proper definitions of these operations guarantee that the resulting flow function is a maximum flow.
+Push-relabel algorithm with FIFO vertex selection rule	O(V3)	Push-relabel algorithm variant which always selects the most recently active vertex, and performs push operations until the excess is positive or there are admissible residual edges from this vertex.
+Dinic's algorithm	O(VE log(V))	The dynamic trees data structure speeds up the maximum flow computation in the layered graph to O(Elog(V)).
+Push-relabel algorithm with dynamic trees	O(VE log(V2/E))	The algorithm builds limited size trees on the residual graph regarding to height function. These trees provide multilevel push operations.
+Binary blocking flow algorithm[8]	\scriptscriptstyle O(E\min(V^{2/3},\sqrt{E})\log(V^2/E)\log{U})	The value U corresponds to the maximum capacity of the network.
+MPM (Malhotra, Pramodh-Kumar and Maheshwari) algorithm	O(V3)	Refer to the Original Paper.
+Jim Orlin's + KRT (King, Rao, Tarjan)'s algorithm	O(VE)	Orlin's algorithm solves max-flow in O(VE) time for m\leq O(n^{(16/15)-\epsilon}) while KRT solves it in O(VE) for m > n^{1+\epsilon}
+For a more extensive list, see[9]
+
+Integral flow theorem[edit]
+The integral flow theorem states that
+
+If each edge in a flow network has integral capacity, then there exists an integral maximal flow.
+Application[edit]
+Multi-source multi-sink maximum flow problem[edit]
+
+Fig. 4.1.1. Transformation of a multi-source multi-sink maximum flow problem into a single-source single-sink maximum flow problem
+Given a network N = (V,E) with a set of sources S = {s1, ..., sn} and a set of sinks T = {t1, ..., tm} instead of only one source and one sink, we are to find the maximum flow across N. We can transform the multi-source multi-sink problem into a maximum flow problem by adding a consolidated source connecting to each vertex in S and a consolidated sink connected by each vertex in T (also known as supersource and supersink) with infinite capacity on each edge (See Fig. 4.1.1.).
+
+Minimum path cover in directed acyclic graph[edit]
+Given a directed acyclic graph G = (V, E), we are to find the minimum number of paths to cover each vertex in V. We can construct a bipartite graph G' = (Vout∪Vin, E' ) from G, where
+
+Vout = {v∈V: v has positive out-degree}.
+Vin = {v∈V: v has positive in-degree}.
+E' = {(u,v)∈Vout×Vin: (u,v)∈E}.
+Then it can be shown, via König's theorem, that G' has a matching of size m if and only if there exists n-m paths that cover each vertex in G, where n is the number of vertices in G. Therefore, the problem can be solved by finding the maximum cardinality matching in G' instead.
+
+Maximum cardinality bipartite matching[edit]
+
+Fig. 4.3.1. Transformation of a maximum bipartite matching problem into a maximum flow problem
+Given a bipartite graph G = (X∪Y, E), we are to find a maximum cardinality matching in G, that is a matching that contains the largest possible number of edges. This problem can be transformed into a maximum flow problem by constructing a network N = (X∪Y∪{s,t), E' }, where
+
+E' contains the edges in G directed from X to Y.
+(s,x)∈E' for each x∈X and (y,t)∈E' for each y∈Y.
+c(e) = 1 for each e∈E' (See Fig. 4.3.1).
+Then the value of the maximum flow in N is equal to the size of the maximum matching in G.
+
+Maximum flow problem with vertex capacities[edit]
+
+Fig. 4.4.1. Transformation of a maximum flow problem with vertex capacities constraint into the original maximum flow problem by node splitting
+Given a network N = (V, E), in which there is capacity at each node in addition to edge capacity, that is, a mapping c: V\mapsto \mathbb{R}^{+}, denoted by c(v), such that the flow f has to satisfy not only the capacity constraint and the conservation of flows, but also the vertex capacity constraint
+
+ \sum_{i\in V} f_{iv} \le c(v) \qquad \forall v \in V \backslash \{s,t\}.
+In other words, the amount of flow passing through a vertex cannot exceed its capacity. To find the maximum flow across N, we can transform the problem into the maximum flow problem in the original sense by expanding N. First, each v\in V is replaced by v_{\text{in}} and v_{\text{out}}, where v_{\text{in}} is connected by edges going into v and v_{\text{out}} is connected to edges coming out from v, then assign capacity c(v) to the edge connecting v_{\text{in}} and v_{\text{out}} (see Fig. 4.4.1, but note that it has incorrectly swapped v_{\text{in}} and v_{\text{out}}). In this expanded network, the vertex capacity constraint is removed and therefore the problem can be treated as the original maximum flow problem.
+
+Maximum edge-disjoint path[edit]
+Given a directed graph G = (V, E) and two vertices s and t, we are to find the maximum number of edge-disjoint paths from s to t. This problem can be transformed to a maximum flow problem by constructing a network N = (V, E) from G with s and t being the source and the sink of N respectively and assign each edge with unit capacity.
+
+Maximum independent (vertex-disjoint) path[edit]
+Given a directed graph G = (V, E) and two vertices s and t, we are to find the maximum number of independent paths from s to t. Two paths are said to be independent if they do not have a vertex in common apart from s and t. We can construct a network N = (V, E) from G with vertex capacities, where
+
+s and t are the source and the sink of N respectively.
+c(v) = 1 for each v∈V.
+c(e) = 1 for each e∈E.
+Then the value of the maximum flow is equal to the maximum number of independent paths from s to t.
+
+Real world applications[edit]
+Baseball Elimination[edit]
+
+Construction of network flow for baseball elimination problem
+In the Baseball Elimination Problem there are n teams competing in a league. At a specific stage of the league season, wi is the number of wins and ri is the number of games left to play for team i and rij is the number of games left against team j. A team is eliminated if it has no chance to finish the season in the first place. The task of Baseball Elimination Problem is to determine which teams are eliminated at each point during the season. Schwartz[10] proposed a method which reduces this problem to maximum network flow. In this method a network is created to determine whether team k is eliminated.
+
+Let G = (V, E) be a network with s,t ∈ V being the source and the sink respectively. We add a game node {i,j} with i < j to V, and connect each of them from s by an edge with capacity rij — which represents the number of plays between these two teams. We also add a team node for each team and connect each game node {i,j} with to team nodes i and j to ensure one of them wins. We do not need to restrict the flow value on these edges. Finally, we make edges from team node i to the sink node t and set the capacity of wk+rk–wi to prevent team i from winning more than wk+rk. Let S be the set of all team participating in the league and let \scriptstyle r(S - \{k\}) = \sum_{i,j \in \{S-\{k\}\}, i < j} r_{ij}. In this method it is claimed team k is not eliminated if and only if a flow value of size r(S - {k}) exists in network G. In the mentioned article it is proved that this flow value is the maximum flow value from s to t.
+
+Airline scheduling[edit]
+In the airline industry a major problem is the scheduling of the flight crews. Airline scheduling problem could be considered as an application of extended maximum network flow. The input of this problem is a set of flights F which contains the information about where and when each flight departs and arrives. In one version of Airline Scheduling the goal is to produce a feasible schedule with at most k crews.
+
+In order to solve this problem we use a variation of circulation problem called bounded circulation which is the generalization of network flow problems, with the added constraint of a lower bound on edge flows.
+
+Let G = (V, E) be a network with s,t ∈ V as the source and the sink nodes. For the source and destination of every flight i we add two nodes to V, node si as the source and node di as the destination node of flight i. We also add the following edges to E:
+
+An edge with capacity [0, 1] between s and each si.
+An edge with capacity [0, 1] between each di and t.
+An edge with capacity [1, 1] between each pair of si and di.
+An edge with capacity [0, 1] between each di and sj, if source sj is reachable with a reasonable amount of time and cost from the destination of flight i.
+An edge with capacity [0, ∞] between s and t.
+In the mentioned method, it is claimed and proved that finding a flow value of k in G between s and t is equal to finding a feasible schedule for flight set F with at most k crews.[11]
+
+Another version of Airline Scheduling is finding the minimum needed crews to perform all the flights. In order to find an answer to this problem we create a bipartite graph G’ = (A ∪ B, E) where each flight has a copy in set A and set B. If the same plane can perform flight j after flight i, connect i∈A to j∈B. A matching in G’ induces a schedule for F and obviously maximum bipartite matching in this graph produces the an airline schedule with minimum number of crews.[11] As it is mentioned in the Application part of this article, the maximum cardinality bipartite matching is an application of maximum flow problem.
+
+Circulation-demand problem[edit]
+There are some factories that produce goods and some villages where the goods have to be delivered. They are connected by a networks of roads with each road having a capacity  c  for maximum goods that can flow through it. The problem is to find if there is a circulation that satisfies the demand. This problem can be transformed into a max-flow problem.
+
+Add a source node  s  and add edges from it to every factory node  f_i  with capacity  p_i  where  p_i  is the production rate of factory  f_i .
+Add a sink node  t  and add edges from all villages  v_i  to  t  with capacity  d_i  where  d_i  is the demand rate of village  v_i .
+Let G = (V, E) be this new network. There exists a circulation that satisfies the demand if and only if :
+
+ \operatorname{Maximum Flow Value}\,(G) =  \sum_{i \in v} d_i 
+If there exists a circulation, looking at the max-flow solution would give us the answer as to how much goods have to be send on a particular road for satisfying the demands.
+
+Fairness in car sharing (carpool)[edit]
+The problem exactly is that  N  people are pooling a car for  k  days. Each participant can choose if he participates on each day. We aim to fairly decide who will be driving on a given day.
+The solution is the following:
+We can decide this on the basis of the number of people using the car i.e.; if  m  people use the car on a day, each person has a responsibility of  1/m . Thus, for every person  i , his driving obligation  D_i  as shown. Then person  i  is required to drive only  [D_i]  times in  k  days.
+Our aim is to ﬁnd if such a setting is possible. For this we try to make the problem as a network, as we can see in the ﬁgure.
+Now, it can be proved that if a ﬂow  k  exists then such a fair setting exists and such a ﬂow of value  k  always exists.
+
+See also[edit]
+Closure problem
+Minimum-cost flow problem
+References[edit]
+Jump up ^ Schrijver, A. (2002). "On the history of the transportation and maximum flow problems". Mathematical Programming 91 (3): 437–445. doi:10.1007/s101070100259. edit
+Jump up ^ Gass, Saul I.; Assad, Arjang A. (2005). "Mathematical, algorithmic and professional developments of operations research from 1951 to 1956". An Annotated Timeline of Operations Research. International Series in Operations Research & Management Science 75. pp. 79–110. doi:10.1007/0-387-25837-X_5. ISBN 1-4020-8116-2. edit
+Jump up ^ Harris, T. E.; Ross, F. S. (1955). "Fundamentals of a Method for Evaluating Rail Net Capacities". Research Memorandum (Rand Corporation).
+Jump up ^ Ford, L. R.; Fulkerson, D. R. (1956). "Maximal flow through a network". Canadian Journal of Mathematics 8: 399. doi:10.4153/CJM-1956-045-5. edit
+Jump up ^ Ford, L.R., Jr.; Fulkerson, D.R., Flows in Networks, Princeton University Press (1962).
+Jump up ^ Kelner, J. A.; Lee, Y. T.; Orecchia, L.; Sidford, A. (2014). "An Almost-Linear-Time Algorithm for Approximate Max Flow in Undirected Graphs, and its Multicommodity Generalizations". Proceedings of the Twenty-Fifth Annual ACM-SIAM Symposium on Discrete Algorithms. p. 217. arXiv:1304.2338. doi:10.1137/1.9781611973402.16. ISBN 978-1-61197-338-9. edit
+Jump up ^ Knight, Helen (7 January 2014). "New algorithm can dramatically streamline solutions to the ‘max flow’ problem". MIT News. Retrieved 8 January 2014.
+Jump up ^ Goldberg, A. V.; Rao, S. (1998). "Beyond the flow decomposition barrier". Journal of the ACM 45 (5): 783. doi:10.1145/290179.290181. edit
+Jump up ^ Goldberg, A. V.; Tarjan, R. E. (1988). "A new approach to the maximum-flow problem". Journal of the ACM 35 (4): 921. doi:10.1145/48014.61051. edit
+Jump up ^ Schwartz, B. L. (1966). "Possible Winners in Partially Completed Tournaments". SIAM Review 8 (3): 302. doi:10.1137/1008062. JSTOR 2028206. edit
+^ Jump up to: a b Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein (2001). "26. Maximum Flow". Introduction to Algorithms, Second Edition. MIT Press and McGraw-Hill. pp. 643–668. ISBN 0-262-03293-7.
+Further reading[edit]
+Joseph Cheriyan and Kurt Mehlhorn (1999). "An analysis of the highest-level selection rule in the preflow-push max-flow algorithm". Information Processing Letters 69 (5): 239–242. doi:10.1016/S0020-0190(99)00019-8.
+Daniel D. Sleator and Robert E. Tarjan (1983). "A data structure for dynamic trees". Journal of Computer and System Sciences 26 (3): 362–391. doi:10.1016/0022-0000(83)90006-5. ISSN 0022-0000.
+Eugene Lawler (2001). "4. Network Flows". Combinatorial Optimization: Networks and Matroids. Dover. pp. 109–177. ISBN 0-486-41453-1.
+Categories: Network flowMathematical problems
+Navigation menu
+Create accountLog inArticleTalkReadEditView history
+
+Main page
+Contents
+Featured content
+Current events
+Random article
+Donate to Wikipedia
+Wikipedia store
+Interaction
+Help
+About Wikipedia
+Community portal
+Recent changes
+Contact page
+Tools
+What links here
+Related changes
+Upload file
+Special pages
+Permanent link
+Page information
+Wikidata item
+Cite this page
+Print/export
+Create a book
+Download as PDF
+Printable version
+Languages
+Català
+فارسی
+Français
+日本語
+Polski
+Português
+Русский
+Српски / srpski
+ไทย
+Tiếng Việt
+Edit links
+This page was last modified on 4 March 2015, at 12:26.
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaDevelopersMobile viewWikimedia Foundation Powered by MediaWiki

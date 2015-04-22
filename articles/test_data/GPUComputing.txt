@@ -1,0 +1,454 @@
+
+General-purpose computing on graphics processing units
+From Wikipedia, the free encyclopedia
+  (Redirected from GPU computing)
+
+This article may be too technical for most readers to understand. Please help improve this article to make it understandable to non-experts, without removing the technical details. The talk page may contain suggestions. (March 2013)
+General-purpose computing on graphics processing units (GPGPU, rarely GPGP or GP²U) is the utilization of a graphics processing unit (GPU), which typically handles computation only for computer graphics, to perform computation in applications traditionally handled by the central processing unit (CPU).[1][2][3] The use of multiple graphics cards in one computer, or large numbers of graphics chips, further parallelizes the already parallel nature of graphics processing.[4] In addition, even a single GPU-CPU framework provides advantages that multiple CPUs on their own do not offer due to specialization in each chip.
+
+Essentially, a GPGPU pipeline is a kind of parallel processing between one or more GPUs and CPUs that analyzes data as if it were in image or other graphic form. Because video cards can operate on picture and graphical data at speeds of dozens or even hundreds of times a traditional CPU, migrating data into graphical form and then using the GPU to "look" at it and analyze it can result in profound speed gains.
+
+GPGPU pipelines developed out of scientific computing and many GPGPU projects are involved in bioinformatics or molecular biology.
+
+Contents  [hide] 
+1 History
+2 Implementations
+2.1 Desktop computers
+2.2 Mobile computers
+3 Hardware support
+3.1 Integer
+3.2 Floating-point
+3.3 Vectorization
+4 GPU vs. CPU
+4.1 Caches
+4.2 Energy efficiency
+5 Programming concepts
+5.1 Stream processing
+5.2 GPU programming concepts
+5.2.1 Computational resources
+5.2.2 Textures as stream
+5.2.3 Kernels
+5.2.4 Flow control
+5.3 GPU methods
+5.3.1 Map
+5.3.2 Reduce
+5.3.3 Stream filtering
+5.3.4 Scan
+5.3.5 Scatter
+5.3.6 Gather
+5.3.7 Sort
+5.3.8 Search
+5.3.9 Data structures
+6 Applications
+6.1 Bioinformatics
+6.1.1 Molecular dynamics
+7 See also
+8 References
+9 External links
+History[edit]
+General-purpose computing on GPUs only became practical and popular after ca. 2001, with the advent of both programmable shaders and floating point support on graphics processors. In particular, problems involving matrices and/or vectors - especially two-, three-, or four-dimensional vectors - were easy to translate to a GPU, which acts with native speed and support on those types. The scientific computing community's experiments with the new hardware started with a matrix multiplication routine (2001); one of the first common scientific programs to run faster on GPUs than CPUs was an implementation of LU factorization (2005).[5]
+
+These early efforts to use GPUs as general-purpose processors required reformulating computational problems in terms of graphics primitives, as supported by the two major APIs for graphics processors, OpenGL and DirectX. This cumbersome translation was obviated by the advent of general-purpose programming languages and APIs such as Sh/RapidMind, Brook and Accelerator.[6][7]
+
+These were followed by Nvidia's CUDA, which allowed programmers to ignore the underlying graphical concepts in favor of more common high-performance computing concepts.[5] Newer, hardware vendor-independent offerings include Microsoft's DirectCompute and Apple/Khronos Group's OpenCL.[5] This means modern GPGPU pipelines can act on any "big data" operation and leverage the speed of a GPU without requiring full and explicit conversion of the data to a graphical form.
+
+Implementations[edit]
+Desktop computers[edit]
+Any language that allows code running on the CPU to poll a GPU shader for return values, can create a GPGPU framework.
+
+OpenCL is the currently dominant open general-purpose GPU computing language, and is an open standard defined by the Khronos Group.[8] OpenCL provides a cross-platform GPGPU platform that additionally supports data parallel compute on CPUs. OpenCL is actively supported on Intel, AMD, Nvidia and ARM platforms.
+
+The dominant proprietary framework is NVIDIA CUDA.[9] NVIDIA launched CUDA in 2006, an SDK and API that allows using the C programming language to code algorithms for execution on Geforce 8 series GPUs.
+
+Programming standards for parallel computing include OpenCL (vendor-independent), OpenACC and OpenHMPP. Mark Harris is founder of GPGPU.org, and coined the term "GPGPU".
+
+OpenVIDIA was developed at University of Toronto during 2003-2005,[10] in collaboration with NVIDIA.
+
+Microsoft introduced the "GPU Computing" language F#, and the DirectCompute GPU computing API, released with the DirectX 11 API.
+
+MATLAB supports GPGPU acceleration using the Parallel Computing Toolbox and MATLAB Distributed Computing Server,[11] as well as third-party packages like Jacket.
+
+GPGPU processing is also used to simulate Newtonian physics by Physics engines, and commercial implementations include Havok Physics, FX and PhysX, both of which are typically used for computer and video games.
+
+Close to Metal, now called Stream, AMD/ATI's GPGPU technology for ATI Radeon-based GPUs.
+
+C++ Accelerated Massive Parallelism is a library that accelerates execution of C++ code by taking advantage of data-parallel hardware on GPUs.
+
+Mobile computers[edit]
+Due to a trend of increasing power of mobile GPUs, general-purpose programming became available also on mobile devices running major mobile operating systems.
+
+Google Android 4.2 enabled running Renderscript code on the mobile device GPU.[12]
+
+Apple introduced a proprietary Metal API for iOS applications, capable of executing arbitrary code through Apple's GPU compute shaders.
+
+Hardware support[edit]
+Computer graphics cards are produced by various vendors, such as NVIDIA and AMD/ATI. Cards from such vendors differ on implementation of data-format support, such as integer and floating-point formats (32-bit and 64-bit). Microsoft introduced a "Shader Model" standard, to help rank the various features of graphic cards into a simple Shader Model version number (1.0, 2.0, 3.0, etc.).
+
+Integer[edit]
+Pre-DirectX 9 graphics cards only supported paletted or integer color types. Various formats are available, each containing a red element, a green element, and a blue element.[citation needed] Sometimes an additional alpha value is added, to be used for transparency. Common formats are:
+
+8 bits per pixel – Sometimes palette mode, where each value is an index in a table with the real color value specified in one of the other formats. Sometimes three bits for red, three bits for green, and two bits for blue.
+16 bits per pixel – Usually allocated as five bits for red, six bits for green, and five bits for blue.
+24 bits per pixel – eight bits for each of red, green, and blue
+32 bits per pixel – eight bits for each of red, green, blue, and alpha
+Floating-point[edit]
+For early fixed-function or limited programmability graphics (i.e. up to and including DirectX 8.1-compliant GPUs) this was sufficient because this is also the representation used in displays. This representation does have certain limitations, however. Given sufficient graphics processing power even graphics programmers would like to use better formats, such as floating point data formats, to obtain effects such as high dynamic range imaging. Many GPGPU applications require floating point accuracy, which came with graphics cards conforming to the DirectX 9 specification.
+
+DirectX 9 Shader Model 2.x suggested the support of two precision types: full and partial precision. Full precision support could either be FP32 or FP24 (floating point 32- or 24-bit per component) or greater, while partial precision was FP16. ATI’s R300 series of GPUs supported FP24 precision only in the programmable fragment pipeline (although FP32 was supported in the vertex processors) while Nvidia’s NV30 series supported both FP16 and FP32; other vendors such as S3 Graphics and XGI supported a mixture of formats up to FP24.
+
+Shader Model 3.0 altered the specification, increasing full precision requirements to a minimum of FP32 support in the fragment pipeline. ATI’s Shader Model 3.0 compliant R5xx generation (Radeon X1000 series) supports just FP32 throughout the pipeline while Nvidia’s NV4x and G7x series continued to support both FP32 full precision and FP16 partial precisions. Although not stipulated by Shader Model 3.0, both ATI and Nvidia’s Shader Model 3.0 GPUs introduced support for blendable FP16 render targets, more easily facilitating the support for High Dynamic Range Rendering.[citation needed]
+
+The implementations of floating point on Nvidia GPUs are mostly IEEE compliant; however, this is not true across all vendors.[13] This has implications for correctness which are considered important to some scientific applications. While 64-bit floating point values (double precision float) are commonly available on CPUs, these are not universally supported on GPUs; some GPU architectures sacrifice IEEE compliance while others lack double-precision altogether. There have been efforts to emulate double-precision floating point values on GPUs; however, the speed tradeoff negates any benefit to offloading the computation onto the GPU in the first place.[14]
+
+Vectorization[edit]
+Most operations on the GPU operate in a vectorized fashion: one operation can be performed on up to four values at once. For instance, if one color <R1, G1, B1> is to be modulated by another color <R2, G2, B2>, the GPU can produce the resulting color <R1*R2, G1*G2, B1*B2> in one operation. This functionality is useful in graphics because almost every basic data type is a vector (either 2-, 3-, or 4-dimensional). Examples include vertices, colors, normal vectors, and texture coordinates. Many other applications can put this to good use, and because of their higher performance, vector instructions (SIMD) have long been available on CPUs.
+
+GPU vs. CPU[edit]
+
+This section possibly contains original research. Please improve it by verifying the claims made and adding inline citations. Statements consisting only of original research should be removed. (February 2015)
+Originally, data was simply passed one-way from a CPU to a GPU, then to a display device. However, as time progressed, it became valuable for GPUs to store at first simple, then complex structures of data to be passed back to the CPU that analyzed an image, or a set of scientific-data represented as a 2D or 3D format that a graphics card can understand. Because the GPU has access to every draw operation, it can analyze data in these forms very quickly; whereas a CPU must poll every pixel or data element much more slowly, as the speed of access between a CPU and its larger pool of random-access memory (or in an even worse case, a hard drive) is slower than GPUs and graphics cards, which typically contain smaller amounts of more expensive memory that is very much faster to access. Transferring the portion of the data set to be actively analyzed to that GPU memory in the form of textures or other easily readable GPU forms results in speed increase. The distinguishing feature of a GPGPU design is the ability to transfer information bidirectionally back from the GPU to the CPU; generally the data throughput in both directions is ideally high, resulting in a multiplier effect on the speed of a specific high-use algorithm. GPGPU pipelines may improve efficiency on especially large data sets and/or data containing 2d or 3d imagery. It is used in complex graphics pipelines as well as scientific computing; particularly in fields with large data sets like genome mapping, or where two- or three-dimensional analysis is useful - in particular at present biomolecule analysis, protein study, and other complex organic chemistry. Such pipelines can also vastly improve efficiency in image processing and computer vision, among other fields; as well as parallel processing generally. Some particularly heavily optimized pipelines have literally resulted in a speed increase of several hundred times the original CPU-based pipeline on one high-use task.
+
+A simple example would be a GPU program that collects data about average lighting values as it renders a particular view from either a camera or a computer graphics program back to the main program on the CPU, so that the CPU can then make adjustments to the overall screen view. A more advanced example might use edge detection to return both numerical information and a processed image representing outlines to a computer vision program controlling, say, a mobile robot. Because the GPU has fast and local hardware access to every pixel or other picture element in an image, it can analyze and average it (for the first example) or apply a Sobel edge filter or other convolution filter (for the second) with much greater speed than a CPU, which typically must access slower random access memory copies of the graphic in question.
+
+GPGPU is fundamentally a software concept, not a hardware concept, it is a type of algorithm, not a piece of equipment. However, specialized equipment designs may even further enhance the efficiency of GPGPU pipelines, which traditionally perform relatively few algorithms on very large amounts of data. Massively parallelized, gigantic-data-level tasks thus may be parallelized even further via specialized setups such as rack computing (many similar, highly tailored machines built into a "rack"), which adds a third layer - many computing units each using many CPUs to correspond to many GPUs. Some Bitcoin "miners" used such setups for high-quantity processing.
+
+Caches[edit]
+Historically, CPUs have used hardware-managed caches but the earlier GPUs only provided software-managed local memories. However, as GPUs are being increasingly used for general-purpose applications, state-of-the-art GPUs are being designed with hardware-managed multi-level caches[15] which have helped the GPUs to move towards mainstream computing. For example, GT200 architecture GPUs did not feature an L2 cache, the Fermi GPU has 768KB last-level cache, the Kepler GPU has 1536KB last-level cache,[15][16] and the Maxwell GPU has 2048KB last-level cache.
+
+Energy efficiency[edit]
+Several research projects have compared the energy efficiency of GPU with that of CPU and FPGA.[17]
+
+Programming concepts[edit]
+GPUs are designed specifically for graphics and thus are very restrictive in operations and programming. Due to their design, GPUs are only effective for problems that can be solved using stream processing and the hardware can only be used in certain ways.
+
+The below discussion referring to vertices, fragments and textures concerns mainly the legacy model of GPGPU programming, where graphics APIs (OpenGL or DirectX) were used to perform general-purpose computation. With the introduction of the CUDA (NVIDIA, 2007) and OpenCL (vendor-independent, 2008) general-purpose computing APIs, in new GPGPU codes it is no longer necessary to map the computation to graphics primitives. The stream processing nature of GPUs remains valid regardless of the APIs used. (See e.g.[18])
+
+Stream processing[edit]
+Main article: Stream processing
+GPUs can only process independent vertices and fragments, but can process many of them in parallel. This is especially effective when the programmer wants to process many vertices or fragments in the same way. In this sense, GPUs are stream processors – processors that can operate in parallel by running one kernel on many records in a stream at once.
+
+A stream is simply a set of records that require similar computation. Streams provide data parallelism. Kernels are the functions that are applied to each element in the stream. In the GPUs, vertices and fragments are the elements in streams and vertex and fragment shaders are the kernels to be run on them. Since GPUs process elements independently there is no way to have shared or static data. For each element we can only read from the input, perform operations on it, and write to the output. It is permissible to have multiple inputs and multiple outputs, but never a piece of memory that is both readable and writable.[vague]
+
+Arithmetic intensity is defined as the number of operations performed per word of memory transferred. It is important for GPGPU applications to have high arithmetic intensity else the memory access latency will limit computational speedup.[19]
+
+Ideal GPGPU applications have large data sets, high parallelism, and minimal dependency between data elements.
+
+GPU programming concepts[edit]
+Computational resources[edit]
+There are a variety of computational resources available on the GPU:
+
+Programmable processors – vertex, primitive, fragment and mainly compute pipelines allow programmer to perform kernel on streams of data
+Rasterizer – creates fragments and interpolates per-vertex constants such as texture coordinates and color
+Texture unit – read-only memory interface
+Framebuffer – write-only memory interface
+In fact, the programmer can substitute a write only texture for output instead of the framebuffer. This is accomplished either through Render to Texture (RTT), Render-To-Backbuffer-Copy-To-Texture (RTBCTT), or the more recent stream-out.
+
+Textures as stream[edit]
+The most common form for a stream to take in GPGPU is a 2D grid because this fits naturally with the rendering model built into GPUs. Many computations naturally map into grids: matrix algebra, image processing, physically based simulation, and so on.
+
+Since textures are used as memory, texture lookups are then used as memory reads. Certain operations can be done automatically by the GPU because of this.
+
+Kernels[edit]
+Kernels can be thought of as the body of loops. For example, a programmer operating on a grid on the CPU might have code that looks like this:
+
+// Input and output grids have 10000 x 10000 or 100 million elements.
+ 
+void transform_10k_by_10k_grid(float in[10000][10000], float out[10000][10000])
+{
+    for (int x = 0; x < 10000; x++) {
+        for (int y = 0; y < 10000; y++) {
+            // The next line is executed 100 million times
+            out[x][y] = do_some_hard_work(in[x][y]);
+        }
+    }
+}
+On the GPU, the programmer only specifies the body of the loop as the kernel and what data to loop over by invoking geometry processing.
+
+Flow control[edit]
+In sequential code it is possible to control the flow of the program using if-then-else statements and various forms of loops. Such flow control structures have only recently been added to GPUs.[20] Conditional writes could be accomplished using a properly crafted series of arithmetic/bit operations, but looping and conditional branching were not possible.
+
+Recent GPUs allow branching, but usually with a performance penalty. Branching should generally be avoided in inner loops, whether in CPU or GPU code, and various methods, such as static branch resolution, pre-computation, predication, loop splitting,[21] and Z-cull[22] can be used to achieve branching when hardware support does not exist.
+
+GPU methods[edit]
+Map[edit]
+Main article: Map (higher-order function)
+The map operation simply applies the given function (the kernel) to every element in the stream. A simple example is multiplying each value in the stream by a constant (increasing the brightness of an image). The map operation is simple to implement on the GPU. The programmer generates a fragment for each pixel on screen and applies a fragment program to each one. The result stream of the same size is stored in the output buffer.
+
+Reduce[edit]
+Main article: Fold (higher-order function)
+Some computations require calculating a smaller stream (possibly a stream of only 1 element) from a larger stream. This is called a reduction of the stream. Generally a reduction can be accomplished in multiple steps. The results from the prior step are used as the input for the current step and the range over which the operation is applied is reduced until only one stream element remains.
+
+Stream filtering[edit]
+Stream filtering is essentially a non-uniform reduction. Filtering involves removing items from the stream based on some criteria.
+
+Scan[edit]
+The scan operation, also known as parallel prefix sum, takes in a vector (stream) of data elements and an (arbitrary) associative binary function '+' with an identity element 'i'. If the input is [a0, a1, a2, a3, ...], an exclusive scan produces the output [i, a0, a0 + a1, a0 + a1 + a2, ...], while an inclusive scan produces the output [a0, a0 + a1, a0 + a1 + a2, a0 + a1 + a2 + a3, ...]. While at first glance the operation may seem inherently serial, efficient parallel scan algorithms are possible and have been implemented on graphics processing units. The scan operation has applications in e.g. quicksort and sparse matrix-vector multiplication.[18][23][24][25]
+
+Scatter[edit]
+The scatter operation is most naturally defined on the vertex processor. The vertex processor is able to adjust the position of the vertex, which allows the programmer to control where information is deposited on the grid. Other extensions are also possible, such as controlling how large an area the vertex affects.
+
+The fragment processor cannot perform a direct scatter operation because the location of each fragment on the grid is fixed at the time of the fragment's creation and cannot be altered by the programmer. However, a logical scatter operation may sometimes be recast or implemented with an additional gather step. A scatter implementation would first emit both an output value and an output address. An immediately following gather operation uses address comparisons to see whether the output value maps to the current output slot.
+
+Gather[edit]
+The fragment processor is able to read textures in a random access fashion, so it can gather information from any grid cell, or multiple grid cells, as desired.[vague]
+
+Sort[edit]
+The sort operation transforms an unordered set of elements into an ordered set of elements. The most common implementation on GPUs is using radix sort for integer and floating point data and coarse-grained merge sort and fine-grained sorting networks for general comparable data.[26][27]
+
+Search[edit]
+The search operation allows the programmer to find a particular element within the stream, or possibly find neighbors of a specified element. The GPU is not used to speed up the search for an individual element, but instead is used to run multiple searches in parallel.[citation needed]
+
+Data structures[edit]
+A variety of data structures can be represented on the GPU:
+
+Dense arrays
+Sparse arrays – static or dynamic
+Adaptive structures (union type)
+Applications[edit]
+The following are some of the areas where GPUs have been used for general purpose computing:
+
+Computer clusters or a variation of a parallel computing (utilizing GPU cluster technology) for highly calculation-intensive tasks:
+High-performance computing clusters (HPC clusters) (often termed supercomputers)
+including cluster technologies like Message Passing Interface, and single-system image (SSI), distributed computing, and Beowulf
+Grid computing (a form of distributed computing) (networking many heterogeneous computers to create a virtual computer architecture)
+Load-balancing clusters (sometimes termed a server farm)
+Physical based simulation and physics engines (usually based on Newtonian physics models)
+Conway's Game of Life, cloth simulation, incompressible fluid flow by solution of Euler equations (fluid dynamics)[28] or Navier–Stokes equations[29]
+Statistical physics
+Ising model
+Lattice gauge theory
+Segmentation – 2D and 3D
+Level-set methods
+CT reconstruction
+Fast Fourier transform
+GPU learning - machine learning and data mining computations, e.g. with software BIDMach
+k-nearest neighbor algorithm[30]
+Fuzzy logic[31]
+Tone mapping
+Audio signal processing
+Audio and sound effects processing, to use a GPU for DSP (digital signal processing)
+Analog signal processing
+Speech processing
+Digital image processing
+Video processing[32]
+Hardware accelerated video decoding and post-processing
+Motion compensation (mo comp)
+Inverse discrete cosine transform (iDCT)
+Variable-length decoding (VLD)
+Inverse quantization (IQ)
+In-loop deblocking
+Bitstream processing (CAVLC/CABAC) using special purpose hardware for this task because this is a serial task not suitable for regular GPGPU computation
+Deinterlacing
+Spatial-temporal de-interlacing
+Noise reduction
+Edge enhancement
+Color correction
+Hardware accelerated video encoding and pre-processing
+Global illumination – ray tracing, photon mapping, radiosity among others, subsurface scattering
+Geometric computing – constructive solid geometry, distance fields, collision detection, transparency computation, shadow generation
+Scientific computing
+Monte Carlo simulation of light propagation[33]
+Weather forecasting
+Climate research
+Molecular modeling on GPU
+Quantum mechanical physics
+Astrophysics[34]
+Bioinformatics[35][36]
+Computational finance
+Medical imaging
+Computer vision
+Digital signal processing / signal processing
+Control engineering
+Operations research[37][38]
+Neural networks
+Database operations[39]
+Lattice Boltzmann methods
+Cryptography and cryptanalysis
+Implementation of MD6
+Implementation of AES[40][41]
+Implementation of DES
+Implementation of RSA[42]
+Implementation of ECC
+Password cracking[43][44]
+Electronic design automation[45][46]
+Antivirus software[47][48]
+Intrusion detection[49][50]
+Increase computing power for distributed computing project like SETI@home, Einstein@home
+Bioinformatics[edit]
+GPGPU usage in Bioinformatics:[51]
+
+
+This section does not cite any references or sources. Please help improve this section by adding citations to reliable sources. Unsourced material may be challenged and removed. (May 2013)
+Application	Description	Supported features	Expected speed-up†	GPU‡	Multi-GPU support	Release status
+BarraCUDA	Sequence mapping software	Alignment of short sequencing reads	6–10x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 0.6.2
+CUDASW++	Open source software for Smith-Waterman protein database searches on GPUs	Parallel search of Smith-Waterman database	10–50x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 2.0.8
+CUSHAW	Parallelized short read aligner	Parallel, accurate long read aligner – gapped alignments to large genomes	10x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 1.0.40
+GPU-BLAST	Local search with fast k-tuple heuristic	Protein alignment according to blastp, multi CPU threads	3–4x	T 2075, 2090, K10, K20, K20X	Single only	Available now, version 2.2.26
+GPU-HMMER	Parallelized local and global search with profile hidden Markov models	Parallel local and global search of hidden Markov models	60–100x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 2.3.2
+mCUDA-MEME	Ultrafast scalable motif discovery algorithm based on MEME	Scalable motif discovery algorithm based on MEME	4–10x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 3.0.12
+SeqNFind	A GPU accelerated sequence analysis toolset	Reference assembly, blast, Smith–Waterman, hmm, de novo assembly	400x	T 2075, 2090, K10, K20, K20X	Yes	Available now
+UGENE	Opensource Smith–Waterman for SSE/CUDA, suffix array based repeats finder and dotplot	Fast short read alignment	6–8x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 1.11
+WideLM	Fits numerous linear models to a fixed design and response	Parallel linear regression on multiple similarly-shaped models	150x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 0.1-1
+Molecular dynamics[edit]
+Further information: Molecular modeling on GPUs, List of software for molecular mechanics modeling
+Application	Description	Supported features	Expected speed-up†	GPU‡	Multi-GPU support	Release status
+Abalone	Models molecular dynamics of biopolymers for simulations of proteins, DNA and ligands	Explicit and implicit solvent, hybrid Monte Carlo	4–120x	T 2075, 2090, K10, K20, K20X	Single only	Available now, version 1.8.88
+ACEMD	GPU simulation of molecular mechanics force fields, implicit and explicit solvent	Written for use on GPUs	160 ns/day GPU version only	T 2075, 2090, K10, K20, K20X	Yes	Available now
+AMBER	Suite of programs to simulate molecular dynamics on biomolecule	PMEMD: explicit and implicit solvent	89.44 ns/day JAC NVE	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 12 + bugfix9
+DL-POLY	Simulate macromolecules, polymers, ionic systems, etc. on a distributed memory parallel computer	Two-body forces, link-cell pairs, Ewald SPME forces, Shake VV	4x	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 4.0 source only
+CHARMM	MD package to simulate molecular dynamics on biomolecule.	Implicit (5x), explicit (2x) solvent via OpenMM	TBD	T 2075, 2090, K10, K20, K20X	Yes	In development Q4/12
+GROMACS	Simulation of biochemical molecules with complicated bond interactions	Implicit (5x), explicit (2x) solvent	165 ns/Day DHFR	T 2075, 2090, K10, K20, K20X	Single only	Available now, version 4.6 in Q4/12
+HOOMD-Blue	Particle dynamics package written grounds up for GPUs	Written for GPUs	2x	T 2075, 2090, K10, K20, K20X	Yes	Available now
+LAMMPS	Classical molecular dynamics package	Lennard-Jones, Morse, Buckingham, CHARMM, tabulated, course grain SDK, anisotropic Gay-Bern, RE-squared, “hybrid” combinations	3–18x	T 2075, 2090, K10, K20, K20X	Yes	Available now
+NAMD	Designed for high-performance simulation of large molecular systems	100M atom capable	6.44 ns/days STMV 585x 2050s	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 2.9
+OpenMM	Library and application for molecular dynamics for HPC with GPUs	Implicit and explicit solvent, custom forces	Implicit: 127–213 ns/day; Explicit: 18–55 ns/day DHFR	T 2075, 2090, K10, K20, K20X	Yes	Available now, version 4.1.1
+† Expected speedups are highly dependent on system configuration. GPU performance compared against multi-core x86 CPU socket. GPU performance benchmarked on GPU supported features and may be a kernel to kernel performance comparison. For details on configuration used, view application website. Speedups as per Nvidia in-house testing or ISV's documentation.
+
+‡ Q=Quadro GPU, T=Tesla GPU. Nvidia recommended GPUs for this application. Please check with developer / ISV to obtain certification information.
+
+See also[edit]
+OpenCL
+OpenMP
+OpenACC
+OpenHMPP[52]
+Fastra II
+Stream processing
+Mark Harris
+Physics engine
+Physics processing unit (PPU)
+Havok Physics, FX
+PhysX
+Close to Metal
+C++ AMP
+DirectCompute
+Renderscript
+Audio processing unit
+Larrabee
+References[edit]
+Jump up ^ Fung, et al., "Mediated Reality Using Computer Graphics Hardware for Computer Vision", Proceedings of the International Symposium on Wearable Computing 2002 (ISWC2002), Seattle, Washington, USA, 7–10 October 2002, pp. 83–89.
+Jump up ^ An EyeTap video-based featureless projective motion estimation assisted by gyroscopic tracking for wearable computer mediated reality, ACM Personal and Ubiquitous Computing published by Springer Verlag, Vol.7, Iss. 3, 2003.
+Jump up ^ "Computer Vision Signal Processing on Graphics Processing Units", Proceedings of the IEEE International Conference on Acoustics, Speech, and Signal Processing (ICASSP 2004): Montreal, Quebec, Canada, 17–21 May 2004, pp. V-93 – V-96
+Jump up ^ "Using Multiple Graphics Cards as a General Purpose Parallel Computer: Applications to Computer Vision", Proceedings of the 17th International Conference on Pattern Recognition (ICPR2004), Cambridge, United Kingdom, 23–26 August 2004, volume 1, pages 805–808.
+^ Jump up to: a b c Du, Peng; Weber, Rick; Luszczek, Piotr; Tomov, Stanimire; Peterson, Gregory; Dongarra, Jack (2012). "From CUDA to OpenCL: Towards a performance-portable solution for multi-platform GPU programming". Parallel Computing 38 (8): 391–407. doi:10.1016/j.parco.2011.10.002. edit
+Jump up ^ Tarditi, David; Puri, Sidd; Oglesby, Jose (2006). "Accelerator: using data parallelism to program GPUs for general-purpose uses". ACM SIGARCH Computer Architecture News 34 (5).
+Jump up ^ Che, Shuai; Boyer, Michael; Meng, Jiayuan; Tarjan, D.; Sheaffer, Jeremy W.; Skadron, Kevin (2008). "A performance study of general-purpose applications on graphics processors using CUDA". J. Parallel and Distributed Computing 68 (10): 1370–1380. doi:10.1016/j.jpdc.2008.05.014.
+Jump up ^ [1]:OpenCL at the Khronos Group
+Jump up ^ http://www.hpcwire.com/hpcwire/2012-02-28/opencl_gains_ground_on_cuda.html "As the two major programming frameworks for GPU computing, OpenCL and CUDA have been competing for mindshare in the developer community for the past few years."
+Jump up ^ James Fung, Steve Mann, Chris Aimone, "OpenVIDIA: Parallel GPU Computer Vision", Proceedings of the ACM Multimedia 2005, Singapore, 6–11 November 2005, pages 849–852
+Jump up ^ "MATLAB Adds GPGPU Support". 20 September 2010.
+Jump up ^ http://developer.android.com/about/versions/android-4.2.html
+Jump up ^ Mapping computational concepts to GPUs: Mark Harris. Mapping computational concepts to GPUs. In ACM SIGGRAPH 2005 Courses (Los Angeles, California, 31 July – 4 August 2005). J. Fujii, Ed. SIGGRAPH '05. ACM Press, New York, NY, 50.
+Jump up ^ Double precision on GPUs (Proceedings of ASIM 2005): Dominik Goddeke, Robert Strzodka, and Stefan Turek. Accelerating Double Precision (FEM) Simulations with (GPUs). Proceedings of ASIM 2005 – 18th Symposium on Simulation Technique, 2005.
+^ Jump up to: a b "A Survey of Techniques for Managing and Leveraging Caches in GPUs", S. Mittal, JCSC, 23(8), 2014.
+Jump up ^ "NVIDIA-Kepler-GK110-Architecture-Whitepaper".
+Jump up ^ "A Survey of Methods for Analyzing and Improving GPU Energy Efficiency", Mittal et al., ACM Computing Surveys, 2014.
+^ Jump up to: a b D. Göddeke, 2010. Fast and Accurate Finite-Element Multigrid Solvers for PDE Simulations on GPU Clusters. Ph.D. dissertation, Technischen Universität Dortmund.
+Jump up ^ Asanovic, K., Bodik, R., Demmel, J., Keaveny, T., Keutzer, K., Kubiatowicz, J., Morgan, N., Patterson, D., Sen, K., Wawrzynek, J., Wessel, D., Yelick, K.: A view of the parallel computing landscape. Commun. ACM 52(10) (2009) 56–67
+Jump up ^ GPU Gems – Chapter 34, GPU Flow-Control Idioms
+Jump up ^ [2]: Future Chips. "Tutorial on removing branches", 2011
+Jump up ^ GPGPU survey paper: John D. Owens, David Luebke, Naga Govindaraju, Mark Harris, Jens Krüger, Aaron E. Lefohn, and Tim Purcell. "A Survey of General-Purpose Computation on Graphics Hardware". Computer Graphics Forum, volume 26, number 1, 2007, pp. 80–113.
+Jump up ^ S. Sengupta, M. Harris, Y. Zhang, J. D. Owens, 2007. Scan primitives for GPU computing. In T. Aila and M. Segal (eds.): Graphics Hardware (2007).
+Jump up ^ G. E. Blelloch, 1989. Scans as primitive parallel operations. IEEE Transactions on Computers, 38(11), pp. 1526-1538.
+Jump up ^ M. Harris, S. Sengupta, J. D. Owens. Parallel Prefix Sum (Scan) with CUDA. In NVIDIA: GPU Gems 3, Chapter 39.
+Jump up ^ [3]: Merrill, Duane. Allocation-oriented Algorithm Design with Application to GPU Computing. Ph.D. dissertation, Department of Computer Science, University of Virginia. Dec. 2011.
+Jump up ^ [4]: Sean Baxter. Modern gpu. http://nvlabs.github.io/moderngpu/, 2013.
+Jump up ^ K. Crane, I. Llamas, S. Tariq, 2008. Real-Time Simulation and Rendering of 3D Fluids. In NVIDIA: GPU Gems 3, Chapter 30.
+Jump up ^ M. Harris, 2004. Fast Fluid Dynamics Simulation on the GPU. In NVIDIA: GPU Gems, Chapter 38.
+Jump up ^ Fast k-nearest neighbor search using GPU. In Proceedings of the CVPR Workshop on Computer Vision on GPU, Anchorage, Alaska, USA, June 2008. V. Garcia and E. Debreuve and M. Barlaud.
+Jump up ^ M. Cococcioni, R. Grasso, M. Rixen, Rapid prototyping of high performance fuzzy computing applications using high level GPU programming for maritime operations support, in Proceedings of the 2011 IEEE Symposium on Computational Intelligence for Security and Defense Applications (CISDA), Paris, 11–15 April 2011
+Jump up ^ Wilson, Ron (3 September 2009). "DSP brings you a high-definition moon walk". EDN. Retrieved 3 September 2009. Lowry is reportedly using Nvidia Tesla GPUs (graphics-processing units) programmed in the company's CUDA (Compute Unified Device Architecture) to implement the algorithms. Nvidia claims that the GPUs are approximately two orders of magnitude faster than CPU computations, reducing the processing time to less than one minute per frame.
+Jump up ^ E. Alerstam, T. Svensson & S. Andersson-Engels, "Parallel computing with graphics processing units for high speed Monte Carlo simulation of photon migration" [5], J. Biomedical Optics 13, 060504 (2008) [6]
+Jump up ^ http://www.astro.lu.se/compugpu2010/
+Jump up ^ Schatz, M.C., Trapnell, C., Delcher, A.L., Varshney, A. (2007) High-throughput sequence alignment using Graphics Processing Units. BMC Bioinformatics 8:474.
+Jump up ^ Svetlin A. Manavski; Giorgio Valle (2008). "CUDA compatible GPU cards as efficient hardware accelerators for Smith-Waterman sequence alignment url=http://www.biomedcentral.com/1471-2105/9/S2/S10". BMC Bioinformatics 9 (Suppl. 2): S10. doi:10.1186/1471-2105-9-s2-s10.
+Jump up ^ GPU computing in OR Vincent Boyer, Didier El Baz. "Recent Advances on GPU Computing in Operations Research". Parallel and Distributed Processing Symposium Workshops & PhD Forum (IPDPSW), 2013 IEEE 27th International, On page(s): 1778 - 1787
+Jump up ^ RCPSP on GPU Libor Bukata, Premysl Sucha, Zdenek Hanzalek. "Solving the Resource Constrained Project Scheduling Problem using the parallel Tabu Search designed for the CUDA platform". Journal of Parallel and Distributed Computing (2014).
+Jump up ^ GPU-based Sorting in PostgreSQL Naju Mancheril, School of Computer Science – Carnegie Mellon University
+Jump up ^ AES on SM3.0 compliant GPUs. Owen Harrison, John Waldron, AES Encryption Implementation and Analysis on Commodity Graphics Processing Units. In proceedings of CHES 2007.
+Jump up ^ AES and modes of operations on SM4.0 compliant GPUs. Owen Harrison, John Waldron, Practical Symmetric Key Cryptography on Modern Graphics Hardware. In proceedings of USENIX Security 2008.
+Jump up ^ RSA on SM4.0 compliant GPUs. Owen Harrison, John Waldron, Efficient Acceleration of Asymmetric Cryptography on Graphics Hardware. In proceedings of AfricaCrypt 2009.
+Jump up ^ "Teraflop Troubles: The Power of Graphics Processing Units May Threaten the World's Password Security System". Georgia Tech Research Institute. Retrieved 7 November 2010.
+Jump up ^ "Want to deter hackers? Make your password longer". MSNBC. 19 August 2010. Retrieved 7 November 2010.
+Jump up ^ Lerner, Larry (9 April 2009). "Viewpoint: Mass GPUs, not CPUs for EDA simulations". EE Times. Retrieved 3 May 2009.
+Jump up ^ "W2500 ADS Transient Convolution GT". accelerates signal integrity simulations on workstations that have NVIDIA Compute Unified Device Architecture (CUDA)-based Graphics Processing Units (GPU)
+Jump up ^ GrAVity: A Massively Parallel Antivirus Engine. Giorgos Vasiliadis and Sotiris Ioannidis, GrAVity: A Massively Parallel Antivirus Engine. In proceedings of RAID 2010.
+Jump up ^ "Kaspersky Lab utilizes NVIDIA technologies to enhance protection". Kaspersky Lab. 14 December 2009. During internal testing, the Tesla S1070 demonstrated a 360-fold increase in the speed of the similarity-defining algorithm when compared to the popular Intel Core 2 Duo central processor running at a clock speed of 2.6 GHz.
+Jump up ^ Gnort: High Performance Network Intrusion Detection Using Graphics Processors. Giorgos Vasiliadis et al., Gnort: High Performance Network Intrusion Detection Using Graphics Processors. In proceedings of RAID 2008.
+Jump up ^ Regular Expression Matching on Graphics Hardware for Intrusion Detection. Giorgos Vasiliadis et al., Regular Expression Matching on Graphics Hardware for Intrusion Detection. In proceedings of RAID 2009.
+Jump up ^ http://www.nvidia.com/docs/IO/123576/nv-applications-catalog-lowres.pdf
+Jump up ^ Open HMPP
+External links[edit]
+openhmpp.org – New Open Standard for Many-Core[dead link]
+OCLTools Open Source OpenCL Compiler and Linker
+GPGPU.org – General-Purpose Computation Using Graphics Hardware
+GPGPU Wiki
+SIGGRAPH 2005 GPGPU Course Notes
+IEEE VIS 2005 GPGPU Course Notes
+NVIDIA Developer Zone
+AMD GPU Tools
+CPU vs. GPGPU
+What is GPU Computing?
+Tech Report article: "ATI stakes claims on physics, GPGPU ground" by Scott Wasson
+GPU accelerated Monte Carlo simulation of the 2D and 3D Ising model – porting a standard model to GPU hardware
+GPGPU Computing @ Duke Statistical Science
+GPGPU Programming in F# using the Microsoft Research Accelerator system
+[show] v t e
+CPU technologies
+[show] v t e
+Parallel computing
+[show] v t e
+Emerging technologies
+Categories: GPGPUComputational scienceEmerging technologiesGraphics hardwareVideo cardsInstruction processingParallel computingVideo game development
+Navigation menu
+Create accountLog inArticleTalkReadEditView history
+
+Main page
+Contents
+Featured content
+Current events
+Random article
+Donate to Wikipedia
+Wikipedia store
+Interaction
+Help
+About Wikipedia
+Community portal
+Recent changes
+Contact page
+Tools
+What links here
+Related changes
+Upload file
+Special pages
+Permanent link
+Page information
+Wikidata item
+Cite this page
+Print/export
+Create a book
+Download as PDF
+Printable version
+Languages
+Català
+Čeština
+Deutsch
+Español
+فارسی
+Français
+한국어
+Italiano
+עברית
+Nederlands
+日本語
+Polski
+Português
+Русский
+Simple English
+Suomi
+Türkçe
+Українська
+中文
+Edit links
+This page was last modified on 7 April 2015, at 07:35.
+Text is available under the Creative Commons Attribution-ShareAlike License; additional terms may apply. By using this site, you agree to the Terms of Use and Privacy Policy. Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.
+Privacy policyAbout WikipediaDisclaimersContact WikipediaDevelopersMobile viewWikimedia Foundation Powered by MediaWiki

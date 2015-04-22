@@ -36,7 +36,6 @@ queries = generate_queries(algorithm_book_file, toc_stoplist_file)
 
 
 for query in queries:
-	# need to clean these up to not include chapter numbers
 	search_terms = clean_section_name(query["name"])
 
 	parent = clean_section_name(query["parent"])
