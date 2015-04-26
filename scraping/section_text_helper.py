@@ -9,6 +9,7 @@ from pdfminer.converter import PDFPageAggregator
 from pdfminer.layout import LAParams, LTTextBox, LTTextLine, LTFigure, LTImage
 
 
+# Get all of the text from a given object (pdf page) and return it
 def parse_lt_objs (lt_objs, page_number, text=[]):
     """Iterate through the list of LT* objects and capture the text or image data contained in each"""
     text_content = [] 
@@ -31,22 +32,31 @@ def parse_lt_objs (lt_objs, page_number, text=[]):
 
     return '\n'.join(text_content)
 
+"""
+This function takes in a list that contains tuples (representing a table of
+contents) and parses it, also returning a list of tuples. The first item in
+each tuple is the level of the chapter/section, and the second item is its
+name. The toc_stoplist is a list of words, like preface, etc that we do not
+want in our table of contents.
+"""
 def parse_table_of_contents(outlines, toc_stoplist):
     toc = []
 
     for i in range(len(outlines)):
         item = outlines[i]
         name = item[1].split(' ')
-        name = [str(j) for j in name]
+        name = [str(j).lower().strip() for j in name]
 
         keep = True
         done = False
 
         for word in name:
-            w = word.lower().strip()
-            if 'appendix' in w or 'bibliography' in w or 'index' in w:
+
+            # If these specific words are found, we are done with relevant
+            # sections
+            if 'appendix' in word or 'bibliography' in word or 'index' in word:
                 done = True
-            if w in toc_stoplist:
+            if word in toc_stoplist:
                 keep = False
 
         if done:
@@ -57,6 +67,7 @@ def parse_table_of_contents(outlines, toc_stoplist):
 
     return toc
 
+# This function just reads in a stoplist for the table of contents
 def read_in_toc_stoplist(stoplist_file):
     s = open(stoplist_file, 'rb')
     stoplist = []
@@ -66,8 +77,18 @@ def read_in_toc_stoplist(stoplist_file):
 
     return stoplist
 
+"""
+Takes in document, interpreter, device (all three of which are just pdfminer
+objects for parsing PDFs), and start_term and end_term. This function searches
+through a given pdf textbook and looks for start_term and end_term, both of
+which are lists of keywords, and returns the associated section of text from
+the pdf file.
+"""
 def get_section_text(document, interpreter, device, start_term, \
                         end_term):
+
+    # If the start/end terms contain a number, we append the word "chapter"
+    # when looking through the pdf textbook
     chapter_start = any([word.isdigit() for word in start_term])
     chapter_end = any([word.isdigit() for word in end_term])
 
@@ -84,6 +105,9 @@ def get_section_text(document, interpreter, device, start_term, \
 
     text_content = []
 
+    # Loop through the pdf file; if start_keywords found, save that location,
+    # and if it is found again within 5 pages, we know we have found the
+    # section, and we add all of the text until we find end_keywords
     for num, page in enumerate(PDFPage.create_pages(document)):
         interpreter.process_page(page)
         layout = device.get_result()
@@ -107,6 +131,15 @@ def get_section_text(document, interpreter, device, start_term, \
 
     return ''.join(text_content).encode('utf-8')
 
+"""
+Call this function with the path to a pdf file and the path to a stoplist file.
+It pulls the table of contents from the pdf file, parses the table of contents,
+and, for each chapter in the table of contents, gets that section of text from
+the pdf textbook. It ultimately returns a list of dictionaries. Each dictionary
+has a "name" field, which is just the name of the section, "parent," which is
+the section that is one level up from that section in the table of contents,
+and "query," which is the actual text of that section from the pdf file.
+"""
 def generate_queries(pdf_file, toc_stoplist_file):
     # Open a PDF document.
     fp = open(pdf_file, 'rb')
