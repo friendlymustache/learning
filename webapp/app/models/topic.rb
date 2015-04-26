@@ -10,7 +10,7 @@ class Topic < ActiveRecord::Base
 	has_many :outgoing_edges, :class_name => "Edge", :foreign_key => "prereq_id"
 	# Incoming edges are those for which the current topic is a postreq
 	# has_many :incoming_edges, :class_name => "Edge", :foreign_key => "postreq_id"
-	has_many :edges
+	has_many :edges, dependent: :destroy
 
 	# Use edges as a join table to access prereq and postreq topics
 	has_many :postreqs, through: :outgoing_edges

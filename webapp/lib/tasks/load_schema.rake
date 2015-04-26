@@ -57,7 +57,6 @@ def save_db_objects(source_path, version)
                 # puts "Hash: " + link_hash.to_s
         		link = Link.create(link_hash)
         		parent_topic.links << link
-        		link.topics << parent_topic
             end
     	end
     else

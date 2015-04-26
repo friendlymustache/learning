@@ -14,7 +14,6 @@ class LinksController < ApplicationController
 			link_hash["version"] = link_params["v_id"]
 			@link = Link.new(link_hash)
 			if @link.save
-				@link.topics << parent
 				parent.links << @link
 				render json: {:success => true}
 			else

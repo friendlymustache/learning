@@ -194,17 +194,21 @@ def create_links
     source_path = "datafiles/links.json"
     file = File.read(source_path)
     links = JSON.parse(file)["links"]
-
+    puts "Creating #{links.length} links"
     links.each do |link_hash|
-        topic_id = link_hash["topic_ids"].first.to_i
+        topic_ids = link_hash["topic_ids"]
         link_hash = link_hash.slice(*(Link.column_names))
         link = Link.find_by_url(link_hash["url"])
         if not link 
             link = Link.create(link_hash)
+        else
+            puts "Not creating redundant link with url #{link_hash['url']}"
         end
-        parent = Topic.find(topic_id)        
-        parent.links << link
-        link.topics << parent
+
+        topic_ids.each do |t_id|
+            parent = Topic.find(t_id.to_i)        
+            parent.links << link
+        end
     end
 
 end
