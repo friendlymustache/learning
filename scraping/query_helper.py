@@ -3,17 +3,24 @@ import os, random
 from os.path import isfile, join
 
 
-stoplist_file = "stoplist.txt"
+"""
+	Script to perform NLP using gensim to find the most relevant text content
+	to a given query document/set of text. Used for semantic searching when
+	scraping sites such as KhanAcademy, MIT OCW, etc.
+"""
 
 
 def preprocess_doc(doc, stoplist):
 	processed = []
 	for word in doc:
 		w = word.strip().lower()
+
+		# Only keep words that are fully alphabetic for NLP purposes
 		if w != '' and w.isalpha() and w not in stoplist:
 			processed.append(word)
 
 	return processed
+
 
 def parse_file(filename, stoplist):
 	f = open(filename, 'rb')
@@ -26,6 +33,12 @@ def parse_file(filename, stoplist):
 
 	return preprocess_doc(doc, stoplist)
 
+"""
+Create a corpus from a given set of documents (subtitles) and a stoplist used
+to remove unnecessary words. Returns documents, a list of strings, subtitles,
+a dictionary keyed by name and containing text, dictionary, and corpus, both of
+which are gensim objects used in our NLP.
+"""
 def make_corpus(subtitles, stoplist):
 	documents = []
 	for video in subtitles:
@@ -33,10 +46,13 @@ def make_corpus(subtitles, stoplist):
 		subtitles[video] = preprocess_doc(subtitles[video], stoplist)
 		documents.append(subtitles[video])
 
+    # Create a simple bag of words (basic count of occurrences) model for our
+    # documents
 	all_tokens = sum(documents, [])
 	tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
 	documents = [[word for word in doc if word not in tokens_once] for doc in documents]
 
+	# Save the created dictionary and corpus
 	dictionary = corpora.Dictionary(documents)
 	dictionary.save('./query_dict.dict')
 
@@ -54,6 +70,13 @@ def read_stoplist(stoplist_file):
 
 	return stoplist
 
+"""
+Do some TFIDF (term frequency inverse document frequency) filtering. Given a
+query string, a dictionary, and a tfidf-model based on the associated corpus,
+assigns a tfidf score to each of the words in the query string. Then, remove
+the 20 percent of words in the query string that have the lowest tfidf score,
+and return our updated query string.
+"""
 def tfidf_filtering(query, dictionary, tfidf_model):
 	q_tfidf = tfidf_model[dictionary.doc2bow(query)]
 	low_score_words = []
@@ -67,6 +90,11 @@ def tfidf_filtering(query, dictionary, tfidf_model):
 
 	return query
 
+"""
+Given a dictionary and corpus, create the lsi (Latent Semantic Indexing) model
+based on tfidf scoring, and also create the document similarity index. Returns
+the tfidf model, the lsi model, and the index.
+"""
 def create_lsi_tfidf_model(dictionary, corpus):
 	tfidf = models.TfidfModel(corpus)
 	corpus_tfidf = tfidf[corpus]
@@ -78,11 +106,21 @@ def create_lsi_tfidf_model(dictionary, corpus):
 	return tfidf, lsi, index
 
 
-# used by khan academy scraper directly
-def get_top_query_hits(query, stoplist_file, subtitles, links):
-	stoplist = read_stoplist(stoplist_file)
+"""
+Takes in a query string, path to a stoplist file, dictionary of video subtitles
+keyed by name, and a list of dictionaries. The list of dictionaries has three
+keys - "topic," the topic name (e.g. 'algorithms'), "name," the name of the
+video, and "url," the link to the video.
 
-	# print query
+Then, it creates a dictionary and corpus from the given subtitles, and also
+creates a tfidf, lsi, and similarity index. Then, it queries the generated
+index using the query string, giving a cosine similarity score to every link
+in the "links" list. If the score is over the threshold value, provided as a
+parameter, we keep the link and append it to a list of dictionaries that we
+eventually return.
+"""
+def get_top_query_hits(query, stoplist_file, subtitles, links, threshold):
+	stoplist = read_stoplist(stoplist_file)
 
 	query = preprocess_doc(query.split(), stoplist)
 	# query = parse_file(query_file, stoplist)
@@ -106,7 +144,7 @@ def get_top_query_hits(query, stoplist_file, subtitles, links):
 	final_links = []
 
 	for video in sims:
-		if video[1] > 0.75:
+		if video[1] > threshold:
 			i = video[0]
 
 			count = 0
