@@ -7,11 +7,12 @@ class TopicsController < ApplicationController
 		the specified name
 		'''
 
-		parent = Topic.find_by_name(topic_params[:parent_name])
+		version = topic_params["v_id"]
+		parent = Topic.find_by(name: topic_params[:parent_name], version: version)
 		topic_hash = topic_params.slice(*(Topic.column_names))
 
 		# Add version to link_hash
-		topic_hash["version"] = topic_params["v_id"]
+		topic_hash["version"] = version
 
 		if parent != nil
 			@topic = parent.children.new(topic_hash)

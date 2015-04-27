@@ -3,10 +3,10 @@
 module.exports = function(environment) {
 
   var ENV = {
-    namespace:'v/1',
+    namespace:'v/2',
     modulePrefix: 'learning',
     environment: environment,
-    baseURL:'/v1',
+    baseURL:'/v2',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -58,7 +58,7 @@ module.exports = function(environment) {
     ENV.baseURL = process.env.baseURL;
   }
 
-  console.log("Final value of baseURL:'/v1',
+  console.log("Final value of baseURL:'/v2',
   */
   return ENV;
 };

@@ -6,8 +6,8 @@ class LinksController < ApplicationController
 		a "parent_name" parameter. Creates a new link under the parent with
 		the specified name
 		'''
-
-		parent = Topic.find_by_name(link_params[:parent_name])
+		version = link_params["v_id"]
+		parent = Topic.find_by(name: link_params[:parent_name], version: version)
 		if parent != nil 
 			link_hash = link_params.slice(*(Link.column_names))
 			# Add version to link_hash

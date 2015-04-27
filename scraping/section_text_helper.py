@@ -45,12 +45,13 @@ def parse_table_of_contents(outlines, toc_stoplist):
     for i in range(len(outlines)):
         item = outlines[i]
         name = item[1].split(' ')
-        name = [str(j).lower().strip() for j in name]
+        name = [str(j) for j in name]
 
         keep = True
         done = False
 
-        for word in name:
+        for w in name:
+            word = w.lower().strip()
 
             # If these specific words are found, we are done with relevant
             # sections
@@ -150,6 +151,7 @@ def generate_queries(pdf_file, toc_stoplist_file):
     outlines = document.get_outlines()
     toc = []
 
+    print "Getting document outlines"
     for (level,title,dest,a,se) in outlines:
         toc.append((level, title))
 
@@ -157,7 +159,7 @@ def generate_queries(pdf_file, toc_stoplist_file):
 
     toc = parse_table_of_contents(toc, toc_stoplist)
 
-    # toc = toc[:9]
+    toc = toc[:3]
 
     rsrcmgr = PDFResourceManager()
 
@@ -174,9 +176,11 @@ def generate_queries(pdf_file, toc_stoplist_file):
 
     topics = []
 
+    print "Looping through topics in table of contents"
     for topic in toc:
         level = topic[0]
         name = topic[1]
+        print "Topic: %s, level: %s"%(name, level)
 
         if level-prev_level == 1:
             parent_names.append(prev_name)
@@ -193,7 +197,7 @@ def generate_queries(pdf_file, toc_stoplist_file):
         prev_name = topic[1]
 
     # can add in section searching for parents as well
-
+    print "Done looping through TOC topics"
     fp.close()
 
     return topics

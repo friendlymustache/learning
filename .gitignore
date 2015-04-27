@@ -14,3 +14,6 @@ log/
 !/log/.keep
 /tmp
 # *.txt
+
+# Ignore imported Python modules
+*.pyc
