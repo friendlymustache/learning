@@ -141,7 +141,7 @@ has a "name" field, which is just the name of the section, "parent," which is
 the section that is one level up from that section in the table of contents,
 and "query," which is the actual text of that section from the pdf file.
 """
-def generate_queries(pdf_file, toc_stoplist_file):
+def generate_queries(pdf_file, toc_stoplist_file, search_topic):
     # Open a PDF document.
     fp = open(pdf_file, 'rb')
     parser = PDFParser(fp)
@@ -171,7 +171,7 @@ def generate_queries(pdf_file, toc_stoplist_file):
     interpreter = PDFPageInterpreter(rsrcmgr, device)
 
     parent_names = []
-    prev_level = 0
+    prev_level = 2
     prev_name = [""]
 
     topics = []
@@ -182,8 +182,10 @@ def generate_queries(pdf_file, toc_stoplist_file):
         name = topic[1]
         print "Topic: %s, level: %s"%(name, level)
 
-        if level-prev_level == 1:
-            parent_names.append(prev_name)
+        # if level-prev_level == 1 and len(topics) != 0:
+        #     parent_names.append(prev_name)
+        if prev_level-level == 1:
+            parent_names.append(name)
         else:
             link = {}
             link["name"] = prev_name
@@ -195,6 +197,25 @@ def generate_queries(pdf_file, toc_stoplist_file):
 
         prev_level = level
         prev_name = topic[1]
+
+    final_chapter = topics[-1]["name"]
+
+    for i in range(len(parent_names)):
+        name = parent_names[i]
+
+        link = {}
+        link["name"] = name
+        link["parent"] = search_topic
+
+        if i == len(parent_names) - 1:
+            link["query"] = get_section_text(document, interpreter, device, \
+                name, final_chapter)
+        else:
+            link["query"] = get_section_text(document, interpreter, device, \
+                name, parent_names[i+1])
+
+        topics.append(link)
+
 
     # can add in section searching for parents as well
     print "Done looping through TOC topics"

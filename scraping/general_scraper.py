@@ -58,7 +58,7 @@ class GeneralScraper:
 
 		# Generate queries from the pdf textbook's table of contents
 		print "Generating queries from textbook's TOC..."
-		queries = generate_queries(book_file, toc_stoplist)
+		queries = generate_queries(book_file, toc_stoplist, topic)
 		print "Done"
 
 		# Set up list of topics. The root topic doesn't have any links
