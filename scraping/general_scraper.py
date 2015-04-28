@@ -70,7 +70,10 @@ class GeneralScraper:
 		# contents, adding the links for that section to our output dictionary
 		for query in queries:
 			search_terms = self.clean_section_name(query["name"])
-			parent = self.clean_section_name(query["parent"])
+			parent = query["parent"]
+
+			if parent != topic:
+				parent = self.clean_section_name(parent)
 
 			print "Getting links from KA for section %s"%(search_terms)						
 			q = query["query"]

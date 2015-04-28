@@ -171,7 +171,7 @@ def generate_queries(pdf_file, toc_stoplist_file, search_topic):
     interpreter = PDFPageInterpreter(rsrcmgr, device)
 
     parent_names = []
-    prev_level = 2
+    prev_level = 0
     prev_name = [""]
 
     topics = []
@@ -182,10 +182,8 @@ def generate_queries(pdf_file, toc_stoplist_file, search_topic):
         name = topic[1]
         print "Topic: %s, level: %s"%(name, level)
 
-        # if level-prev_level == 1 and len(topics) != 0:
-        #     parent_names.append(prev_name)
-        if prev_level-level == 1:
-            parent_names.append(name)
+        if level-prev_level == 1:
+            parent_names.append(prev_name)
         else:
             link = {}
             link["name"] = prev_name
