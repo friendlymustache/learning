@@ -171,7 +171,7 @@ def generate_queries(pdf_file, toc_stoplist_file, search_topic):
     interpreter = PDFPageInterpreter(rsrcmgr, device)
 
     parent_names = []
-    prev_level = 0
+    prev_level = 2
     prev_name = [""]
 
     topics = []
@@ -180,16 +180,17 @@ def generate_queries(pdf_file, toc_stoplist_file, search_topic):
     for topic in toc:
         level = topic[0]
         name = topic[1]
-        print "Topic: %s, level: %s"%(name, level)
 
-        if level-prev_level == 1:
-            parent_names.append(prev_name)
-        else:
+        if prev_level-level == 1:
+            parent_names.append(name)
+        elif level == prev_level:
             link = {}
             link["name"] = prev_name
             link["parent"] = parent_names[-1]
             link["query"] = get_section_text(document, interpreter, device, \
                 prev_name, name)
+
+            print "Topic: %s, parent: %s"%(prev_name, parent_names[-1])
 
             topics.append(link)
 
@@ -214,8 +215,6 @@ def generate_queries(pdf_file, toc_stoplist_file, search_topic):
 
         topics.append(link)
 
-
-    # can add in section searching for parents as well
     print "Done looping through TOC topics"
     fp.close()
 
