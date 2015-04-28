@@ -72,7 +72,7 @@ class GeneralScraper:
 			search_terms = self.clean_section_name(query["name"])
 			parent = query["parent"]
 
-			if parent != topic:
+			if parent != topic and len(parent) != 0:
 				parent = self.clean_section_name(parent)
 
 			print "Getting links from KA for section %s"%(search_terms)						
