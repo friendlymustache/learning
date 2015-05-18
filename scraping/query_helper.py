@@ -17,7 +17,7 @@ def preprocess_doc(doc, stoplist):
 
 		# Only keep words that are fully alphabetic for NLP purposes
 		if w != '' and w.isalpha() and w not in stoplist:
-			processed.append(word)
+			processed.append(w)
 
 	return processed
 
@@ -100,10 +100,51 @@ def create_lsi_tfidf_model(dictionary, corpus):
 	corpus_tfidf = tfidf[corpus]
 
 	lsi = models.LsiModel(corpus_tfidf, id2word=dictionary, num_topics=15)
-	corpus_lsi = lsi[corpus_tfidf]
-	index = similarities.MatrixSimilarity(corpus_lsi)
+	index = similarities.MatrixSimilarity(lsi[corpus_tfidf])
 
 	return tfidf, lsi, index
+
+
+
+def calculate_idf(term, corpus, tfidf):
+	docfreq = sum([int(term in dict(doc).keys()) for doc in corpus])
+	return models.tfidfmodel.df2idf(float(docfreq), len(corpus))
+
+"""
+Modified from
+http://lixinzhang.github.io/implementation-of-okapi-bm25-on-python.html
+
+Given a bag of words representation of a query, a list of documents (a list of
+lists of words), and a dictionary, compute the Okapi BM25 score of each of the
+documents w.r.t the query. 
+"""
+def BM25Score(query, dictionary, corpus, tfidf, k1=1.5, b=0.75):
+	scores = []
+	query_bow = dictionary.doc2bow(query)
+
+	doc_avg_len = sum([float(len(doc)) for doc in corpus]) / float(len(corpus))
+
+	for idx, document in enumerate(corpus):
+		# doc is bag of words repr of given document
+
+		doc = dict(document)
+
+		commonTerms = set(dict(query_bow).keys()) & set(doc.keys())
+		tmp_score = []
+
+		for term in commonTerms:
+			freq = float(doc[term])
+			numer = freq * (k1 + 1.0)
+			denom = (freq + k1 * (1.0 - b + b * len(doc.keys())) / doc_avg_len)
+
+			tmp_score.append(numer / denom * calculate_idf(term, corpus, tfidf))
+
+		scores.append(sum(tmp_score))
+
+	norm = max(scores)
+	scores = [s / norm for s in scores]
+
+	return scores
 
 
 """
@@ -136,10 +177,18 @@ def get_top_query_hits(query, stoplist_file, subtitles, links, threshold):
 	tfidf, lsi, index = create_lsi_tfidf_model(dictionary, corpus)
 
 	query = tfidf_filtering(query, dictionary, tfidf)
+	query_bow = dictionary.doc2bow(query)
 
-	query_lsi = lsi[dictionary.doc2bow(query)]
-	sims = index[query_lsi]
-	sims = sorted(enumerate(sims), key=lambda item: -item[1])
+	# LSI document similarity
+	# query_lsi = lsi[query_bow]
+	# sims = index[query_lsi]
+	# sims = sorted(enumerate(sims), key=lambda item: -item[1])
+
+	# Okapi BM25 similarity
+	sims = sorted(enumerate(BM25Score(query=query, dictionary=dictionary,\
+		corpus=corpus, tfidf=tfidf)), key=lambda item: -item[1])
+
+	print sims
 
 	final_links = []
 

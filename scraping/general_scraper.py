@@ -99,7 +99,7 @@ class GeneralScraper:
 				link["section_name"] = search_terms
 
 			# Filter using document similarity techniques with a 0.75 threshold
-			links = get_top_query_hits(q, nlp_stoplist, subs, links, 0.75)
+			links = get_top_query_hits(q, nlp_stoplist, subs, links, 0.9)
 			
 			# Add the current topic + its links to our list
 			new_topic = {"name" : search_terms, "parent" : parent, "links" : links}
