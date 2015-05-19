@@ -147,6 +147,12 @@ def BM25Score(query, dictionary, corpus, tfidf, k1=1.5, b=0.75):
 	return scores
 
 
+# try different num_topics
+# use whether it is chapter or subtopic to decide # topics
+# look @ actual factors/topics that pop up - visualize
+# list of algorithms videos & test within each other
+# lda instead of plsi
+
 """
 Takes in a query string, path to a stoplist file, dictionary of video subtitles
 keyed by name, and a list of dictionaries. The list of dictionaries has three
